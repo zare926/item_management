@@ -1,21 +1,29 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+.main_newuser
+  %img.main_newuser__image{src: 'https://images.unsplash.com/photo-1499321889027-736489e2f5a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1953&q=80',size: "100x100"}
+    .main_newuser__name
+      Sign Up.
+  .register__area
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .newnickname__area
+        = f.label :ニックネーム
+        %br/
+        = f.email_field :nickname, autofocus: true, autocomplete: "nickname",class: 'newnickname__area--form'
+      .newemail__area
+        = f.label :メールアドレス
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email", class: 'newemail__area--form'
+      .newpassword__area
+        = f.label :パスワード
+        - if @minimum_password_length
+          %em
+            (#{@minimum_password_length}文字以上必須)
+        %br/
+        = f.password_field :password, autocomplete: "new-password",class:'newpassword__area--form'
+      .newpassword_confirmation__area
+        = f.label :パスワード再入力
+        %br/
+        = f.password_field :password_confirmation, autocomplete: "new-password",class:'newpassword_confirmation__area--form'
+      .register
+        = f.submit "登録" , class:'register__btn'
+      = render "devise/shared/links"
