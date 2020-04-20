@@ -1,14 +1,14 @@
 .main_newuser
-  %img.main_newuser__image{src: 'https://images.unsplash.com/photo-1499321889027-736489e2f5a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1953&q=80',size: "100x100"}
-    .main_newuser__name
-      Sign Up.
+  = image_tag asset_path('register2'),class:'main_newuser__image'
+  .main_newuser__name
+    Sign Up.
   .register__area
     = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
       = render "devise/shared/error_messages", resource: resource
       .newnickname__area
         = f.label :ニックネーム
         %br/
-        = f.email_field :nickname, autofocus: true, autocomplete: "nickname",class: 'newnickname__area--form'
+        = f.text_field :nickname, autofocus: true, autocomplete: "nickname",class: 'newnickname__area--form'
       .newemail__area
         = f.label :メールアドレス
         %br/

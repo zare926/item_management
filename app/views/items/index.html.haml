@@ -1,0 +1,24 @@
+.top__contents
+  = image_tag asset_path('IMindex2'),class:'top__contents--image1'
+  = image_tag asset_path('IMindex3'),class:'top__contents--image2'
+  = image_tag asset_path('IMindex4'),class:'top__contents--image3'
+  = image_tag asset_path('IMindex5'),class:'top__contents--image4'
+  -# .time
+  -#   = @time.strftime("%Y年%-m月%-d日 %-H時%-M分%-S秒 %A")
+  -# %a.itemup{:div => "", :href => "/items/new"}
+  -#   %h2 ItemUP
+  -# %a
+  -#   .item_area
+  -#     - @items.each do |item|
+  -#       .item_area_list
+  -#         %img.item_image{:src => "#{item.image}", :width => "100"}/
+  -#         .btn_list
+  -#           %ul.more_list
+  -#             %li
+  -#               = link_to '使う', "/items/#{item.id}/edit"
+  -#             %li
+  -#               = link_to '編集', "/items/#{item.id}/edit", method: :get
+  -#             %li
+  -#               = link_to '削除', "/items/#{item.id}", method: :delete
+  -#   #city-name
+  -#   #weather
