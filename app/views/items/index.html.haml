@@ -3,23 +3,16 @@
   %li
   %li
   %li
-
-  -# .time
-  -#   = @time.strftime("%Y年%-m月%-d日 %-H時%-M分%-S秒 %A")
-  -# %a.itemup{:div => "", :href => "/items/new"}
-  -#   %h2 ItemUP
-  -# %a
-  -#   .item_area
-  -#     - @items.each do |item|
-  -#       .item_area_list
-  -#         %img.item_image{:src => "#{item.image}", :width => "100"}/
-  -#         .btn_list
-  -#           %ul.more_list
-  -#             %li
-  -#               = link_to '使う', "/items/#{item.id}/edit"
-  -#             %li
-  -#               = link_to '編集', "/items/#{item.id}/edit", method: :get
-  -#             %li
-  -#               = link_to '削除', "/items/#{item.id}", method: :delete
-  -#   #city-name
-  -#   #weather
+  .top__left
+    .top__left--time
+      %p.top__left--time-real
+    .top__left--weather
+      .top__info
+      .top__left--weather-city
+      .top__left--weather-information
+    .top__left--rogout
+      = link_to "ログアウト" ,destroy_user_session_path,method: :delete ,class: "top__left--rogout-btn"
+  .top__right
+    .top__right--area
+      .top__right--area-btn
+    .top__right--item
