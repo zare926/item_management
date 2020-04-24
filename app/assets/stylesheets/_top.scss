@@ -1,4 +1,3 @@
-
 .top__contents--image{
   width: 100%;
   height: 100%;
@@ -21,7 +20,7 @@
     animation: anime 40s linear 0s infinite ;
   }
   & li:nth-child(1){
-    background-image: image-url('IMindex2.jpeg');
+    background-image: image-url('IMindex2');
   }
   & li:nth-child(2){
     background-image: image-url('IMindex3');
@@ -34,7 +33,7 @@
     animation-delay: 20s;
   }
   & li:nth-child(4){
-    background-image: image-url('IMindex5');
+    background-image: image-url('IMindex7');
     -webkit-animation-delay: 30s;
     animation-delay: 30s;
   }
@@ -145,7 +144,7 @@
         }
       }
     }
-    &--rogout{
+    &--register{
       height: 5%;
       padding: 10px;
       margin: 10px;
@@ -165,22 +164,28 @@
     z-index: 1;
     margin-left: 20px;
     &--area{
-      height: 44px;
+      height: 70px;
       width: 96%;
-      margin: 51px 0 10px 10px;
+      margin: 25px 0 10px 0 ;
       text-align: center;
+      font-size: 30px;
+      line-height: 70px;
+      font-weight: bold;
+      font-family: 'Silom',sans-serif;
+      background:rgba(243, 244, 245, 0.616);
+      box-shadow: 0 1px 3px rgba(0,0,0,1);
       &-btn{
-        line-height: 44px;
-        font-family: 'Silom',sans-serif;
-        height: 100%;
-        width: 100px;
+        line-height: 59px;
+        height: 80%;
+        width: 130px;
         float: right;
         background:rgba(243, 244, 245, 0.616);
         box-shadow: 0 1px 3px rgba(0,0,0,1);
         text-decoration: none;
         color: rgba(0,0,0,1);
-        margin: 0 10px 10px 0;
+        margin: 7px 10px 10px 0;
         font-weight: bold;
+        font-size: 18px;
       }
     }
     &--item{

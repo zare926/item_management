@@ -3,6 +3,7 @@
   %li
   %li
   %li
+  %li
   .top__left
     .top__left--time
       %p.top__left--time-real
@@ -10,11 +11,19 @@
       .top__info
       .top__left--weather-city
       .top__left--weather-information
-    .top__left--rogout
-      = link_to "ログアウト" ,destroy_user_session_path,method: :delete ,class: "top__left--rogout-btn"
+    .top__left--register
+      - if user_signed_in?
+        = link_to "ログアウト" ,destroy_user_session_path,method: :delete,class: "top__left--register-btn"
+      - else
+        = link_to "ログイン", new_user_session_path, class: "top__left--register-btn"
   .top__right
     .top__right--area
-      = link_to "アイテム追加", new_item_path ,class:"top__right--area-btn"
+      - if user_signed_in? 
+        Welcome to #{current_user.nickname}!
+        = link_to "New Item!!", new_item_path,method: :get,class:"top__right--area-btn"
+      - else
+        Please register or login
+        = link_to "New User!!", new_user_registration_path, class: "top__right--area-btn"
     .top__right--item
       %p.top__right--item-sunny
         Sunny Item
