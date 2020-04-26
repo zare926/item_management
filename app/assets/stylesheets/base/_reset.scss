@@ -10,7 +10,7 @@
 */
 html{
   color:#000;
-  background:#FFF;
+	background:#FFF;
 }
 /*
   TODO remove settings on BODY since we can't namespace it.
@@ -19,6 +19,9 @@ html{
   TODO test putting a class on HEAD.
       - Fails on FF.
 */
+body{
+}
+
 body,
 div,
 dl,
@@ -45,7 +48,7 @@ blockquote,
 th,
 td {
   margin:0;
-  padding:0;
+	padding:0;
 }
 table {
   border-collapse:collapse;
