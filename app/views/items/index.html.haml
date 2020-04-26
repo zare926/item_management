@@ -19,17 +19,17 @@
   .top__right
     .top__right--area
       - if user_signed_in? 
-        Welcome to #{current_user.nickname}!
-        = link_to "New Item!!", new_item_path,method: :get,class:"top__right--area-btn"
+        Welcome to #{current_user.nickname}!!
+        = link_to "New Shoes!!", new_item_path,method: :get,class:"top__right--area-btn"
       - else
         Please register or login
         = link_to "New User!!", new_user_registration_path, class: "top__right--area-btn"
     .top__right--item
       %p.top__right--item-sunny
-        Sunny Item
+        Sunny Shoes
       .top__right--item-border
       %p.top__right--item-rainy
-        Raniy Item
+        Raniy Shoes
       .top__right--item-border
       %p.top__right--item-recovery
-        Recovery Item
+        Recovery Shoes
