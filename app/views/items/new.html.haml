@@ -31,11 +31,11 @@
             = f.text_field :name, class: 'top__right--item-form-box-shoes', placeholder: '40文字まで'
           .top__right--item-form-box
             その他
-            = f.text_area :name, class: 'top__right--item-form-box-shoesohter',placeholder: '補足'
+            = f.text_area :text, class: 'top__right--item-form-box-shoesohter',placeholder: '補足'
             .top__right--item-form-box
             晴れ用か雨用か洗濯してください
             = f.select :weather, [["晴れの日用", 0],["雨の日用", 1]],{}, {class: 'top__right--item-form-box-shoesweather'}
           .top__right--item-form-right
-            .top__right--item-form-right-box 
-              = f.file_field :image, class: 'top__right--item-form-right-boximage'
+            = image_tag asset_path('new1'),class:'top__right--item-form-right-box'
+            = f.file_field :image, class: 'top__right--item-form-right-boximage'
             = f.submit "登録" ,class: 'top__right--item-form-rightbtn'
