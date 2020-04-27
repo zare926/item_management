@@ -9,6 +9,11 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
+    if @item.save
+      redirect_to root_path and return
+    else
+      redirect_to new_item_path and return
+    end
   end
 
   def edit
@@ -26,6 +31,6 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name,:weather,:image,:text).merge(:user_id current_user.id)
+    params.require(:item).permit(:name,:text,:weather,:image).merge(user_id: current_user.id)
   end
 end
