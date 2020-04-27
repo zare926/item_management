@@ -20,3 +20,22 @@
     .top__right--item
       .top__right--item-form
         .top__right--item-form-name
+          Please register the shoes you have!
+        .top__right--item-form-border
+        .top__right--item-form-info
+          持っている靴を長持ちさせる為、登録しましょう！
+        .top__right--item-form--border
+        = form_with(model: @item, local: true) do |f|
+          .top__right--item-form-box
+            品名
+            = f.text_field :name, class: 'top__right--item-form-box-shoes', placeholder: '40文字まで'
+          .top__right--item-form-box
+            その他
+            = f.text_area :name, class: 'top__right--item-form-box-shoesohter',placeholder: '補足'
+            .top__right--item-form-box
+            晴れ用か雨用か洗濯してください
+            = f.select :weather, [["晴れの日用", 0],["雨の日用", 1]],{}, {class: 'top__right--item-form-box-shoesweather'}
+          .top__right--item-form-right
+            .top__right--item-form-right-box 
+              = f.file_field :image, class: 'top__right--item-form-right-boximage'
+            = f.submit "登録" ,class: 'top__right--item-form-rightbtn'

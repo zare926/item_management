@@ -3,8 +3,86 @@
     height: 100%;
     width: 95%;
     margin: auto;
+    position: relative;
     &-name{
-      
+      max-width: 600px;
+      height: 100px;
+      margin: auto;
+      text-align: center;
+      line-height: 135px;
+      font-size: 30px;
+      font-family: 'Silom',sans-serif;
+    }
+    &-border{
+      max-width: 200px;
+      border-bottom: 2px solid rgb(85, 79, 79);
+      margin: auto;
+      margin-top: 30px;
+    }
+    &-info{
+      text-align: center;
+      margin-top: 30px;
+    }
+    &--border{
+      width: 90%;
+      border-bottom: 2px solid rgb(85, 79, 79);
+      margin: auto;
+      margin-top: 30px;
+      margin-bottom: 50px;
+    }
+    &-box{
+      margin: 20px 20px 20px 170px;
+      font-size: 20px;
+      &-shoes{
+        display: block;
+        margin-top: 10px;
+        font-size: 15px;
+        width: 400px;
+        height: 30px;
+      }
+      &-shoesohter{
+        display: block;
+        margin-top: 10px;
+        font-size: 15px;
+        width: 400px;
+        height: 150px;
+      }
+      &-shoesweather{
+        display: block;
+        margin-top: 10px;
+        font-size: 15px;
+        height: 30px;
+      }
+    }
+    &-right{
+      width: 550px;
+      height: 390px;
+      position: absolute;
+      top: 270px;
+      left: 620px;
+      &-box{
+        background:rgba(255, 255, 255, 0.6);
+        box-shadow: 0 1px 3px rgba(0,0,0,1);
+        width: 300px;
+        height: 300px;
+        display: block;
+        &image{
+          width: 100px;
+          margin-top: 330px;
+        }
+        &image input{
+          background:rgba(143, 139, 139, 0.6);
+          box-shadow: 0 1px 3px rgba(0,0,0,1);
+        }
+      }
+      &btn{
+        float: right;
+        margin: 30px 230px 0 0 ;
+        background:rgba(143, 139, 139, 0.6);
+        box-shadow: 0 1px 3px rgba(0,0,0,1);
+        width: 50px;
+        height: 30px;
+      }
     }
   }
 }
