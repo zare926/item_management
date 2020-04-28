@@ -25,11 +25,20 @@
         Please register or login
         = link_to "New User!!", new_user_registration_path, class: "top__right--area-btn"
     .top__right--item
-      %p.top__right--item-sunny
-        Sunny Shoes
+      .top__right--item-sunny 
+        %p Sunny Shoes
+        - @items.each do |i|
+          - if i.weather == 0 and i.status == "unused"
+            = image_tag i.image.url,class:'image',size:'150x150'
       .top__right--item-border
-      %p.top__right--item-rainy
-        Raniy Shoes
+      .top__right--item-rainy
+        %p Raniy Shoes
+        - @items.each do |i|
+          - if i.weather == 1 and i.status == "unused"
+            = image_tag i.image.url,class:'image',size:'150x150'
       .top__right--item-border
-      %p.top__right--item-recovery
-        Recovery Shoes
+      .top__right--item-recovery
+        %p Recovery Shoes
+        - @items.each do |i|
+          - if i.status == "used"
+            = image_tag i.image.url,class:'image',size:'150x150'
