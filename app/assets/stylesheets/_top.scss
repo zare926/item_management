@@ -97,7 +97,7 @@
     }
     &--weather{
       height: 80%;
-      padding: 10px;
+      padding: 15px;
       margin: 10px;
       background:rgba(243, 244, 245, 0.616);
       box-shadow: 0 1px 3px rgba(0,0,0,1);
@@ -190,13 +190,13 @@
     }
     &--item{
       width: 94.6%;
-      height: 82.9%;
+      height: 85%;
       padding-left: 20px;
       background:rgba(243, 244, 245, 0.616);
       box-shadow: 0 1px 3px rgba(0,0,0,1);
       font-family: 'Silom',sans-serif;
       & p{
-        margin: 10px 0 0 10px;
+        margin: 7px 0 0 10px;
       }
       &-sunny{
         padding-top: 10px;
@@ -220,11 +220,12 @@
         height: 200px;
         display: inline-block;
         margin: 5px 0 10px 50px;
+        position: relative;
         & img{
           border-radius: 10px;
         }
         .edit__btn{
-          background:rgba(243, 244, 245, 0.616);
+          background:rgba(243, 247, 250, 0.616);
           box-shadow: 0 1px 3px rgba(0,0,0,1);
           border-radius: 10px;
           text-decoration: none;
@@ -236,6 +237,12 @@
         }
         & span{
           font-size: 13px;
+        }
+        .time{
+          position: absolute;
+          top: 82px;
+          left: -23px;
+          color: rgb(0, 0, 0);
         }
       }
     }

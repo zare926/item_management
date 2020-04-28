@@ -34,7 +34,7 @@ class ItemsController < ApplicationController
     time = Time.now
     used = Item.all
     used.each do |u|
-      if u.created_at + u.limit.minutes < time && u.status =="used"
+      if u.updated_at + u.limit.minutes < time && u.status =="used"
         u.status = "unused"
         u.save
       end
