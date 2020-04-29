@@ -97,7 +97,7 @@
     }
     &--weather{
       height: 80%;
-      padding: 10px;
+      padding: 15px;
       margin: 10px;
       background:rgba(243, 244, 245, 0.616);
       box-shadow: 0 1px 3px rgba(0,0,0,1);
@@ -161,6 +161,7 @@
   .top__right{
     background:rgba(235, 235, 235, 0);
     width: 80%;
+    height: 833px;
     z-index: 1;
     margin-left: 20px;
     &--area{
@@ -189,17 +190,18 @@
       }
     }
     &--item{
-      width: 96%;
-      height: 86%;
+      width: 94.6%;
+      height: 86.2%;
+      padding-left: 20px;
       background:rgba(243, 244, 245, 0.616);
       box-shadow: 0 1px 3px rgba(0,0,0,1);
+      font-family: 'Silom',sans-serif;
       & p{
-        margin: 10px 0 0 10px;
-        font-family: 'Silom',sans-serif;
+        margin: 7px 0 0 10px;
       }
       &-sunny{
         padding-top: 10px;
-        height: 40%;
+        height: 33%;
         overflow: scroll;
       }
       &-border{
@@ -207,12 +209,44 @@
         margin: 0 50px 0 50px;
       }
       &-rainy{
-        height: 30%;
+        height: 33%;
         overflow: scroll;
       }
       &-recovery{
-        height: 30%;
+        height: 33%;
         overflow: scroll;
+      }
+      .image_box{
+        width: 185px;
+        height: 200px;
+        display: inline-block;
+        margin: 5px 0 10px 50px;
+        position: relative;
+        & img{
+          border-radius: 10px;
+        }
+        .edit__btn{
+          background:rgba(243, 247, 250, 0.616);
+          box-shadow: 0 1px 3px rgba(0,0,0,1);
+          border-radius: 10px;
+          text-decoration: none;
+          display: inline-block;
+          padding: 4px 10px 4px 10px;
+          font-size: 15px;
+          color: black;
+          margin-bottom: 5px;
+        }
+        & span{
+          font-size: 13px;
+        }
+        .time{
+          background:rgba(243, 247, 250, 0.616);
+          box-shadow: 0 1px 1px rgba(0,0,0,1);
+          position: absolute;
+          top: 82px;
+          left: -23px;
+          color: rgb(0, 0, 0);
+        }
       }
     }
   }

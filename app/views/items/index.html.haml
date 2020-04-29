@@ -25,11 +25,40 @@
         Please register or login
         = link_to "New User!!", new_user_registration_path, class: "top__right--area-btn"
     .top__right--item
-      %p.top__right--item-sunny
-        Sunny Shoes
+      .top__right--item-sunny 
+        %p Sunny Shoes
+        - if user_signed_in?
+          - @items.each do |i|
+            - if i.weather == 0 and i.status == "unused"
+              .image_box
+                %span
+                  = i.name
+                  = image_tag i.image.url,class:'image',size:'140x140'
+                  = link_to 'Used', item_used_index_path(i.id), method: :get,class:'edit__btn'
+                  = link_to 'Edit', edit_item_path(i.id), method: :get,class:'edit__btn'
       .top__right--item-border
-      %p.top__right--item-rainy
-        Raniy Shoes
+      .top__right--item-rainy
+        %p Raniy Shoes
+        - if user_signed_in?
+          - @items.each do |i|
+            - if i.weather == 1 and i.status == "unused"
+              .image_box
+                %span
+                  = i.name
+                  = image_tag i.image.url,class:'image',size:'140x140'
+                  = link_to 'Used', item_used_index_path(i.id), method: :get,class:'edit__btn'
+                  = link_to 'Edit', edit_item_path(i.id), method: :get,class:'edit__btn'
       .top__right--item-border
-      %p.top__right--item-recovery
-        Recovery Shoes
+      .top__right--item-recovery
+        %p Recovery Shoes
+        - if user_signed_in?
+          - @items.each do |i|
+            - if i.status == "used"
+              .image_box
+                %span
+                  = i.name
+                  = image_tag i.image.url,class:'image',size:'140x140'
+                  = link_to 'Edit', edit_item_path(i.id), method: :get,class:'edit__btn'
+                  = link_to 'Un Used', new_item_used_path(i.id), method: :get,class:'edit__btn'
+                .time
+                  = (i.updated_at+i.limit.minutes).strftime("%Y-%m-%d %H:%M:%S")
