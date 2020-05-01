@@ -29,11 +29,9 @@
           .top__right--item-form-box
             品名
             = f.text_field :name, class: 'top__right--item-form-box-shoes', placeholder: '40文字まで'
-            = @item.name
           .top__right--item-form-box
             その他
             = f.text_area :text, class: 'top__right--item-form-box-shoesohter',placeholder: '補足'
-            = @item.text
             .top__right--item-form-box
             晴れ用か雨用か洗濯してください
             = f.select :weather, [["晴れの日用", 0],["雨の日用", 1]],{}, {class: 'top__right--item-form-box-shoesweather'}
