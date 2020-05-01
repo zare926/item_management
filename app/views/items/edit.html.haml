@@ -1,0 +1,43 @@
+%ul.top__contents--image
+  %li
+  %li
+  %li
+  %li
+  %li
+  .top__left
+    .top__left--time
+      %p.top__left--time-real
+    .top__left--weather
+      .top__info
+      .top__left--weather-city
+      .top__left--weather-information
+    .top__left--register
+      = link_to "ログアウト" ,destroy_user_session_path,method: :delete,class: "top__left--register-btn"
+  .top__right
+    .top__right--area
+      Register new shoes!!
+      = link_to "Return", root_path,method: :get,class:"top__right--area-btn"
+    .top__right--item
+      .top__right--item-form
+        .top__right--item-form-name
+          Please register the shoes you have!
+        .top__right--item-form-border
+        .top__right--item-form-info
+          持っている靴を長持ちさせる為、登録しましょう！
+        .top__right--item-form--border
+        = form_with(model: @item, local: true) do |f|
+          .top__right--item-form-box
+            品名
+            = f.text_field :name, class: 'top__right--item-form-box-shoes', placeholder: '40文字まで'
+            = @item.name
+          .top__right--item-form-box
+            その他
+            = f.text_area :text, class: 'top__right--item-form-box-shoesohter',placeholder: '補足'
+            = @item.text
+            .top__right--item-form-box
+            晴れ用か雨用か洗濯してください
+            = f.select :weather, [["晴れの日用", 0],["雨の日用", 1]],{}, {class: 'top__right--item-form-box-shoesweather'}
+          .top__right--item-form-right
+            = image_tag @item.image.url ,class:'top__right--item-form-right-box'
+            = f.file_field :image, class: 'top__right--item-form-right-boximage'
+            = f.submit "登録" ,class: 'top__right--item-form-rightbtn'
