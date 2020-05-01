@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :timepass,only:[:index]
-
+  before_action :set_params,only:[:show,:edit]
   def index
     if user_signed_in?
       @items = Item.where(user_id: current_user.id).order("created_at DESC")
@@ -24,6 +24,13 @@ class ItemsController < ApplicationController
   end
 
   def update
+    item = Item.find(params[:id])
+    item.update(item_params)
+    if item.save
+      redirect_to root_path and return
+    else
+      redirect_to new_item_path and return
+    end
   end
 
   def show
