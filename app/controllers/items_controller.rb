@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   before_action :timepass,only:[:index]
   before_action :set_params,only:[:show,:edit]
+  before_action :move_to_index, except: [:index, :show]
   def index
     if user_signed_in?
       @items = Item.where(user_id: current_user.id).order("created_at DESC")
@@ -25,6 +26,7 @@ class ItemsController < ApplicationController
 
   def update
     item = Item.find(params[:id])
+    item.timestamps = false
     item.update(item_params)
     if item.save
       redirect_to root_path and return
@@ -60,4 +62,11 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
+  def move_to_index
+    @item = Item.find(params[:id])
+    redirect_to action: :index unless user_signed_in?
+    if @item.status == "used"
+      redirect_to action: :index
+    end
+  end
 end

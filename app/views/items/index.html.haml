@@ -59,6 +59,5 @@
                   = i.name
                   = image_tag i.image.url,class:'image',size:'140x140'
                   = link_to 'Un Used', new_item_used_path(i.id), method: :get,class:'edit__btn'
-                  = link_to 'Edit', edit_item_path(i.id), method: :get,class:'edit__btn'
                 .time
                   = (i.updated_at+i.limit.minutes).strftime("%Y-%m-%d %H:%M:%S")
