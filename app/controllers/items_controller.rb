@@ -68,7 +68,7 @@ class ItemsController < ApplicationController
 
   def move_to_edit
     @item = Item.find(params[:id])
-    if @item.status == "used"
+    if @item.status == "used" or @item.user_id != current_user.id
       redirect_to action: :index
     end
   end

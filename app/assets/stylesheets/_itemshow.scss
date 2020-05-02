@@ -1,0 +1,24 @@
+.show__name{
+  width: 400px;
+  margin: 10px auto;
+  &--box{
+    padding-top: 40px;
+    font-size: 30px;
+  }
+}
+
+.show__image{
+  margin: 25px 0 0 35px;
+  border-radius: 10px;
+}
+
+.show__other{
+  float: right;
+  margin: 25px 35px 0 0;
+  width: 600px;
+  background: red;
+  &--text{
+    font-size: 20px;
+  }
+}
+

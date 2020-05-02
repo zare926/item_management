@@ -18,4 +18,10 @@
       Register new shoes!!
       = link_to "HOME", root_path,method: :get,class:"top__right--area-btn"
     .top__right--item
-      = image_tag @item.image.url,class:"image2"
+      .show__name
+        .show__name--box
+          = @item.name
+      = image_tag @item.image.url,class:"show__image"
+      .show__other
+        .show__other--text
+          = @item.text
