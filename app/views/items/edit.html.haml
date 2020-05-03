@@ -35,6 +35,9 @@
             .top__right--item-form-box
             晴れ用か雨用か洗濯してください
             = f.select :weather, [["晴れの日用", 0],["雨の日用", 1]],{}, {class: 'top__right--item-form-box-shoesweather'}
+            .top__right--item-form-box
+            サイズ
+            = f.select :size, Item.sizes.keys ,{}, {class: 'top__right--item-form-box-shoessize'}
           .top__right--item-form-right
             = image_tag @item.image.url ,class:'top__right--item-form-right-box'
             = f.file_field :image, class: 'top__right--item-form-right-boximage'

@@ -55,7 +55,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name,:text,:weather,:image).merge(user_id: current_user.id)
+    params.require(:item).permit(:name,:text,:weather,:image,:size).merge(user_id: current_user.id)
   end
 
   def set_params

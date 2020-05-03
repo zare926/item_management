@@ -10,13 +10,18 @@
 .show__image{
   margin: 25px 0 0 35px;
   border-radius: 10px;
+  border: 1px solid rgba(41, 49, 51, 0.616);
+  box-shadow: 0 1px 8px rgba(0,0,0,1);
 }
 
 .show__other{
   float: right;
-  margin: 25px 35px 0 0;
-  width: 600px;
-  background: red;
+  margin: 25px 75px 0 0;
+  width: 550px;
+  height: 250px;
+  background:rgba(243, 244, 245, 0.616);
+  box-shadow: 0 1px 3px rgba(0,0,0,1);
+  overflow: scroll;
   &--text{
     font-size: 20px;
   }

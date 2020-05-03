@@ -217,10 +217,11 @@
         overflow: scroll;
       }
       .image_box{
-        width: 185px;
+        width: 140px;
         height: 200px;
         display: inline-block;
         margin: 5px 0 10px 50px;
+        padding-right: 45px;
         position: relative;
         & img{
           border-radius: 10px;
@@ -236,7 +237,10 @@
           color: black;
           margin-bottom: 5px;
         }
-        & span{
+        .item__name{
+          display: block;
+          width: 140px;
+          height: 15px;
           font-size: 13px;
         }
         .time{

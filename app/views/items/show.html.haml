@@ -24,4 +24,4 @@
       = image_tag @item.image.url,class:"show__image"
       .show__other
         .show__other--text
-          = @item.text
+          = simple_format(@item.text)
