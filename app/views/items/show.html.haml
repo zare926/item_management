@@ -24,4 +24,19 @@
       = image_tag @item.image.url,class:"show__image"
       .show__other
         .show__other--text
+          ■ 情報
+          %br
           = simple_format(@item.text)
+        .show__other--border
+        .show__other--size
+          ■ サイズ
+          %br
+          = simple_format(@item.size)
+        .show__other--border
+        .show__other--weather
+          ■ 晴れ用？雨用？
+          - if @item.weather == 1
+            = simple_format("雨の日用")
+          - else
+            = simple_format("晴れの日用")
+            

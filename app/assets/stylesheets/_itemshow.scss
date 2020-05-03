@@ -18,12 +18,19 @@
   float: right;
   margin: 25px 75px 0 0;
   width: 550px;
-  height: 250px;
+  height: 400px;
   background:rgba(243, 244, 245, 0.616);
   box-shadow: 0 1px 3px rgba(0,0,0,1);
-  overflow: scroll;
+  font-size: 20px;
+  padding: 10px 0 0 10px;
   &--text{
+    height: 150px;
     font-size: 20px;
+    overflow: scroll;
+  }
+  &--border{
+    border-bottom: 2px solid rgb(85, 79, 79);
+    margin: 20px ;
   }
 }
 
