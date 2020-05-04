@@ -233,7 +233,7 @@
           text-decoration: none;
           display: inline-block;
           padding: 4px 10px 4px 10px;
-          font-size: 15px;
+          font-size: 13px;
           color: black;
           margin-bottom: 5px;
         }
@@ -242,6 +242,17 @@
           width: 140px;
           height: 15px;
           font-size: 13px;
+        }
+        .show__btn{
+          background:rgba(243, 247, 250, 0.616);
+          box-shadow: 0 1px 3px rgba(0,0,0,1);
+          border-radius: 10px;
+          text-decoration: none;
+          display: inline-block;
+          padding: 4px 10px 4px 10px;
+          font-size: 13px;
+          color: black;
+          margin-bottom: 5px;
         }
         .time{
           background:rgba(243, 247, 250, 0.616);

@@ -1,4 +1,5 @@
 class Item < ApplicationRecord
+
   enum status: { unused: 0, used: 1 }
   enum size: { "選択してください":"","22cm":"22cm","22.5cm":"22.5cm",
                "23cm":"23cm","23.5cm":"23.5cm",
