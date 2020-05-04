@@ -31,7 +31,7 @@
 		background:rgba(243, 244, 245, 0.6);
     box-shadow: 0 1px 3px rgba(0,0,0,1);
     width: 346px;
-    height: 385px;
+    height: 460px;
     border-radius: 10px;
     .newnickname__area{
       margin: 20px 20px 5px 20px;
@@ -65,9 +65,17 @@
         height: 35px;
       }
     }
+    .newmysize_area{
+      margin: 5px 20px 5px 20px;
+      font-weight: bold;
+      &--form{
+        width: 300px;
+        height: 35px;
+      }
+    }
     .register{
       position: relative;
-      top: -18px;
+      top: 0px;
       left: 8px;
       margin: 40px 30px 20px 20px;
       &__btn{
@@ -85,8 +93,17 @@
     .sign_in{
       margin-left:20px;
       position: absolute;
-      top: 310px;
+      top: 392px;
       text-decoration: none;
+      background:rgba(143, 139, 139, 0.6);
+      box-shadow: 0 1px 3px rgba(0,0,0,1);
+      border-radius: 10px;
+      color: white;
+      width: 140px;
+      height: 46px;
+      font-size: 18px;
+      line-height: 46px;
+      text-align: center;
     }
   }
 }
