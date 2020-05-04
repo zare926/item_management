@@ -23,6 +23,10 @@
         = f.label :パスワード再入力
         %br/
         = f.password_field :password_confirmation, autocomplete: "new-password",class:'newpassword_confirmation__area--form'
+      .newmysize_area
+        = f.label :マイサイズ
+        %br/
+        = f.select :mysize,Item.sizes.keys,{},{class:'newmysize_area--form'}
       .register
         = f.submit "登録" , class:'register__btn'
       = render "devise/shared/links"
