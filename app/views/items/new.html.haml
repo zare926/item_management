@@ -16,7 +16,7 @@
   .top__right
     .top__right--area
       Register new shoes!!
-      = link_to "Return", root_path,method: :get,class:"top__right--area-btn"
+      = link_to "HOME", root_path,method: :get,class:"top__right--area-btn"
     .top__right--item
       .top__right--item-form
         .top__right--item-form-name
@@ -30,12 +30,16 @@
             品名
             = f.text_field :name, class: 'top__right--item-form-box-shoes', placeholder: '40文字まで'
           .top__right--item-form-box
-            その他
-            = f.text_area :text, class: 'top__right--item-form-box-shoesohter',placeholder: '補足'
+            情報
+            = f.text_area :text, class: 'top__right--item-form-box-shoesohter',placeholder: '買った日、買った場所、好きな情報を書き込みましょう！'
             .top__right--item-form-box
-            晴れ用か雨用か洗濯してください
-            = f.select :weather, [["晴れの日用", 0],["雨の日用", 1]],{}, {class: 'top__right--item-form-box-shoesweather'}
+            晴れ用？雨用？
+            = f.select :weather, [["Sunny", 0],["Rain", 1]],{}, {class: 'top__right--item-form-box-shoesweather'}
+            .top__right--item-form-box
+            サイズ
+            = f.select :size, Item.sizes.keys,{}, {class: 'top__right--item-form-box-shoessize'}
           .top__right--item-form-right
+            画像
             = image_tag asset_path('new1'),class:'top__right--item-form-right-box'
             = f.file_field :image, class: 'top__right--item-form-right-boximage'
             = f.submit "登録" ,class: 'top__right--item-form-rightbtn'

@@ -1,0 +1,42 @@
+%ul.top__contents--image
+  %li
+  %li
+  %li
+  %li
+  %li
+  .top__left
+    .top__left--time
+      %p.top__left--time-real
+    .top__left--weather
+      .top__info
+      .top__left--weather-city
+      .top__left--weather-information
+    .top__left--register
+      = link_to "ログアウト" ,destroy_user_session_path,method: :delete,class: "top__left--register-btn"
+  .top__right
+    .top__right--area
+      Register new shoes!!
+      = link_to "HOME", root_path,method: :get,class:"top__right--area-btn"
+    .top__right--item
+      .show__name
+        .show__name--box
+          = @item.name
+      = image_tag @item.image.url,class:"show__image"
+      .show__other
+        .show__other--text
+          ■ 情報
+          %br
+          = simple_format(@item.text)
+        .show__other--border
+        .show__other--size
+          ■ サイズ
+          %br
+          = simple_format(@item.size)
+        .show__other--border
+        .show__other--weather
+          ■ 晴れ用？雨用？
+          - if @item.weather == 1
+            = simple_format("雨の日用")
+          - else
+            = simple_format("晴れの日用")
+            

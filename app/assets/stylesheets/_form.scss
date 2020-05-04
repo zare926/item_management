@@ -28,28 +28,31 @@
       border-bottom: 2px solid rgb(85, 79, 79);
       margin: auto;
       margin-top: 30px;
-      margin-bottom: 50px;
+      margin-bottom: 20px;
     }
     &-box{
       margin: 20px 20px 20px 170px;
       font-size: 20px;
+      font-weight: bold;
       &-shoes{
         display: block;
-        margin-top: 10px;
         font-size: 15px;
         width: 400px;
         height: 30px;
       }
       &-shoesohter{
         display: block;
-        margin-top: 10px;
         font-size: 15px;
         width: 400px;
         height: 150px;
       }
       &-shoesweather{
-        display: block;
-        margin-top: 10px;
+        display: inline-block;
+        font-size: 15px;
+        height: 30px;
+      }
+      &-shoessize{
+        display: inline-block;
         font-size: 15px;
         height: 30px;
       }
@@ -58,8 +61,10 @@
       width: 550px;
       height: 390px;
       position: absolute;
-      top: 270px;
+      top: 239px;
       left: 620px;
+      font-weight: bold;
+      font-size: 20px;
       &-box{
         background:rgba(255, 255, 255, 0.6);
         box-shadow: 0 1px 3px rgba(0,0,0,1);
@@ -83,6 +88,7 @@
         width: 100px;
         height: 30px;
         border-radius: 10px;
+        font-size: 15px;
       }
     }
   }

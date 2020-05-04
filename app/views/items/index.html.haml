@@ -31,10 +31,11 @@
           - @items.each do |i|
             - if i.weather == 0 and i.status == "unused"
               .image_box
-                %span
+                .item__name
                   = i.name
                   = image_tag i.image.url,class:'image',size:'140x140'
                   = link_to 'Used', item_used_index_path(i.id), method: :get,class:'edit__btn'
+                  = link_to 'Show', item_path(i.id), method: :get,class:'show__btn'
                   = link_to 'Edit', edit_item_path(i.id), method: :get,class:'edit__btn'
       .top__right--item-border
       .top__right--item-rainy
@@ -43,10 +44,11 @@
           - @items.each do |i|
             - if i.weather == 1 and i.status == "unused"
               .image_box
-                %span
+                .item__name
                   = i.name
                   = image_tag i.image.url,class:'image',size:'140x140'
                   = link_to 'Used', item_used_index_path(i.id), method: :get,class:'edit__btn'
+                  = link_to 'Show', item_path(i.id), method: :get,class:'show__btn'
                   = link_to 'Edit', edit_item_path(i.id), method: :get,class:'edit__btn'
       .top__right--item-border
       .top__right--item-recovery
@@ -55,9 +57,10 @@
           - @items.each do |i|
             - if i.status == "used"
               .image_box
-                %span
+                .item__name
                   = i.name
                   = image_tag i.image.url,class:'image',size:'140x140'
+                  = link_to 'Show', item_path(i.id), method: :get,class:'show__btn'
                   = link_to 'Un Used', new_item_used_path(i.id), method: :get,class:'edit__btn'
                 .time
                   = (i.updated_at+i.limit.minutes).strftime("%Y-%m-%d %H:%M:%S")
