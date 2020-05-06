@@ -168,17 +168,18 @@
       height: 70px;
       width: 1276px;
       margin: 25px 0 10px 0 ;
+      text-align: center;
       font-size: 30px;
       line-height: 70px;
       font-weight: bold;
       font-family: 'Silom',sans-serif;
       background:rgba(243, 244, 245, 0.616);
       box-shadow: 0 1px 3px rgba(0,0,0,1);
-      position: relative;
       &-btn{
         line-height: 59px;
         height: 80%;
         width: 130px;
+        float: right;
         background:rgba(243, 244, 245, 0.616);
         box-shadow: 0 1px 3px rgba(0,0,0,1);
         text-decoration: none;
@@ -186,23 +187,6 @@
         margin: 7px 10px 10px 0;
         font-weight: bold;
         font-size: 18px;
-        position: absolute;
-        top: 0px;
-        left: 1139px;
-      }
-      &-name{
-        width: 500px;
-        margin-left: 30px;
-        position: relative;
-        &-right{
-          position: absolute;
-          left: 80px;
-          display: inline-block;
-        }
-        .iconimage{
-          margin-top: 5px;
-
-        }
       }
     }
     &--item{
