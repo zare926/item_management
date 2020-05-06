@@ -3,7 +3,6 @@
   %li
   %li
   %li
-  %li
   .top__left
     .top__left--time
       %p.top__left--time-real
@@ -19,10 +18,19 @@
   .top__right
     .top__right--area
       - if user_signed_in? 
-        Welcome to #{current_user.nickname}!!
+        .top__right--area-name
+          - if current_user.iconimage.present?
+            = image_tag current_user.iconimage.url ,size:"60x60",class:"iconimage"
+            .top__right--area-name-right
+              Welcome to #{current_user.nickname}!!
+          - else
+            = image_tag asset_path('iconnew1'),size:"60x60",class:"iconimage"
+            .top__right--area-name-right
+              Welcome to #{current_user.nickname}!!
         = link_to "New Shoes!!", new_item_path,method: :get,class:"top__right--area-btn"
       - else
-        Please register or login
+        .top__right--area-name
+          Please register or login
         = link_to "New User!!", new_user_registration_path, class: "top__right--area-btn"
     .top__right--item
       .top__right--item-sunny 
