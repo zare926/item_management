@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :timepass,only:[:index]
-  before_action :set_params,only:[:show,:edit]
+  before_action :set_params,only:[:show,:edit,:destroy]
   before_action :move_to_index, except: [:index,:show]
   before_action :move_to_edit, only: [:edit]
   def index
@@ -39,6 +39,11 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+    if @item.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
   end
 
   def timepass
