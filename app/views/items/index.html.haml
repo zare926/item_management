@@ -19,9 +19,14 @@
     .top__right--area
       - if user_signed_in? 
         .top__right--area-name
-          = image_tag current_user.iconimage.url ,size:"60x60",class:"iconimage"
-          .top__right--area-name-right
-            Welcome to #{current_user.nickname}!!
+          - if current_user.iconimage.present?
+            = image_tag current_user.iconimage.url ,size:"60x60",class:"iconimage"
+            .top__right--area-name-right
+              Welcome to #{current_user.nickname}!!
+          - else
+            = image_tag asset_path('iconnew1'),size:"60x60",class:"iconimage"
+            .top__right--area-name-right
+              Welcome to #{current_user.nickname}!!
         = link_to "New Shoes!!", new_item_path,method: :get,class:"top__right--area-btn"
       - else
         .top__right--area-name
