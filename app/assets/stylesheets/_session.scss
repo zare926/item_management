@@ -31,7 +31,7 @@
 		background:rgba(243, 244, 245, 0.6);
     box-shadow: 0 1px 3px rgba(0,0,0,1);
     width: 672px;
-    height: 336px;
+    height: 328px;
     border-radius: 10px;
     &--email{
       position: relative;
@@ -69,13 +69,24 @@
         font-size: 20px;
         color: white;
         margin-bottom: 10px;
+        cursor: pointer;
       }
     }
     .sign_up{
-      margin-left:20px;
       position: absolute;
-      top: 250px;
+      top: 233px;
+      left: 360px;
+      background:rgba(143, 139, 139, 0.6);
+      box-shadow: 0 1px 3px rgba(0,0,0,1);
+      border-radius: 10px;
+      width: 128px;
+      height: 46px;
+      font-size: 20px;
+      color: white;
+      margin-bottom: 10px;
       text-decoration: none;
+      text-align: center;
+      line-height: 46px;
     }
     .forget_password{
       margin-left:20px;

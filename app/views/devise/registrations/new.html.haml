@@ -23,10 +23,16 @@
         = f.label :パスワード再入力
         %br/
         = f.password_field :password_confirmation, autocomplete: "new-password",class:'newpassword_confirmation__area--form'
-      .newmysize_area
+      .newmysize__area
         = f.label :マイサイズ
         %br/
-        = f.select :mysize,Item.sizes.keys,{},{class:'newmysize_area--form'}
+        = f.select :mysize,Item.sizes.keys,{},{class:'newmysize__area--form'}
+      .iconimage__area
+        = f.label :アイコン
+        %br/
+        .iconimage
+          = image_tag asset_path('iconnew1'),class:'iconimage_new',size:"120x120"
+        = f.file_field :iconimage, autocomplete: "iconimage",class:'iconimage__area--form'
       .register
         = f.submit "登録" , class:'register__btn'
-      = render "devise/shared/links"
+        = render "devise/shared/links"

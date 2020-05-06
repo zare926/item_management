@@ -1,0 +1,14 @@
+.errorbox{
+  position: absolute;
+  top: 20px;
+  left: 380px;
+  width: 500px;
+  float: left;
+  #error_explanation{
+    color: white;
+    font-weight: bold;
+  }
+  & h2{
+    font-weight: bold;
+  }
+}
