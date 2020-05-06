@@ -6,7 +6,6 @@ class ItemsController < ApplicationController
   def index
     if user_signed_in?
       @items = Item.where(user_id: current_user.id).order("created_at DESC")
-      @user = User.where(iconimage: current_user)
     end
   end
 
