@@ -40,4 +40,5 @@
             = simple_format("雨の日用")
           - else
             = simple_format("晴れの日用")
-      = link_to 'Delete',item_path(@item.id) , method: :delete,class:'delete__btn'
+      - if user_signed_in? && current_user.id == @item.user_id
+        = link_to 'Delete',item_path(@item.id) , method: :delete,class:'delete__btn'
