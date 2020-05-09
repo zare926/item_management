@@ -39,7 +39,9 @@
         = link_to "New User!!", new_user_registration_path, class: "top__right--area-btn"
     .top__right--item
       .top__right--item-sunny 
-        %p Sunny Shoes
+        .weather-box
+          = image_tag asset_path('sun1'),size:"25x25",class:"weatherimage"
+          %p Sunny Shoes
         - if user_signed_in?
           - @items.each do |i|
             - if i.weather == 0 and i.status == "unused"
@@ -52,7 +54,9 @@
                   = link_to 'Edit', edit_item_path(i.id), method: :get,class:'edit__btn'
       .top__right--item-border
       .top__right--item-rainy
-        %p Raniy Shoes
+        .weather-box
+          = image_tag asset_path('rain1'),size:"25x25",class:"weatherimage"
+          %p Raniy Shoes
         - if user_signed_in?
           - @items.each do |i|
             - if i.weather == 1 and i.status == "unused"
@@ -65,7 +69,9 @@
                   = link_to 'Edit', edit_item_path(i.id), method: :get,class:'edit__btn'
       .top__right--item-border
       .top__right--item-recovery
-        %p Recovery Shoes
+        .weather-box
+          = image_tag asset_path('zzz'),size:"25x25",class:"weatherimage"
+          %p Recovery Shoes
         - if user_signed_in?
           - @items.each do |i|
             - if i.status == "used"
