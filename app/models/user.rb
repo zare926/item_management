@@ -16,4 +16,9 @@ class User < ApplicationRecord
                "30cm":"30cm" }
   has_many :items
   mount_uploader :iconimage, ImageUploader
+
+  def self.search(search)
+    return User.all unless search
+    User.where('nickname LIKE(?)', "%#{search}%")
+  end
 end
