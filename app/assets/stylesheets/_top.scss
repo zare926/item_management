@@ -204,6 +204,24 @@
           margin-top: 5px;
         }
       }
+      .search{
+        position: absolute;
+        left: 600px;
+        top: 0;
+        &-submit{
+          display: none;
+        }
+      }
+      .search-btn{
+        position: absolute;
+        left: 1020px;
+        top: 13px;
+        border: 1px solid black;
+        padding: 0 17px;
+        background:rgba(243, 244, 245, 0.616);
+        box-shadow: 0 1px 3px rgba(0,0,0,1);
+        cursor: pointer;
+      }
     }
     &--item{
       width: 1256px;
