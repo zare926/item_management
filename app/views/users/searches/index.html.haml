@@ -1,4 +1,4 @@
-%ul.top__contents--image
+%ul.top__contents--image-search
   %li
   %li
   %li
@@ -15,8 +15,37 @@
       = link_to "ログアウト" ,destroy_user_session_path,method: :delete,class: "top__left--register-btn"
   .top__right
     .top__right--area
-      Correct registered shoe information!!
+      .top__right--area-name
+        - if current_user.iconimage.present?
+          = link_to image_tag(current_user.iconimage.url ,size:"60x60",class:"iconimage"),user_path(current_user.id)
+          .top__right--area-name-right
+            Welcome to #{current_user.nickname}!!
+        - else
+          = link_to image_tag(asset_path('iconnew1'),size:"60x60",class:"iconimage"),user_path(current_user.id)
+          .top__right--area-name-right
+            Welcome to #{current_user.nickname}!!
       = link_to "HOME", root_path,method: :get,class:"top__right--area-btn"
-    .top__right--item
-      - @users.each do |u|
-        = u.nickname
+      = form_with(url: users_searches_path, local: true, method: :get,class: "search") do |s|
+        = s.text_field :keyword, placeholder: "Userを検索する", class: "search-input"
+        = s.submit class:"search-submit"
+      = image_tag asset_path('search1'),size:"40x40",class:"search-btn"
+    .top__right--user
+      .top__right--userinfo
+        .top__right--userinfo-icon アイコン
+        .top__right--userinfo-name ユーザーネーム
+        .top__right--userinfo-size マイサイズ
+        .top__right--userinfo-number 所持数
+        .top__right--user-box
+          - @users.each do |u|
+            .top__right--user-boxs
+              - if u.iconimage.present?
+                = link_to image_tag(u.iconimage.url ,size:"60x60",class:"top__right--user-boxsicon"),user_path(u.id)
+              - else
+                = link_to image_tag(asset_path('iconnew1'),size:"60x60",class:"top__right--user-boxsicon"),user_path(u.id)
+              .top__right--user-boxsname
+                = link_to u.nickname,user_path(u.id)
+              .top__right--user-boxssize
+                = u.mysize
+              .top__right--user-boxsnumber
+                = u.items.length
+                足
