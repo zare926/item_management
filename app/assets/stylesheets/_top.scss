@@ -206,14 +206,17 @@
       }
     }
     &--item{
-      width: 1256px;
+      width: 1265px;
       height: 718px;
-      padding-left: 20px;
+      padding-left: 11px;
       background:rgba(243, 244, 245, 0.616);
       box-shadow: 0 1px 3px rgba(0,0,0,1);
       font-family: 'Silom',sans-serif;
+      .weatherimage{
+      }
       & p{
         margin: 7px 0 0 10px;
+        display: inline-block;
       }
       &-sunny{
         padding-top: 10px;
