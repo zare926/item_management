@@ -5,4 +5,7 @@ Rails.application.routes.draw do
     resources :used,only:[:index,:new,:create]
   end
   resources :users, only: [:show]
+  namespace :users do
+    resources :searches, only: [:index]
+  end
 end
