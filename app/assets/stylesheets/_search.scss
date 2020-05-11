@@ -1,4 +1,4 @@
-.top__contents--image{
+.top__contents--image-search{
   width: 100%;
   height: 100%;
   background:rgba(235, 235, 235, 0);
@@ -20,20 +20,20 @@
     animation: anime 40s linear 0s infinite ;
   }
   & li:nth-child(1){
-    background-image: image-url('IMindex2');
+    background-image: image-url('IMindex6');
   }
   & li:nth-child(2){
-    background-image: image-url('IMindex3');
+    background-image: image-url('IMindex10');
     -webkit-animation-delay: 10s;
     animation-delay: 10s;
   }
   & li:nth-child(3){
-    background-image: image-url('IMindex4');
+    background-image: image-url('IMindex13');
     -webkit-animation-delay: 20s;
     animation-delay: 20s;
   }
   & li:nth-child(4){
-    background-image: image-url('IMindex7');
+    background-image: image-url('IMindex12');
     -webkit-animation-delay: 30s;
     animation-delay: 30s;
   }
@@ -223,81 +223,71 @@
         cursor: pointer;
       }
     }
-    &--item{
+    &--user{
       width: 1265px;
       height: 718px;
       padding-left: 11px;
       background:rgba(243, 244, 245, 0.616);
       box-shadow: 0 1px 3px rgba(0,0,0,1);
       font-family: 'Silom',sans-serif;
-      .weatherimage{
-      }
-      & p{
-        margin: 7px 0 0 10px;
-        display: inline-block;
-      }
-      &-sunny{
-        padding-top: 10px;
-        height: 33%;
-        overflow: scroll;
-      }
-      &-border{
-        border-bottom: 2px solid rgb(85, 79, 79);
-        margin: 0 50px 0 50px;
-      }
-      &-rainy{
-        height: 33%;
-        overflow: scroll;
-      }
-      &-recovery{
-        height: 33%;
-        overflow: scroll;
-      }
-      .image_box{
-        width: 140px;
-        height: 200px;
-        display: inline-block;
-        margin: 5px 0 10px 50px;
-        padding-right: 45px;
-        position: relative;
-        & img{
-          border-radius: 10px;
-        }
-        .edit__btn{
-          background:rgba(243, 247, 250, 0.616);
-          box-shadow: 0 1px 3px rgba(0,0,0,1);
-          border-radius: 10px;
-          text-decoration: none;
+      &info{
+        width: 1000px;
+        height: 80px;
+        margin: 0 auto;
+        padding: 15px;
+        font-weight: bold;
+        line-height: 80px;
+        &-icon{
           display: inline-block;
-          padding: 4px 10px 4px 10px;
-          font-size: 13px;
-          color: black;
-          margin-bottom: 5px;
         }
-        .item__name{
-          display: block;
-          width: 140px;
-          height: 15px;
-          font-size: 13px;
-        }
-        .show__btn{
-          background:rgba(243, 247, 250, 0.616);
-          box-shadow: 0 1px 3px rgba(0,0,0,1);
-          border-radius: 10px;
-          text-decoration: none;
+        &-name{
+          margin-left: 30px;
           display: inline-block;
-          padding: 4px 10px 4px 10px;
-          font-size: 13px;
-          color: black;
-          margin-bottom: 5px;
         }
-        .time{
-          background:rgba(243, 247, 250, 0.616);
-          box-shadow: 0 1px 1px rgba(0,0,0,1);
-          position: absolute;
-          top: 82px;
-          left: -23px;
-          color: rgb(0, 0, 0);
+        &-size{
+          margin-left: 40px;
+          display: inline-block;
+        }
+        &-number{
+          margin-left: 53px;
+          display: inline-block;
+        }
+        .top__right--user-box{
+          margin-top: 10px;
+          height: 600px;
+          overflow: scroll;
+          &s{
+            margin-bottom: 40px;
+            height: 60px;
+            position: relative;
+            &icon{
+              display: inline-block;
+              background:rgba(243, 244, 245, 0.616);
+              box-shadow: 0 1px 3px rgba(0,0,0,1);
+            }
+            &name{
+              display: inline-block;
+              position: absolute;
+              top: 0;
+              left: 120px;
+              & a{
+                text-decoration: none;
+                color: black;
+              }
+            }
+            &size{
+              display: inline-block;
+              position: absolute;
+              top: 0;
+              left: 260px;
+            }
+            &number{
+              display: inline-block;
+              position: absolute;
+              top: 0;
+              left: 400px;
+            }
+          }
         }
       }
     }

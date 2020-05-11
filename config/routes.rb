@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   resources :items do
     resources :used,only:[:index,:new,:create]
   end
-  resources :users, only: [:index,:show]
   namespace :users do
     resources :searches, only: [:index]
   end
+  resources :users, only: [:index,:show]
 end
