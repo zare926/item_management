@@ -16,8 +16,19 @@
   .top__right
     .top__right--area
       .top__right--area-name
-        Register new shoes!!
+        - if current_user.iconimage.present?
+          = link_to image_tag(current_user.iconimage.url ,size:"60x60",class:"iconimage"),user_path(current_user.id)
+          .top__right--area-name-right
+            Register new shoes!!
+        - else
+          = link_to image_tag(asset_path('iconnew1'),size:"60x60",class:"iconimage"),user_path(current_user.id)
+          .top__right--area-name-right
+            Register new shoes!!
       = link_to "HOME", root_path,method: :get,class:"top__right--area-btn"
+      = form_with(url: users_searches_path, local: true, method: :get,class: "search") do |s|
+        = s.text_field :keyword, placeholder: "Userを検索する", class: "search-input"
+        = s.submit class:"search-submit"
+      = image_tag asset_path('search1'),size:"40x40",class:"search-btn"
     .top__right--item
       .top__right--item-form
         .top__right--item-form-name
