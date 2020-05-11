@@ -10,7 +10,12 @@ class Item < ApplicationRecord
                "28cm":"28cm","28.5cm":"28.5cm",
                "29cm":"29cm","29.5cm":"29.5cm",
                "30cm":"30cm" }
+               
   mount_uploader :image, ImageUploader
   belongs_to :user
   belongs_to :used, optional: true
+
+  validates :name , presence: true,length: { maximum: 40 }
+  validates :image , presence: true
+
 end

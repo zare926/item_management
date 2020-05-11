@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-
+  before_save { self.email = email.downcase }
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
          
@@ -16,6 +16,12 @@ class User < ApplicationRecord
                "30cm":"30cm" }
   has_many :items
   mount_uploader :iconimage, ImageUploader
+
+  validates :nickname , presence: true
+  validates :email, presence: true, 
+                    format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i, message: "は@とドメインを含んだものを入力してください" }, 
+                    uniqueness: { case_sensitive: false }
+  validates :password, presence: true, format: { with: /\A[a-zA-Z0-9]+\z/, message: "は半角英数字で入力してください"}, length: { minimum: 6 }
 
   def self.search(search)
     return User.all unless search
