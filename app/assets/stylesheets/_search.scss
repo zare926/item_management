@@ -233,22 +233,31 @@
       &info{
         width: 1000px;
         height: 80px;
-        margin: 0 auto;
-        padding: 15px;
+        margin: 10px auto;
+        padding: 5px 10px 5px 10px;
         font-weight: bold;
-        line-height: 80px;
+        line-height: 60px;
+        border-bottom: 2px solid rgb(85, 79, 79);
+        &-border{
+          border-bottom: 2px solid rgb(85, 79, 79);
+          margin: 10px -10px 0 -10px;
+        }
         &-icon{
+          margin-top: 10px;
           display: inline-block;
         }
         &-name{
+          margin-top: 10px;
           margin-left: 30px;
           display: inline-block;
         }
         &-size{
+          margin-top: 10px;
           margin-left: 40px;
           display: inline-block;
         }
         &-number{
+          margin-top: 10px;
           margin-left: 53px;
           display: inline-block;
         }
