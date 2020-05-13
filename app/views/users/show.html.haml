@@ -25,14 +25,14 @@
             .top__right--area-name-right
               #{@user.nickname} shoes!!
           - else
-            = link_to image_tag(asset_path('iconnew1'),size:"60x60",class:"iconimage"),user_path(@user.id)
+            = link_to image_tag(asset_path('iconnew1.png'),size:"60x60",class:"iconimage"),user_path(@user.id)
             .top__right--area-name-right
               #{@user.nickname} shoes!!
         = link_to "HOME", root_path,method: :get,class:"top__right--area-btn"
         = form_with(url: users_searches_path, local: true, method: :get,class: "search") do |s|
           = s.text_field :keyword, placeholder: "Userを検索する", class: "search-input"
           = s.submit class:"search-submit"
-        = image_tag asset_path('search1'),size:"40x40",class:"search-btn"
+        = image_tag asset_path('search1.png'),size:"40x40",class:"search-btn"
       - else
         .top__right--area-name
           - if @user.iconimage.present?
@@ -40,14 +40,14 @@
             .top__right--area-name-right
               #{@user.nickname} shoes!!
           - else
-            = link_to image_tag(asset_path('iconnew1'),size:"60x60",class:"iconimage"),user_path(@user.id)
+            = link_to image_tag(asset_path('iconnew1.png'),size:"60x60",class:"iconimage"),user_path(@user.id)
             .top__right--area-name-right
               #{@user.nickname} shoes!!
         = link_to "New User!!", new_user_registration_path, class: "top__right--area-btn"
     .top__right--item
       .top__right--item-sunny 
         .weather-box
-          = image_tag asset_path('sun1'),size:"25x25",class:"weatherimage"
+          = image_tag asset_path('sun1.png'),size:"25x25",class:"weatherimage"
           %p Sunny Shoes Show
         - @items.each do |i|
           - if i.weather == 0 and i.status == "unused"
@@ -59,7 +59,7 @@
       .top__right--item-border
       .top__right--item-rainy
         .weather-box
-          = image_tag asset_path('rain1'),size:"25x25",class:"weatherimage"
+          = image_tag asset_path('rain1.png'),size:"25x25",class:"weatherimage"
           %p Raniy Shoes Show
         - @items.each do |i|
           - if i.weather == 1 and i.status == "unused"
@@ -71,7 +71,7 @@
       .top__right--item-border
       .top__right--item-recovery
         .weather-box
-          = image_tag asset_path('zzz'),size:"25x25",class:"weatherimage"
+          = image_tag asset_path('zzz.png'),size:"25x25",class:"weatherimage"
           %p Recovery Shoes Show
         - @items.each do |i|
           - if i.status == "used"
