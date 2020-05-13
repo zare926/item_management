@@ -21,14 +21,14 @@
           .top__right--area-name-right
             Welcome to #{current_user.nickname}!!
         - else
-          = link_to image_tag(asset_path('iconnew1'),size:"60x60",class:"iconimage"),user_path(current_user.id)
+          = link_to image_tag(asset_path('iconnew1.png'),size:"60x60",class:"iconimage"),user_path(current_user.id)
           .top__right--area-name-right
             Welcome to #{current_user.nickname}!!
       = link_to "HOME", root_path,method: :get,class:"top__right--area-btn"
       = form_with(url: users_searches_path, local: true, method: :get,class: "search") do |s|
         = s.text_field :keyword, placeholder: "Userを検索する", class: "search-input"
         = s.submit class:"search-submit"
-      = image_tag asset_path('search1'),size:"40x40",class:"search-btn"
+      = image_tag asset_path('search1.png'),size:"40x40",class:"search-btn"
     .top__right--user
       .top__right--userinfo
         .top__right--userinfo-border
@@ -42,7 +42,7 @@
               - if u.iconimage.present?
                 = link_to image_tag(u.iconimage.url ,size:"60x60",class:"top__right--user-boxsicon"),user_path(u.id)
               - else
-                = link_to image_tag(asset_path('iconnew1'),size:"60x60",class:"top__right--user-boxsicon"),user_path(u.id)
+                = link_to image_tag(asset_path('iconnew1.png'),size:"60x60",class:"top__right--user-boxsicon"),user_path(u.id)
               .top__right--user-boxsname
                 = link_to u.nickname,user_path(u.id)
               .top__right--user-boxssize
