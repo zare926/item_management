@@ -31,7 +31,7 @@
         = f.label :アイコン
         %br/
         .iconimage
-          = image_tag asset_path('iconnew1'),class:'iconimage_new',size:"120x120"
+          = image_tag asset_path('iconnew1.png'),class:'iconimage_new',size:"120x120"
         = f.file_field :iconimage, autocomplete: "iconimage",class:'iconimage__area--form'
       .register
         = f.submit "登録" , class:'register__btn'

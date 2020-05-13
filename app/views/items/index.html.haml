@@ -25,14 +25,14 @@
             .top__right--area-name-right
               Welcome to #{current_user.nickname}!!
           - else
-            = link_to image_tag(asset_path('iconnew1'),size:"60x60",class:"iconimage"),user_path(current_user.id)
+            = link_to image_tag(asset_path('iconnew1.png'),size:"60x60",class:"iconimage"),user_path(current_user.id)
             .top__right--area-name-right
               Welcome to #{current_user.nickname}!!
         = link_to "New Shoes!!", new_item_path,method: :get,class:"top__right--area-btn"
         = form_with(url: users_searches_path, local: true, method: :get,class: "search") do |s|
           = s.text_field :keyword, placeholder: "Userを検索する", class: "search-input"
           = s.submit class:"search-submit"
-        = image_tag asset_path('search1'),size:"40x40",class:"search-btn"
+        = image_tag asset_path('search1.png'),size:"40x40",class:"search-btn"
       - else
         .top__right--area-name
           Please register or login
@@ -40,7 +40,7 @@
     .top__right--item
       .top__right--item-sunny 
         .weather-box
-          = image_tag asset_path('sun1'),size:"25x25",class:"weatherimage"
+          = image_tag asset_path('sun1.png'),size:"25x25",class:"weatherimage"
           %p Sunny Shoes
         - if user_signed_in?
           - @items.each do |i|
@@ -55,7 +55,7 @@
       .top__right--item-border
       .top__right--item-rainy
         .weather-box
-          = image_tag asset_path('rain1'),size:"25x25",class:"weatherimage"
+          = image_tag asset_path('rain1.png'),size:"25x25",class:"weatherimage"
           %p Raniy Shoes
         - if user_signed_in?
           - @items.each do |i|
@@ -70,7 +70,7 @@
       .top__right--item-border
       .top__right--item-recovery
         .weather-box
-          = image_tag asset_path('zzz'),size:"25x25",class:"weatherimage"
+          = image_tag asset_path('zzz.png'),size:"25x25",class:"weatherimage"
           %p Recovery Shoes
         - if user_signed_in?
           - @items.each do |i|
