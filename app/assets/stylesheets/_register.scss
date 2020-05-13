@@ -6,7 +6,7 @@
   height: 100%;
   background: #000000;
   z-index: -1;
-  background-image: image-url('register5');
+  background-image: image-url('IMindex1');
   &__name{
     position: absolute;
     top:40px;
@@ -14,7 +14,8 @@
     right: 0;
     bottom: 0;
     margin: auto;
-    color: white;
+    color: rgba(255, 255, 255, 0.986);
+    -webkit-text-stroke: 1px rgba(153, 153, 152, 0.986);
     font-family: 'Silom',sans-serif;
     font-size: 75px;
     width: 326px;
