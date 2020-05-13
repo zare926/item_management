@@ -20,20 +20,20 @@
     animation: anime 40s linear 0s infinite ;
   }
   & li:nth-child(1){
-    background-image: image-url('IMindex6');
+    background-image: image-url('IMindex4');
   }
   & li:nth-child(2){
-    background-image: image-url('IMindex10');
+    background-image: image-url('IMindex4');
     -webkit-animation-delay: 10s;
     animation-delay: 10s;
   }
   & li:nth-child(3){
-    background-image: image-url('IMindex13');
+    background-image: image-url('IMindex4');
     -webkit-animation-delay: 20s;
     animation-delay: 20s;
   }
   & li:nth-child(4){
-    background-image: image-url('IMindex12');
+    background-image: image-url('IMindex4');
     -webkit-animation-delay: 30s;
     animation-delay: 30s;
   }
@@ -89,6 +89,7 @@
       background:rgba(243, 244, 245, 0.616);
       box-shadow: 0 1px 3px rgba(0,0,0,1);
       line-height: 50px;
+      border-radius: 10px;
       &-real{
         font-size: 25px;
         text-align: center;
@@ -102,6 +103,7 @@
       background:rgba(243, 244, 245, 0.616);
       box-shadow: 0 1px 3px rgba(0,0,0,1);
       font-family: 'Silom',sans-serif;
+      border-radius: 10px;
       .top__info{
         box-shadow: 10px 10px #ccc;
         -moz-box-shadow: 10px 10px rgb(134, 128, 128);
@@ -151,6 +153,7 @@
       background:rgba(243, 244, 245, 0.616);
       box-shadow: 0 1px 3px rgba(0,0,0,1);
       text-align: center;
+      border-radius: 10px;
       &-btn{
         text-decoration: none;
         font-weight: bold;
@@ -175,6 +178,7 @@
       background:rgba(243, 244, 245, 0.616);
       box-shadow: 0 1px 3px rgba(0,0,0,1);
       position: relative;
+      border-radius: 10px;
       &-btn{
         line-height: 59px;
         height: 80%;
@@ -230,6 +234,7 @@
       background:rgba(243, 244, 245, 0.616);
       box-shadow: 0 1px 3px rgba(0,0,0,1);
       font-family: 'Silom',sans-serif;
+      border-radius: 10px;
       &info{
         width: 1000px;
         height: 80px;
