@@ -38,14 +38,6 @@ set :linked_files, %w{ config/credentials.yml.enc }
 
 # 元々記述されていた after 「'deploy:publishing', 'deploy:restart'」以下を削除して、次のように書き換え
 
-set :default_env, {
-  rbenv_root: "/home/user/.rbenv",
-  path: "/home/user/.rbenv/bin:$PATH",
-  region: 'ap-northeast-1',
-  aws_access_key_id: Rails.application.credentials.aws[:access_key_id], #credentails.ymlに鍵の本体があります
-  aws_secret_access_key: Rails.application.credentials.aws[:secret_access_key]  #credentails.ymlに鍵の本体があります
-}
-
 after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
   task :restart do
