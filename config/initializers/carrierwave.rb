@@ -16,7 +16,7 @@ CarrierWave.configure do |config|
     }
   
 
-  config.fog_directory  = 'shoesmanagement'
-  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/shoesmanagement'
+    config.fog_directory  = 'shoesmanagement'
+    config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/shoesmanagement'
   end
 end
