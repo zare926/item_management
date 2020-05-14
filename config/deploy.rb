@@ -41,9 +41,9 @@ set :linked_files, %w{ config/credentials.yml.enc }
 set :default_env, {
   rbenv_root: "/home/user/.rbenv",
   path: "/home/user/.rbenv/bin:$PATH",
-  region: ENV["S3_REGION"],
-  aws_access_key_id: ENV["S3_ACCESS_KEY"],
-  aws_secret_access_key: ENV["S3_SECRET_KEY"]
+  region: 'ap-northeast-1',
+  aws_access_key_id: Rails.application.credentials.aws[:access_key_id], #credentails.ymlに鍵の本体があります
+  aws_secret_access_key: Rails.application.credentials.aws[:secret_access_key]  #credentails.ymlに鍵の本体があります
 }
 
 after 'deploy:publishing', 'deploy:restart'
