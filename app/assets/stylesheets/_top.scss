@@ -32,6 +32,9 @@
         font-size: 25px;
         text-align: center;
         font-family: 'Silom',sans-serif;
+        @media screen and (max-width:1200px){
+          font-size: 15px;
+        }
       }
     }
     &--weather{
@@ -53,6 +56,9 @@
         padding: 10px;
         text-align: center;
         border-radius: 10px;
+        @media screen and (max-width:1000px){
+          font-size: 10px;
+        }
       }
       &-city{
         & h2{
@@ -97,15 +103,15 @@
       display: block;
       cursor: pointer;
       text-align: center;
-      & a{
-        text-decoration: none;
-        font-weight: bold;
-        color: black;
-      }
     }
     &--register:active{
       background:rgba(161, 171, 180, 0.616);
       box-shadow: 0 3px 3px rgba(0,0,0,1);
+    }
+    & a{
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
     }
   }
   .top__right{
@@ -155,6 +161,9 @@
           position: absolute;
           top: 0;
         }
+        @media screen and (max-width:1400px){
+          font-size: 20px;
+        }
         .iconimage{
           margin: 5px 5px 0 0;
         }
@@ -164,6 +173,9 @@
         display: inline-block;
         position: absolute;
         top: 0;
+        @media screen and (max-width:1400px){
+          width: 15%;
+        }
         &-submit{
           display: none;
         }

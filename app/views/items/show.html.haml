@@ -12,13 +12,13 @@
     .top__right--area
       .top__right--area-name
         - if current_user.iconimage.present?
-            = link_to image_tag(current_user.iconimage.url ,size:"60x60",class:"iconimage"),user_path(current_user.id)
-            .top__right--area-name-right
-              Register new shoes!!
-          - else
-            = link_to image_tag(asset_path('iconnew1.png'),size:"60x60",class:"iconimage"),user_path(current_user.id)
-            .top__right--area-name-right
-              Register new shoes!!
+          = link_to image_tag(current_user.iconimage.url ,size:"60x60",class:"iconimage"),user_path(current_user.id)
+          .top__right--area-name-right
+            Register new shoes!!
+        - else
+          = link_to image_tag(asset_path('iconnew1.png'),size:"60x60",class:"iconimage"),user_path(current_user.id)
+          .top__right--area-name-right
+            Register new shoes!!
       = form_with(url: users_searches_path, local: true, method: :get,class: "search") do |s|
         = s.text_field :keyword, placeholder: "Userを検索する", class: "search-input"
         = s.submit class:"search-submit"
