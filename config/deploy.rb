@@ -34,7 +34,8 @@ namespace :deploy do
   end
 end
 
-	
+append :linked_files, 'config/database.yml', 'config/master.key'	
+
 # secrets.yml用のシンボリックリンクを追加
 set :linked_files, %w{ config/credentials.yml.enc }
 
