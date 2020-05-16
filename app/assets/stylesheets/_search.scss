@@ -84,19 +84,22 @@
         }
       }
     }
+    &--block{
+      height: 10px;
+    }
     &--register{
-      height: 5%;
-      padding: 10px;
+      padding: 14px 108px;
       margin: 10px;
       background:rgba(243, 244, 245, 0.616);
       box-shadow: 0 1px 3px rgba(0,0,0,1);
-      text-align: center;
       border-radius: 10px;
-      &-btn{
-        text-decoration: none;
-        font-weight: bold;
-        color: black;
-      }
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+    }
+    &--register:active{
+      background:rgba(161, 171, 180, 0.616);
+      box-shadow: 0 3px 3px rgba(0,0,0,1);
     }
   }
   .top__right{
@@ -133,6 +136,10 @@
         left: 1139px;
         text-align: center;
       }
+      &-btn:active{
+        background:rgba(161, 171, 180, 0.616);
+        box-shadow: 0 3px 3px rgba(0,0,0,1);
+      }
       &-name{
         width: 550px;
         margin-left: 30px;
@@ -163,6 +170,10 @@
         background:rgba(243, 244, 245, 0.616);
         box-shadow: 0 1px 3px rgba(0,0,0,1);
         cursor: pointer;
+      }
+      .search-btn:active{
+        background:rgba(161, 171, 180, 0.616);
+        box-shadow: 0 3px 3px rgba(0,0,0,1);
       }
     }
     &--user{
