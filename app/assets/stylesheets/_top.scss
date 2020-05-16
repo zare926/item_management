@@ -5,80 +5,18 @@
   z-index: -1;
   display: flex;
   overflow-y: scroll;
-  overflow-x: hidden;
   & li{
     position: absolute;
-    top: 0px;
-    left: 0px;
     width: 100%;
     height: 1000px;
     background-size: cover;
     background-position: 50% 50%;
-    background-repeat: none;
-    opacity: 0;
+    background-image: image-url('IMindex7');
     -webkit-animation: anime 40s linear 0s infinite ;
     animation: anime 40s linear 0s infinite ;
   }
-  & li:nth-child(1){
-    background-image: image-url('IMindex7');
-  }
-  & li:nth-child(2){
-    background-image: image-url('IMindex7');
-    -webkit-animation-delay: 10s;
-    animation-delay: 10s;
-  }
-  & li:nth-child(3){
-    background-image: image-url('IMindex7');
-    -webkit-animation-delay: 20s;
-    animation-delay: 20s;
-  }
-  & li:nth-child(4){
-    background-image: image-url('IMindex7');
-    -webkit-animation-delay: 30s;
-    animation-delay: 30s;
-  }
-  @-webkit-keyframes anime { 
-    0% {
-        -webkit-animation-timing-function: ease-in;
-        opacity: 0;
-    }
-    10% {
-        -webkit-transform: scale(1);
-        opacity: 1;
-    }
-    40% {
-        -webkit-transform: scale(1);
-            -webkit-animation-timing-function: ease-out;
-        opacity: 1;
-    }
-    50% {
-        -webkit-transform: scale(1);
-        opacity: 0;
-    }
-    100% { opacity: 0 }
-  }
-  @keyframes anime { 
-    0% {
-        animation-timing-function: ease-in;
-        opacity: 0;
-    }
-    10% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    40% {
-        transform: scale(1);
-            animation-timing-function: ease-out;
-        opacity: 1;
-    }
-    50% {
-        transform: scale(1);
-        opacity: 0;
-    }
-    100% { opacity: 0 }
-  }
   .top__left{
-    width: 320px;
+    width: 20%;
     height: 100%;
     z-index: 1;
     margin-left: 15px;
@@ -97,7 +35,7 @@
       }
     }
     &--weather{
-      height: 80%;
+      height: 634px;
       padding: 15px;
       margin: 10px;
       background:rgba(243, 244, 245, 0.616);
@@ -109,7 +47,7 @@
         -moz-box-shadow: 10px 10px rgb(134, 128, 128);
         -webkit-box-shadow: 10px 10px rgba(89, 99, 109, 0.616);
         -o-box-shadow: 10px 10px rgb(121, 115, 115);
-        width: 240px;
+        width: 90%;
         border: solid 1px rgb(134, 128, 128);
         margin-bottom: 20px;
         padding: 10px;
@@ -124,6 +62,8 @@
       }
       &-information{
         .weather-report{
+          width: 98%;
+          height: 84px;
           background:rgba(155, 233, 243, 0.616);
           box-shadow: 0 1px 3px rgba(0,0,0,1);
           -webkit-box-shadow: 3px 3px rgba(18, 41, 65, 0.616);
@@ -147,18 +87,20 @@
       }
     }
     &--register{
-      height: 5%;
-      padding: 10px;
+      padding: 10px 0;
       margin: 10px;
       background:rgba(243, 244, 245, 0.616);
       box-shadow: 0 1px 3px rgba(0,0,0,1);
-      text-align: center;
       border-radius: 10px;
-      &-btn{
-        text-decoration: none;
-        font-weight: bold;
-        color: black;
-      }
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+      display: block;
+      text-align: center;
+    }
+    &--register:active{
+      background:rgba(161, 171, 180, 0.616);
+      box-shadow: 0 3px 3px rgba(0,0,0,1);
     }
   }
   .top__right{
@@ -169,7 +111,7 @@
     margin-left: 20px;
     &--area{
       height: 70px;
-      width: 1276px;
+      width: 97%;
       margin: 25px 0 10px 0 ;
       font-size: 30px;
       line-height: 70px;
@@ -177,11 +119,9 @@
       font-family: 'Silom',sans-serif;
       background:rgba(243, 244, 245, 0.616);
       box-shadow: 0 1px 3px rgba(0,0,0,1);
-      position: relative;
       border-radius: 10px;
+      position: relative;
       &-btn{
-        line-height: 59px;
-        height: 80%;
         width: 130px;
         background:rgba(243, 244, 245, 0.616);
         box-shadow: 0 1px 3px rgba(0,0,0,1);
@@ -190,45 +130,61 @@
         margin: 7px 10px 10px 0;
         font-weight: bold;
         font-size: 18px;
-        position: absolute;
-        top: 0px;
-        left: 1139px;
         text-align: center;
+        border-radius: 10px;
+        float: right;
+        height: 80%;
+        line-height: 59px;
+      }
+      &-btn:active{
+        background:rgba(161, 171, 180, 0.616);
+        box-shadow: 0 3px 3px rgba(0,0,0,1);
       }
       &-name{
-        width: 550px;
+        width: 45%;
         margin-left: 30px;
+        display: inline-block;
         position: relative;
         &-right{
-          position: absolute;
-          left: 80px;
           display: inline-block;
+          position: absolute;
+          top: 0;
         }
         .iconimage{
-          margin-top: 5px;
+          margin: 5px 5px 0 0;
         }
       }
       .search{
+        width: 25%;
+        display: inline-block;
         position: absolute;
-        left: 600px;
         top: 0;
         &-submit{
           display: none;
         }
+        &-input{
+          width: 100%;
+        }
       }
       .search-btn{
-        position: absolute;
-        left: 1020px;
-        top: 13px;
         border: 1px solid black;
         padding: 0 17px;
         background:rgba(243, 244, 245, 0.616);
         box-shadow: 0 1px 3px rgba(0,0,0,1);
         cursor: pointer;
+        display: inline-block;
+        margin-left: 10px;
+        position: absolute;
+        top: 13px;
+        right: 21%;
+      }
+      .search-btn:active{
+        background:rgba(161, 171, 180, 0.616);
+        box-shadow: 0 3px 3px rgba(0,0,0,1);
       }
     }
     &--item{
-      width: 1265px;
+      width: 96%;
       height: 718px;
       padding-left: 11px;
       background:rgba(243, 244, 245, 0.616);

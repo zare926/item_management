@@ -11,11 +11,10 @@
       .top__info
       .top__left--weather-city
       .top__left--weather-information
-    .top__left--register
-      - if user_signed_in?
-        = link_to "ログアウト" ,destroy_user_session_path,method: :delete,class: "top__left--register-btn"
-      - else
-        = link_to "ログイン", new_user_session_path, class: "top__left--register-btn"
+    - if user_signed_in?
+      = link_to "ログアウト" ,destroy_user_session_path,method: :delete,class: "top__left--register"
+    - else
+      = link_to "ログイン", new_user_session_path, class: "top__left--register"
   .top__right
     .top__right--area
       - if user_signed_in? 
