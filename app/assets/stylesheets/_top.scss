@@ -5,78 +5,17 @@
   z-index: -1;
   display: flex;
   overflow-y: scroll;
-  overflow-x: hidden;
   & li{
     position: absolute;
-    top: 0px;
-    left: 0px;
     width: 100%;
     height: 1000px;
     background-size: cover;
     background-position: 50% 50%;
-    background-repeat: none;
-    opacity: 0;
+    background-image: image-url('IMindex7');
     -webkit-animation: anime 40s linear 0s infinite ;
     animation: anime 40s linear 0s infinite ;
   }
-  & li:nth-child(1){
-    background-image: image-url('IMindex7');
-  }
-  & li:nth-child(2){
-    background-image: image-url('IMindex7');
-    -webkit-animation-delay: 10s;
-    animation-delay: 10s;
-  }
-  & li:nth-child(3){
-    background-image: image-url('IMindex7');
-    -webkit-animation-delay: 20s;
-    animation-delay: 20s;
-  }
-  & li:nth-child(4){
-    background-image: image-url('IMindex7');
-    -webkit-animation-delay: 30s;
-    animation-delay: 30s;
-  }
-  @-webkit-keyframes anime { 
-    0% {
-        -webkit-animation-timing-function: ease-in;
-        opacity: 0;
-    }
-    10% {
-        -webkit-transform: scale(1);
-        opacity: 1;
-    }
-    40% {
-        -webkit-transform: scale(1);
-            -webkit-animation-timing-function: ease-out;
-        opacity: 1;
-    }
-    50% {
-        -webkit-transform: scale(1);
-        opacity: 0;
-    }
-    100% { opacity: 0 }
-  }
-  @keyframes anime { 
-    0% {
-        animation-timing-function: ease-in;
-        opacity: 0;
-    }
-    10% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    40% {
-        transform: scale(1);
-            animation-timing-function: ease-out;
-        opacity: 1;
-    }
-    50% {
-        transform: scale(1);
-        opacity: 0;
-    }
-    100% { opacity: 0 }
-  }
+  
   .top__left{
     width: 320px;
     height: 100%;
