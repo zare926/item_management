@@ -15,6 +15,7 @@
   - capistranoによるAWS EC2への自動デプロイ
   - AWS S3への画像アップロード
   - OpenWeatherMapをAPIとして使用
+  - RSpecで単体テスト
 
 ## Contributors
   - https://github.com/zare926
@@ -42,7 +43,6 @@ Basic認証をかけているため、以下のID/PASSを入力してくださ�
 https://gyazo.com/c7afd97a002a96222af218788238772e
 
 ## 実装予定
-  - RSpecでの単体テスト
   - Dockerの使用
   - Twitterカードの使用（adidas,NIKEなどシューズメーカーのツイート？）
   - お気に入りの靴を選べる機能
