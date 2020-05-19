@@ -1,5 +1,5 @@
 .top__contents--image
-  = image_tag asset_path('IMindex7'),class:"top__contents--image-back"
+  = image_tag asset_path('IMindex28'),class:"top__contents--image-back"
   .top__left
     .top__left--time
       %p.top__left--time-real
@@ -20,11 +20,8 @@
           = link_to image_tag(asset_path('iconnew1.png'),size:"60x60",class:"iconimage"),user_path(current_user.id)
           .top__right--area-name-right
             新しい靴を登録しましょう！
-      = link_to "HOME", root_path,method: :get,class:"top__right--area-btn"
-      = form_with(url: users_searches_path, local: true, method: :get,class: "search") do |s|
-        = s.text_field :keyword, placeholder: "Userを検索する", class: "search-input"
-        = s.submit class:"search-submit"
-      = image_tag asset_path('search1.png'),size:"40x40",class:"search-btn"
+      = link_to "トップ", root_path,method: :get,class:"top__right--area-btn"
+      = render partial:"shared/search"
     .top__right--item
       .top__right--item-form
         .top__right--item-form-name

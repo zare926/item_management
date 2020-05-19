@@ -1,0 +1,4 @@
+= form_with(url: users_searches_path, local: true, method: :get,class: "search") do |s|
+  = s.text_field :keyword, placeholder: "ユーザーを検索する", class: "search-input"
+  = s.submit class:"search-submit"
+= image_tag asset_path('search1.png'),size:"40x40",class:"search-btn"
