@@ -26,9 +26,6 @@
       box-shadow: 0 1px 3px rgba(0,0,0,1);
       line-height: 50px;
       border-radius: 10px;
-      overflow-x: scroll;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
       &-real{
         font-size: 25px;
         text-align: center;
@@ -36,9 +33,6 @@
           font-size: 15px;
         }
       }
-    }
-    &--time::-webkit-scrollbar {
-      display:none;
     }
     &--weather{
       height: 634px;
@@ -79,6 +73,8 @@
           border-radius: 10px;
           font-size: 12px;
           overflow-x: scroll;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
           & img{
             float: left;
             margin: 15px;
@@ -92,6 +88,9 @@
           .weather-temp{
             margin: 10px 10px 0 10px;
           }
+        }
+        &--time::-webkit-scrollbar {
+          display:none;
         }
       }
     }
@@ -270,6 +269,18 @@
         position: absolute;
         top: 13px;
         right: 12%;
+        @media screen and (max-width:1920px){
+          right: 10.4%;
+        }
+        @media screen and (max-width:1850px){
+          right: 10.8%;
+        }
+        @media screen and (max-width:1750px){
+          right: 11%;
+        }
+        @media screen and (max-width:1700px){
+          right: 11.5%;
+        }
         @media screen and (max-width:1600px){
           right: 12.5%;
         }
