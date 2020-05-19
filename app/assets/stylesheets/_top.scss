@@ -392,6 +392,17 @@
           width: 140px;
           height: 15px;
           font-size: 13px;
+          position: relative;
+          .favorite_off{
+            position: absolute ;
+            top: 25px;
+            left: 108px;
+          }
+          .favorite_on{
+            position: absolute;
+            top: 10px;
+            left: 92px;
+          }
         }
         .time{
           background:rgba(243, 247, 250, 0.616);

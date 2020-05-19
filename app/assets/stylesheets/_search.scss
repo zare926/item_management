@@ -36,6 +36,11 @@
       margin-left: 53px;
       display: inline-block;
     }
+    &-favorite{
+      margin-top: 10px;
+      margin-left: 120px;
+      display: inline-block;
+    }
     .top__right--user-box{
       margin-top: 10px;
       height: 600px;
@@ -70,6 +75,12 @@
           position: absolute;
           top: 0;
           left: 400px;
+        }
+        &favorite{
+          display: inline-block;
+          position: absolute;
+          top: 0;
+          left: 530px;
         }
       }
       .pagination{
