@@ -19,11 +19,26 @@
         - if current_user.iconimage.present?
           = link_to image_tag(current_user.iconimage.url ,size:"60x60",class:"iconimage"),user_path(current_user.id)
           .top__right--area-name-right
-            Welcome to #{current_user.nickname}!!
+            ようこそ #{current_user.nickname}さん!!
         - else
           = link_to image_tag(asset_path('iconnew1.png'),size:"60x60",class:"iconimage"),user_path(current_user.id)
           .top__right--area-name-right
-            Welcome to #{current_user.nickname}!!
+            ようこそ #{current_user.nickname}さん!!
+        .top__right--area-name-window
+          .window__area
+            .window__area--name
+              #{current_user.nickname}
+            - if current_user.iconimage.present?
+              = link_to image_tag(current_user.iconimage.url ,size:"120x120",class:"window__area--image"),user_path(current_user.id)
+            - else
+              = link_to image_tag(asset_path('iconnew1.png'),size:"120x120",class:"window__area--image"),user_path(current_user.id)
+            %p.window__area--number 靴の所持数 #{@items.length}足
+            %p.window__area--favorite お気に入りの靴の数 #{@items_favorite.length}足
+            .window__area--mypage
+              = link_to "マイページ",user_path(current_user.id),class:"window__area--mypage-zone"
+            .window__area--logout
+              = link_to "ログアウト",destroy_user_session_path,method: :delete,class: "window__area--logout-zone"
+
       = link_to "HOME", root_path,method: :get,class:"top__right--area-btn"
       = form_with(url: users_searches_path, local: true, method: :get,class: "search") do |s|
         = s.text_field :keyword, placeholder: "Userを検索する", class: "search-input"

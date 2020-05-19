@@ -72,3 +72,18 @@ jQuery(function($) {
     console.log("失敗しました");
   });
 });
+
+$(function(){
+  $('.iconimage').hover(function(){
+    $('.top__right--area-name-window').show();
+  },function(){
+    $('.top__right--area-name-window').hide();
+  });
+  $('.top__right--area-name-window').hover(function(){
+    $('.top__right--area-name-window').show();
+  },function(){
+    $('.top__right--area-name-window').hide();
+  });
+});
+
+

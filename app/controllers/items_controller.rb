@@ -1,11 +1,13 @@
 class ItemsController < ApplicationController
   before_action :timepass,only:[:index]
   before_action :set_params,only:[:show,:edit,:destroy]
+  before_action :user_params,only:[:show,:edit]
   before_action :move_to_index, except: [:index,:show]
   before_action :move_to_edit, only: [:edit]
   def index
     if user_signed_in?
       @items = Item.where(user_id: current_user.id).order("created_at DESC")
+      @items_favorite = Item.where(favorite: 1)
     end
   end
 
@@ -69,6 +71,12 @@ class ItemsController < ApplicationController
 
   def set_params
     @item = Item.find(params[:id])
+  end
+
+  def user_params
+    @user = @item.user
+    @item_number = @item.user.items
+    @item_favorite = @item_number.where(favorite:1)
   end
 
   def move_to_index

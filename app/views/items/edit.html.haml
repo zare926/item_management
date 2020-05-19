@@ -1,9 +1,5 @@
-%ul.top__contents--image
-  %li
-  %li
-  %li
-  %li
-  %li
+.top__contents--image
+  = image_tag asset_path('IMindex7'),class:"top__contents--image-back"
   .top__left
     .top__left--time
       %p.top__left--time-real
@@ -11,11 +7,36 @@
       .top__info
       .top__left--weather-city
       .top__left--weather-information
-    .top__left--register
-      = link_to "ログアウト" ,destroy_user_session_path,method: :delete,class: "top__left--register-btn"
+    = link_to "ログアウト" ,destroy_user_session_path,method: :delete,class: "top__left--register"
   .top__right
     .top__right--area
-      Correct registered shoe information!!
+      .top__right--area-name
+        - if @user.iconimage.present?
+          = link_to image_tag(@user.iconimage.url ,size:"60x60",class:"iconimage"),user_path(@user.id)
+          .top__right--area-name-right
+            登録情報編集
+        - else
+          = link_to image_tag(asset_path('iconnew1.png'),size:"60x60",class:"iconimage"),user_path(@user.id)
+          .top__right--area-name-right
+            登録情報編集
+        .top__right--area-name-window
+          .window__area
+            .window__area--name
+              #{@user.nickname}
+            - if @user.iconimage.present?
+              = link_to image_tag(@user.iconimage.url ,size:"120x120",class:"window__area--image"),user_path(@user.id)
+            - else
+              = link_to image_tag(asset_path('iconnew1.png'),size:"120x120",class:"window__area--image"),user_path(@user.id)
+            %p.window__area--number 靴の所持数 #{@item_number.length}足
+            %p.window__area--favorite お気に入りの靴の数 #{@item_favorite.length}足
+            .window__area--mypage
+              = link_to "マイページ",user_path(@user.id),class:"window__area--mypage-zone"
+            .window__area--logout
+              = link_to "ログアウト",destroy_user_session_path,method: :delete,class: "window__area--logout-zone"
+      = form_with(url: users_searches_path, local: true, method: :get,class: "search") do |s|
+        = s.text_field :keyword, placeholder: "Userを検索する", class: "search-input"
+        = s.submit class:"search-submit"
+      = image_tag asset_path('search1.png'),size:"40x40",class:"search-btn"
       = link_to "HOME", root_path,method: :get,class:"top__right--area-btn"
     .top__right--item
       .top__right--item-form

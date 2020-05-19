@@ -176,6 +176,65 @@
         }
         .iconimage{
           margin: 5px 5px 0 0;
+          border-radius: 10px;
+        }
+        &-window{
+          display: none;
+          position: absolute;
+          top: 66px;
+          left: 0;
+          z-index: 1;
+          width: 200px;
+          height: 325px;
+          background:rgba(247, 245, 245, 0.904);
+          box-shadow: 0 1px 3px rgba(0,0,0,1);
+          border-radius: 10px;
+          font-size: 12px;
+          .window__area{
+            text-align: center;
+            &--name{
+              height: 20px;
+              font-size: 12px;
+            }
+            &--image{
+              border-radius: 10px;
+              margin-top: 30px;
+            }
+            &--number{
+              margin-top: -45px;
+              height: 20px;
+            }
+            &--favorite{
+              height: 20px;
+              margin-bottom: 30px;
+            }
+            &--mypage{
+              border: 0.5px solid gray;
+              border-radius: 10px;
+              background:rgba(214, 213, 213, 0.904);
+              width: 150px;
+              height: 30px;
+              line-height: 30px;
+              margin-left: 25px;
+              &-zone{
+                text-decoration: none;
+                color: black;
+              }
+            }
+            &--logout{
+              border: 0.5px solid gray;
+              border-radius: 10px;
+              background:rgba(214, 213, 213, 0.904);
+              width: 150px;
+              height: 30px;
+              line-height: 30px;
+              margin:10px 0 0 25px;
+              &-zone{
+                text-decoration: none;
+                color: black;
+              }
+            }
+          }
         }
       }
       .search{
