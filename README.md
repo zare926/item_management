@@ -22,7 +22,7 @@
 
 ## ER図
 
-## URL：http://54.178.124.177/
+## URL：http://54.178.124.177/users/sign_in
 Basic認証をかけているため、以下のID/PASSを入力してください。
 
 ### ID/PASS
