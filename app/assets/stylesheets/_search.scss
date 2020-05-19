@@ -1,348 +1,76 @@
-.top__contents--image-search{
-  width: 100%;
-  height: 100%;
-  background:rgba(235, 235, 235, 0);
-  z-index: -1;
-  display: flex;
-  & li{
-    position: absolute;
-    width: 100%;
-    height: 1000px;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-image: image-url('IMindex4');
-    -webkit-animation: anime 40s linear 0s infinite ;
-    animation: anime 40s linear 0s infinite ;
-  }
-  .top__left{
-    width: 20%;
-    height: 100%;
-    z-index: 1;
-    margin-left: 15px;
-    &--time{
-      height: 50px;
-      padding: 10px;
-      margin: 25px 10px 10px 10px;
-      background:rgba(243, 244, 245, 0.616);
-      box-shadow: 0 1px 3px rgba(0,0,0,1);
-      line-height: 50px;
-      border-radius: 10px;
-      overflow-x: scroll;
-      &-real{
-        font-size: 25px;
-        text-align: center;
-        font-family: 'Silom',sans-serif;
-        @media screen and (max-width:1200px){
-          font-size: 15px;
-        }
-      }
+.top__right--user{
+  width: 96%;
+  height: 718px;
+  padding-left: 11px;
+  background:rgba(243, 244, 245, 0.616);
+  box-shadow: 0 1px 3px rgba(0,0,0,1);
+  font-family: 'Silom',sans-serif;
+  border-radius: 10px;
+  &info{
+    width: 1000px;
+    height: 80px;
+    margin: 10px auto;
+    padding: 5px 10px 5px 10px;
+    font-weight: bold;
+    line-height: 60px;
+    border-bottom: 2px solid rgb(85, 79, 79);
+    &-border{
+      border-bottom: 2px solid rgb(85, 79, 79);
+      margin: 10px -10px 0 -10px;
     }
-    &--weather{
-      height: 634px;
-      padding: 15px;
-      margin: 10px;
-      background:rgba(243, 244, 245, 0.616);
-      box-shadow: 0 1px 3px rgba(0,0,0,1);
-      font-family: 'Silom',sans-serif;
-      border-radius: 10px;
-      .top__info{
-        box-shadow: 10px 10px #ccc;
-        -moz-box-shadow: 10px 10px rgb(134, 128, 128);
-        -webkit-box-shadow: 10px 10px rgba(89, 99, 109, 0.616);
-        -o-box-shadow: 10px 10px rgb(121, 115, 115);
-        width: 90%;
-        border: solid 1px rgb(134, 128, 128);
-        margin-bottom: 20px;
-        padding: 10px;
-        text-align: center;
-        border-radius: 10px;
-        @media screen and (max-width:1000px){
-          font-size: 10px;
-        }
-      }
-      &-city{
-        & h2{
-          margin: 12px 10px 10px;
-          font-size: 25px;
-        }
-      }
-      &-information{
-        .weather-report{
-          width: 98%;
-          height: 84px;
-          background:rgba(155, 233, 243, 0.616);
-          box-shadow: 0 1px 3px rgba(0,0,0,1);
-          -webkit-box-shadow: 3px 3px rgba(18, 41, 65, 0.616);
-          margin: 20px 0 20px 0;
-          font-family: 'Silom',sans-serif;
-          border-radius: 10px;
-          font-size: 12px;
-          overflow-x: scroll;
-          & img{
-            float: left;
-            margin: 15px;
-          }
-          .weather-date{
-            margin: 10px;
-          }
-          .weather-main{
-            margin: 10px;
-          }
-          .weather-temp{
-            margin: 10px 10px 0 10px;
-          }
-        }
-      }
+    &-icon{
+      margin-top: 10px;
+      display: inline-block;
     }
-    &--register{
-      padding: 10px 0;
-      margin: 10px;
-      background:rgba(243, 244, 245, 0.616);
-      box-shadow: 0 1px 3px rgba(0,0,0,1);
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      color: black;
-      display: block;
-      text-align: center;
+    &-name{
+      margin-top: 10px;
+      margin-left: 30px;
+      display: inline-block;
     }
-    &--register:active{
-      background:rgba(161, 171, 180, 0.616);
-      box-shadow: 0 3px 3px rgba(0,0,0,1);
+    &-size{
+      margin-top: 10px;
+      margin-left: 40px;
+      display: inline-block;
     }
-    & a{
-      text-decoration: none;
-      font-weight: bold;
-      color: black;
+    &-number{
+      margin-top: 10px;
+      margin-left: 53px;
+      display: inline-block;
     }
-  }
-  .top__right{
-    background:rgba(235, 235, 235, 0);
-    width: 80%;
-    height: 833px;
-    z-index: 1;
-    margin-left: 20px;
-    &--area{
-      height: 70px;
-      width: 97%;
-      margin: 25px 0 10px 0 ;
-      font-size: 30px;
-      line-height: 70px;
-      font-weight: bold;
-      font-family: 'Silom',sans-serif;
-      background:rgba(243, 244, 245, 0.616);
-      box-shadow: 0 1px 3px rgba(0,0,0,1);
-      position: relative;
-      border-radius: 10px;
-      &-btn{
-        width: 130px;
-        background:rgba(243, 244, 245, 0.616);
-        box-shadow: 0 1px 3px rgba(0,0,0,1);
-        text-decoration: none;
-        color: rgba(0,0,0,1);
-        margin: 7px 10px 10px 0;
-        font-weight: bold;
-        font-size: 18px;
-        text-align: center;
-        border-radius: 10px;
-        float: right;
-        height: 80%;
-        line-height: 59px;
-        @media screen and (max-width:930px){
-          font-size: 12px;
-          width: 100px;
-        }
-      }
-      &-btn:active{
-        background:rgba(161, 171, 180, 0.616);
-        box-shadow: 0 3px 3px rgba(0,0,0,1);
-      }
-      &-name{
-        width: 45%;
-        margin-left: 30px;
-        display: inline-block;
+    .top__right--user-box{
+      margin-top: 10px;
+      height: 600px;
+      overflow: scroll;
+      &s{
+        margin-bottom: 40px;
+        height: 60px;
         position: relative;
-        &-right{
+        &icon{
+          display: inline-block;
+          background:rgba(243, 244, 245, 0.616);
+          box-shadow: 0 1px 3px rgba(0,0,0,1);
+        }
+        &name{
+          display: inline-block;
           position: absolute;
           top: 0;
+          left: 120px;
+          & a{
+            text-decoration: none;
+            color: black;
+          }
+        }
+        &size{
           display: inline-block;
-        }
-        @media screen and (max-width:1400px){
-          font-size: 20px;
-        }
-        @media screen and (max-width:930px){
-          font-size: 12px;
-        }
-        .iconimage{
-          margin: 5px 5px 0 0;
-          border-radius: 10px;
-        }
-        &-window{
-          display: none;
           position: absolute;
-          top: 66px;
-          left: 0;
-          z-index: 1;
-          width: 200px;
-          height: 325px;
-          background:rgba(247, 245, 245, 0.904);
-          box-shadow: 0 1px 3px rgba(0,0,0,1);
-          border-radius: 10px;
-          font-size: 12px;
-          .window__area{
-            text-align: center;
-            &--name{
-              height: 20px;
-              font-size: 12px;
-            }
-            &--image{
-              border-radius: 10px;
-              margin-top: 30px;
-            }
-            &--number{
-              margin-top: -45px;
-              height: 20px;
-            }
-            &--favorite{
-              height: 20px;
-              margin-bottom: 30px;
-            }
-            &--mypage{
-              border: 0.5px solid gray;
-              border-radius: 10px;
-              background:rgba(214, 213, 213, 0.904);
-              width: 150px;
-              height: 30px;
-              line-height: 30px;
-              margin-left: 25px;
-              &-zone{
-                text-decoration: none;
-                color: black;
-              }
-            }
-            &--logout{
-              border: 0.5px solid gray;
-              border-radius: 10px;
-              background:rgba(214, 213, 213, 0.904);
-              width: 150px;
-              height: 30px;
-              line-height: 30px;
-              margin:10px 0 0 25px;
-              &-zone{
-                text-decoration: none;
-                color: black;
-              }
-            }
-          }
+          top: 0;
+          left: 260px;
         }
-      }
-      .search{
-        width: 25%;
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        @media screen and (max-width:1400px){
-          width: 15%;
-        }
-        &-submit{
-          display: none;
-        }
-        &-input{
-          width: 100%;
-        }
-      }
-      .search-btn{
-        border: 1px solid black;
-        padding: 0 17px;
-        background:rgba(243, 244, 245, 0.616);
-        box-shadow: 0 1px 3px rgba(0,0,0,1);
-        cursor: pointer;
-        display: inline-block;
-        margin-left: 10px;
-        position: absolute;
-        top: 13px;
-        right: 21%;
-      }
-      .search-btn:active{
-        background:rgba(161, 171, 180, 0.616);
-        box-shadow: 0 3px 3px rgba(0,0,0,1);
-      }
-    }
-    &--user{
-      width: 96%;
-      height: 718px;
-      padding-left: 11px;
-      background:rgba(243, 244, 245, 0.616);
-      box-shadow: 0 1px 3px rgba(0,0,0,1);
-      font-family: 'Silom',sans-serif;
-      border-radius: 10px;
-      &info{
-        width: 1000px;
-        height: 80px;
-        margin: 10px auto;
-        padding: 5px 10px 5px 10px;
-        font-weight: bold;
-        line-height: 60px;
-        border-bottom: 2px solid rgb(85, 79, 79);
-        &-border{
-          border-bottom: 2px solid rgb(85, 79, 79);
-          margin: 10px -10px 0 -10px;
-        }
-        &-icon{
-          margin-top: 10px;
+        &number{
           display: inline-block;
-        }
-        &-name{
-          margin-top: 10px;
-          margin-left: 30px;
-          display: inline-block;
-        }
-        &-size{
-          margin-top: 10px;
-          margin-left: 40px;
-          display: inline-block;
-        }
-        &-number{
-          margin-top: 10px;
-          margin-left: 53px;
-          display: inline-block;
-        }
-        .top__right--user-box{
-          margin-top: 10px;
-          height: 600px;
-          overflow: scroll;
-          &s{
-            margin-bottom: 40px;
-            height: 60px;
-            position: relative;
-            &icon{
-              display: inline-block;
-              background:rgba(243, 244, 245, 0.616);
-              box-shadow: 0 1px 3px rgba(0,0,0,1);
-            }
-            &name{
-              display: inline-block;
-              position: absolute;
-              top: 0;
-              left: 120px;
-              & a{
-                text-decoration: none;
-                color: black;
-              }
-            }
-            &size{
-              display: inline-block;
-              position: absolute;
-              top: 0;
-              left: 260px;
-            }
-            &number{
-              display: inline-block;
-              position: absolute;
-              top: 0;
-              left: 400px;
-            }
-          }
+          position: absolute;
+          top: 0;
+          left: 400px;
         }
       }
     }

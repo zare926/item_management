@@ -34,10 +34,7 @@
             .window__area--logout
               = link_to "ログアウト",destroy_user_session_path,method: :delete,class: "window__area--logout-zone"
 
-      = form_with(url: users_searches_path, local: true, method: :get,class: "search") do |s|
-        = s.text_field :keyword, placeholder: "ユーザーを検索する", class: "search-input"
-        = s.submit class:"search-submit"
-      = image_tag asset_path('search1.png'),size:"40x40",class:"search-btn"
+      = render partial:"shared/search"
       = link_to "トップ", root_path,method: :get,class:"top__right--area-btn"
     .top__right--item
       .show__name
@@ -62,4 +59,4 @@
           - else
             = simple_format("晴れの日用")
       - if user_signed_in? && current_user.id == @item.user_id
-        = link_to 'Delete',item_path(@item.id) , method: :delete,class:'delete__btn'
+        = link_to '削除',item_path(@item.id) , method: :delete,class:'delete__btn'

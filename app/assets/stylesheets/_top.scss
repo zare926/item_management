@@ -27,6 +27,8 @@
       line-height: 50px;
       border-radius: 10px;
       overflow-x: scroll;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
       &-real{
         font-size: 25px;
         text-align: center;
@@ -34,6 +36,9 @@
           font-size: 15px;
         }
       }
+    }
+    &--time::-webkit-scrollbar {
+      display:none;
     }
     &--weather{
       height: 634px;
@@ -318,6 +323,11 @@
         padding-top: 10px;
         height: 33%;
         overflow: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      &-sunny::-webkit-scrollbar { 
+        display:none;
       }
       &-border{
         border-bottom: 2px solid rgb(85, 79, 79);
@@ -326,10 +336,20 @@
       &-rainy{
         height: 33%;
         overflow: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      &-rainy::-webkit-scrollbar { 
+        display:none;
       }
       &-recovery{
         height: 33%;
         overflow: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      &-recovery::-webkit-scrollbar { 
+        display:none;
       }
       .image_box{
         width: 140px;

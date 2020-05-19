@@ -40,20 +40,17 @@
 
 
 
-        = link_to "新しい靴を登録", new_item_path,method: :get,class:"top__right--area-btn"
-        = form_with(url: users_searches_path, local: true, method: :get,class: "search") do |s|
-          = s.text_field :keyword, placeholder: "ユーザーを検索する", class: "search-input"
-          = s.submit class:"search-submit"
-        = image_tag asset_path('search1.png'),size:"40x40",class:"search-btn"
+        = link_to "新しく靴を登録", new_item_path,method: :get,class:"top__right--area-btn"
+        = render partial:"shared/search"
       - else
         .top__right--area-name
           ユーザー登録またはログインしてください
-        = link_to "New User!!", new_user_registration_path, class: "top__right--area-btn"
+        = link_to "ユーザー登録", new_user_registration_path, class: "top__right--area-btn"
     .top__right--item
       .top__right--item-sunny 
         .weather-box
           = image_tag asset_path('sun1.png'),size:"25x25",class:"weatherimage"
-          %p Sunny Shoes
+          %p 晴れの日用の靴
         - if user_signed_in?
           - @items.each do |i|
             - if i.weather == 0 and i.status == "unused"
@@ -67,7 +64,7 @@
       .top__right--item-rainy
         .weather-box
           = image_tag asset_path('rain1.png'),size:"25x25",class:"weatherimage"
-          %p Raniy Shoes
+          %p 雨の日用の靴
         - if user_signed_in?
           - @items.each do |i|
             - if i.weather == 1 and i.status == "unused"
@@ -81,7 +78,7 @@
       .top__right--item-recovery
         .weather-box
           = image_tag asset_path('zzz.png'),size:"25x25",class:"weatherimage"
-          %p Recovery Shoes
+          %p 休息中
         - if user_signed_in?
           - @items.each do |i|
             - if i.status == "used"

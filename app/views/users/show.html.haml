@@ -1,9 +1,5 @@
-%ul.top__contents--image
-  %li
-  %li
-  %li
-  %li
-  %li
+.top__contents--image
+  = image_tag asset_path('IMindex4'),class:"top__contents--image-back"
   .top__left
     .top__left--time
       %p.top__left--time-real
@@ -23,11 +19,11 @@
           - if @user.iconimage.present?
             = link_to image_tag(@user.iconimage.url ,size: "60x60",class: "iconimage"),user_path(@user.id)
             .top__right--area-name-right
-              #{@user.nickname} shoes!!
+              #{@user.nickname} の靴一覧
           - else
             = link_to image_tag(asset_path('iconnew1.png'),size:"60x60",class:"iconimage"),user_path(@user.id)
             .top__right--area-name-right
-              #{@user.nickname} shoes!!
+              #{@user.nickname} の靴一覧
           .top__right--area-name-window
             .window__area
               .window__area--name
@@ -42,27 +38,24 @@
                 = link_to "ユーザーページ",user_path(@user.id),class:"window__area--mypage-zone"
               .window__area--logout
                 = link_to "ログアウト",destroy_user_session_path,method: :delete,class: "window__area--logout-zone"
-        = link_to "HOME", root_path,method: :get,class:"top__right--area-btn"
-        = form_with(url: users_searches_path, local: true, method: :get,class: "search") do |s|
-          = s.text_field :keyword, placeholder: "Userを検索する", class: "search-input"
-          = s.submit class:"search-submit"
-        = image_tag asset_path('search1.png'),size:"40x40",class:"search-btn"
+        = link_to "トップ", root_path,method: :get,class:"top__right--area-btn"
+        = render partial:"shared/search"
       - else
         .top__right--area-name
           - if @user.iconimage.present?
             = link_to image_tag(@user.iconimage.url ,size: "60x60",class: "iconimage"),user_path(@user.id)
             .top__right--area-name-right
-              #{@user.nickname} shoes!!
+              #{@user.nickname} の靴一覧
           - else
             = link_to image_tag(asset_path('iconnew1.png'),size:"60x60",class:"iconimage"),user_path(@user.id)
             .top__right--area-name-right
-              #{@user.nickname} shoes!!
-        = link_to "New User!!", new_user_registration_path, class: "top__right--area-btn"
+              #{@user.nickname} の靴一覧
+        = link_to "ユーザー登録", new_user_registration_path, class: "top__right--area-btn"
     .top__right--item
       .top__right--item-sunny 
         .weather-box
           = image_tag asset_path('sun1.png'),size:"25x25",class:"weatherimage"
-          %p Sunny Shoes Show
+          %p 晴れの日用靴一覧
         - @items.each do |i|
           - if i.weather == 0 and i.status == "unused"
             .image_box
@@ -73,7 +66,7 @@
       .top__right--item-rainy
         .weather-box
           = image_tag asset_path('rain1.png'),size:"25x25",class:"weatherimage"
-          %p Raniy Shoes Show
+          %p 雨の日用靴一覧
         - @items.each do |i|
           - if i.weather == 1 and i.status == "unused"
             .image_box
@@ -84,7 +77,7 @@
       .top__right--item-recovery
         .weather-box
           = image_tag asset_path('zzz.png'),size:"25x25",class:"weatherimage"
-          %p Recovery Shoes Show
+          %p 休息中
         - @items.each do |i|
           - if i.status == "used"
             .image_box
