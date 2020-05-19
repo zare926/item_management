@@ -1,9 +1,5 @@
-%ul.top__contents--image
-  %li
-  %li
-  %li
-  %li
-  %li
+.top__contents--image
+  = image_tag asset_path('IMindex7'),class:"top__contents--image-back"
   .top__left
     .top__left--time
       %p.top__left--time-real
@@ -22,19 +18,36 @@
           - if current_user.iconimage.present?
             = link_to image_tag(current_user.iconimage.url ,size:"60x60",class:"iconimage"),user_path(current_user.id)
             .top__right--area-name-right
-              Welcome to #{current_user.nickname}!!
+              ようこそ #{current_user.nickname}さん!!
           - else
             = link_to image_tag(asset_path('iconnew1.png'),size:"60x60",class:"iconimage"),user_path(current_user.id)
             .top__right--area-name-right
-              Welcome to #{current_user.nickname}!!
-        = link_to "New Shoes!!", new_item_path,method: :get,class:"top__right--area-btn"
+              ようこそ #{current_user.nickname}さん!!
+          .top__right--area-name-window
+            .window__area
+              .window__area--name
+                #{current_user.nickname}
+              - if current_user.iconimage.present?
+                = link_to image_tag(current_user.iconimage.url ,size:"120x120",class:"window__area--image"),user_path(current_user.id)
+              - else
+                = link_to image_tag(asset_path('iconnew1.png'),size:"120x120",class:"window__area--image"),user_path(current_user.id)
+              %p.window__area--number 靴の所持数 #{@items.length}足
+              %p.window__area--favorite お気に入りの靴の数 #{@items_favorite.length}足
+              .window__area--mypage
+                = link_to "マイページ",user_path(current_user.id),class:"window__area--mypage-zone"
+              .window__area--logout
+                = link_to "ログアウト",destroy_user_session_path,method: :delete,class: "window__area--logout-zone"
+
+
+
+        = link_to "新しい靴を登録", new_item_path,method: :get,class:"top__right--area-btn"
         = form_with(url: users_searches_path, local: true, method: :get,class: "search") do |s|
-          = s.text_field :keyword, placeholder: "Userを検索する", class: "search-input"
+          = s.text_field :keyword, placeholder: "ユーザーを検索する", class: "search-input"
           = s.submit class:"search-submit"
         = image_tag asset_path('search1.png'),size:"40x40",class:"search-btn"
       - else
         .top__right--area-name
-          Please register or login
+          ユーザー登録またはログインしてください
         = link_to "New User!!", new_user_registration_path, class: "top__right--area-btn"
     .top__right--item
       .top__right--item-sunny 
@@ -47,10 +60,9 @@
               .image_box
                 .item__name
                   = i.name
-                  = image_tag i.image.url,class:'image',size:'140x140'
-                  = link_to 'Used', item_used_index_path(i.id), method: :get,class:'edit__btn'
-                  = link_to 'Show', item_path(i.id), method: :get,class:'show__btn'
-                  = link_to 'Edit', edit_item_path(i.id), method: :get,class:'edit__btn'
+                  = link_to image_tag(i.image.url,class:'image',size:'140x140'),item_path(i.id)
+                  = link_to '使用する', item_used_index_path(i.id), method: :get,class:'edit__btn'
+                  = link_to '編集', edit_item_path(i.id), method: :get,class:'edit__btn'
       .top__right--item-border
       .top__right--item-rainy
         .weather-box
@@ -62,10 +74,9 @@
               .image_box
                 .item__name
                   = i.name
-                  = image_tag i.image.url,class:'image',size:'140x140'
-                  = link_to 'Used', item_used_index_path(i.id), method: :get,class:'edit__btn'
-                  = link_to 'Show', item_path(i.id), method: :get,class:'show__btn'
-                  = link_to 'Edit', edit_item_path(i.id), method: :get,class:'edit__btn'
+                  = link_to image_tag(i.image.url,class:'image',size:'140x140'),item_path(i.id)
+                  = link_to '使用する', item_used_index_path(i.id), method: :get,class:'edit__btn'
+                  = link_to '編集', edit_item_path(i.id), method: :get,class:'edit__btn'
       .top__right--item-border
       .top__right--item-recovery
         .weather-box
@@ -77,8 +88,7 @@
               .image_box
                 .item__name
                   = i.name
-                  = image_tag i.image.url,class:'image',size:'140x140'
-                  = link_to 'Show', item_path(i.id), method: :get,class:'show__btn'
-                  = link_to 'Un Used', new_item_used_path(i.id), method: :get,class:'edit__btn'
+                  = link_to image_tag(i.image.url,class:'image',size:'140x140'),item_path(i.id)
+                  = link_to '使用可能にする', new_item_used_path(i.id), method: :get,class:'edit__btn'
                 .time
                   = (i.updated_at+i.limit.minutes).strftime("%Y-%m-%d %H:%M:%S")

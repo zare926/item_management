@@ -28,6 +28,20 @@
             = link_to image_tag(asset_path('iconnew1.png'),size:"60x60",class:"iconimage"),user_path(@user.id)
             .top__right--area-name-right
               #{@user.nickname} shoes!!
+          .top__right--area-name-window
+            .window__area
+              .window__area--name
+                #{@user.nickname}
+              - if @user.iconimage.present?
+                = link_to image_tag(@user.iconimage.url ,size:"120x120",class:"window__area--image"),user_path(@user.id)
+              - else
+                = link_to image_tag(asset_path('iconnew1.png'),size:"120x120",class:"window__area--image"),user_path(@user.id)
+              %p.window__area--number 靴の所持数 #{@items.length}足
+              %p.window__area--favorite お気に入りの靴の数 #{@items_favorite.length}足
+              .window__area--mypage
+                = link_to "ユーザーページ",user_path(@user.id),class:"window__area--mypage-zone"
+              .window__area--logout
+                = link_to "ログアウト",destroy_user_session_path,method: :delete,class: "window__area--logout-zone"
         = link_to "HOME", root_path,method: :get,class:"top__right--area-btn"
         = form_with(url: users_searches_path, local: true, method: :get,class: "search") do |s|
           = s.text_field :keyword, placeholder: "Userを検索する", class: "search-input"
@@ -54,8 +68,7 @@
             .image_box
               .item__name
                 = i.name
-                = image_tag i.image.url,class:'image',size:'140x140'
-                = link_to 'Show', item_path(i.id), method: :get,class:'show__btn'
+                = link_to image_tag(i.image.url,class:'image',size:'140x140'),item_path(i.id)
       .top__right--item-border
       .top__right--item-rainy
         .weather-box
@@ -66,8 +79,7 @@
             .image_box
               .item__name
                 = i.name
-                = image_tag i.image.url,class:'image',size:'140x140'
-                = link_to 'Show', item_path(i.id), method: :get,class:'show__btn'
+                = link_to image_tag(i.image.url,class:'image',size:'140x140'),item_path(i.id)
       .top__right--item-border
       .top__right--item-recovery
         .weather-box
@@ -78,7 +90,6 @@
             .image_box
               .item__name
                 = i.name
-                = image_tag i.image.url,class:'image',size:'140x140'
-                = link_to 'Show', item_path(i.id), method: :get,class:'show__btn'
+                = link_to image_tag(i.image.url,class:'image',size:'140x140'),item_path(i.id)
               .time
                 = (i.updated_at+i.limit.minutes).strftime("%Y-%m-%d %H:%M:%S")

@@ -24,6 +24,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @items = @user.items
+    @items_favorite = @items.where(favorite:1)
   end
 
   def search
