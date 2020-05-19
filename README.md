@@ -79,6 +79,7 @@ https://gyazo.com/c7afd97a002a96222af218788238772e
 |limit|integer|default: 4320|
 |text|string|
 |user_id|integer|null: false|
+|favorite|integer|default: 0||
 
 #### association
   - belongs_to :user
