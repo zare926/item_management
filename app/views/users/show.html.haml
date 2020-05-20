@@ -51,10 +51,10 @@
             .top__right--area-name-right
               #{@user.nickname} の靴一覧
         = link_to "ユーザー登録", new_user_registration_path, class: "top__right--area-btn"
-    .top__right--item
+    .top__right--item-user
       .top__right--item-show
         #{@user.nickname} の靴一覧
-        .top__right--item-showbox
+        .top__right--item-usershowbox
           - @items.each do |i|
             .image_box
               .item__name
