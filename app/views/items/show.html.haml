@@ -39,6 +39,12 @@
     .top__right--item_show.clearfix
       = image_tag @item.image.url,class:"show__image"
       .item_info
+        - if user_signed_in? && current_user.id == @item.user_id
+        = image_tag asset_path('triangle.png'),class:"item_info-image",size:"12x8"
+          .item_info-area
+            = link_to '削除',item_path(@item.id) , method: :delete,class:'delete__btn'
+            - if user_signed_in? && current_user.id == @item.user_id and @item.status == "unused"
+              = link_to '編集', edit_item_path(@item.id), method: :get,class:'edit__btn'
         .show__name
           .show__name--box
             = @item.name
@@ -58,10 +64,3 @@
               = simple_format("雨の日用")
             - else
               = simple_format("晴れの日用")
-        -# - if user_signed_in? && current_user.id == @item.user_id
-        -#   = link_to '削除',item_path(@item.id) , method: :delete,class:'delete__btn'
-        -# - if user_signed_in? && current_user.id == @item.user_id and @item.status == "unused"
-        -#   = link_to '編集', edit_item_path(@item.id), method: :get,class:'edit__btn'
-
-        
-        

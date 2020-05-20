@@ -86,4 +86,17 @@ $(function(){
   });
 });
 
+$(function(){
+  $('.item_info-image').hover(function(){
+    $('.item_info-area').show();
+  },function(){
+    $('.item_info-area').hide();
+  });
+  $('.item_info-area').hover(function(){
+    $('.item_info-area').show();
+  },function(){
+    $('.item_info-area').hide();
+  });
+});
+
 
