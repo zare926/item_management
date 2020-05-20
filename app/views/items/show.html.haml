@@ -36,27 +36,32 @@
 
       = render partial:"shared/search"
       = link_to "トップ", root_path,method: :get,class:"top__right--area-btn"
-    .top__right--item
-      .show__name
-        .show__name--box
-          = @item.name
+    .top__right--item_show.clearfix
       = image_tag @item.image.url,class:"show__image"
-      .show__other
-        .show__other--text
-          ■ 情報
-          %br
-          = simple_format(@item.text)
-        .show__other--border
-        .show__other--size
-          ■ サイズ
-          %br
-          = simple_format(@item.size)
-        .show__other--border
-        .show__other--weather
-          ■ 晴れ用？雨用？
-          - if @item.weather == 1
-            = simple_format("雨の日用")
-          - else
-            = simple_format("晴れの日用")
-      - if user_signed_in? && current_user.id == @item.user_id
-        = link_to '削除',item_path(@item.id) , method: :delete,class:'delete__btn'
+      .item_info
+        .show__name
+          .show__name--box
+            = @item.name
+        .show__other.clearfix
+          .show__other--text
+            ■ 情報
+            %br
+            = simple_format(@item.text)
+          .show__other--size
+            ■ サイズ
+            %br
+            = simple_format(@item.size)
+          .show__other--weather
+            ■ 晴れ用？雨用？
+            %br
+            - if @item.weather == 1
+              = simple_format("雨の日用")
+            - else
+              = simple_format("晴れの日用")
+        -# - if user_signed_in? && current_user.id == @item.user_id
+        -#   = link_to '削除',item_path(@item.id) , method: :delete,class:'delete__btn'
+        -# - if user_signed_in? && current_user.id == @item.user_id and @item.status == "unused"
+        -#   = link_to '編集', edit_item_path(@item.id), method: :get,class:'edit__btn'
+
+        
+        

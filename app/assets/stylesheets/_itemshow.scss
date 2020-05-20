@@ -1,50 +1,84 @@
-.show__name{
-  width: 400px;
-  margin: 10px auto;
-  &--box{
-    padding-top: 40px;
-    font-size: 30px;
-    text-align: center;
-  }
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
-.show__image{
-  margin: 25px 0 0 55px;
+.top__right--item_show{
+  width: 96%;
+  height: 800px;
+  padding-left: 11px;
+  background:rgba(243, 244, 245, 0.616);
+  box-shadow: 0 1px 3px rgba(0,0,0,1);
   border-radius: 10px;
-  border: 1px solid rgba(41, 49, 51, 0.616);
-  box-shadow: 0 1px 8px rgba(0,0,0,1);
-}
 
-.show__other{
-  float: right;
-  margin: 25px 120px 0 0;
-  width: 420px;
-  height: 400px;
-  max-width: 540px;
-  min-width: 100px;
-  background:rgba(243, 244, 245, 0.616);
-  box-shadow: 0 1px 3px rgba(0,0,0,1);
-  font-size: 20px;
-  padding: 10px 0 0 10px;
-  &--text{
-    height: 150px;
-    font-size: 20px;
-    overflow: scroll;
+  .show__image{
+    margin: 50px 0 0 50px;
+    border-radius: 10px;
+    border: 1px solid rgba(41, 49, 51, 0.616);
+    box-shadow: 0 1px 8px rgba(0,0,0,1);
+    float: left;
   }
-  &--border{
-    border-bottom: 2px solid rgb(85, 79, 79);
-    margin: 20px ;
+  .item_info{
+    width: 600px;
+    height: 400px;
+    float: left;
+    background:rgba(243, 244, 245, 0.616);
+    box-shadow: 0 1px 3px rgba(0,0,0,1);
+    margin: 50px 0 0 20px;
+    border-radius: 10px;
+    .show__name{
+      text-align: center;
+      &--box{
+        padding-top: 40px;
+        font-size: 30px;
+      }
+    }
   }
-}
-.delete__btn{
-  background:rgba(243, 244, 245, 0.616);
-  box-shadow: 0 1px 3px rgba(0,0,0,1);
-  text-decoration: none;
-  color: rgba(0,0,0,1);
-  font-weight: bold;
-  font-size: 18px;
-  padding: 12px;
-  float: right;
-  margin: -100px 463px 0px 0px;
+
+  .show__other{
+    margin: 26px 0 0 60px;
+    width: 560px;
+    padding: 5px 0 0 10px;
+    border-radius: 10px;
+    &--text{
+      width: 200px;
+      font-size: 15px;
+      margin: 10px;
+      overflow: scroll;
+      float: left;
+    }
+    &--size{
+      width: 100px;
+      font-size: 15px;
+      margin: 10px;
+      float: left;
+    }
+    &--weather{
+      width: 100px;
+      font-size: 15px;
+      margin: 10px;
+      float: left;
+    }
+  }
+  .delete__btn{
+    background:rgba(243, 244, 245, 0.616);
+    box-shadow: 0 1px 3px rgba(0,0,0,1);
+    text-decoration: none;
+    color: rgba(0,0,0,1);
+    font-size: 14px;
+    padding: 9px 12px;
+    border-radius: 10px;
+    margin-left: 10px;
+  }
+  .edit__btn{
+    background:rgba(243, 244, 245, 0.616);
+    box-shadow: 0 1px 3px rgba(0,0,0,1);
+    text-decoration: none;
+    color: rgba(0,0,0,1);
+    font-size: 14px;
+    padding: 9px 12px;
+    border-radius: 10px;
+  }
 }
 

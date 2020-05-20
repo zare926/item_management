@@ -84,8 +84,8 @@
                     = image_tag asset_path('favorite2.png'),class:"favorite_on" ,size:"50x50"
                   = link_to '使用する', item_used_index_path(i.id), method: :get,class:'edit__btn'
                   = link_to '編集', edit_item_path(i.id), method: :get,class:'edit__btn'
-      .top__right--item-border
-      .top__right--item-recovery
+    .top__right--item-bottom
+      .top__right--item-bottomrecovery
         .weather-box
           = image_tag asset_path('zzz.png'),size:"25x25",class:"weatherimage"
           %p 休息中
