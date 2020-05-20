@@ -35,7 +35,7 @@
       }
     }
     &--weather{
-      height: 634px;
+      height: 716px;
       padding: 15px;
       margin: 10px;
       background:rgba(243, 244, 245, 0.616);
@@ -65,7 +65,7 @@
       &-information{
         .weather-report{
           width: 98%;
-          height: 84px;
+          height: 96px;
           background:rgba(155, 233, 243, 0.616);
           box-shadow: 0 1px 3px rgba(0,0,0,1);
           -webkit-box-shadow: 3px 3px rgba(18, 41, 65, 0.616);
@@ -77,10 +77,10 @@
           scrollbar-width: none;
           & img{
             float: left;
-            margin: 15px;
+            margin: 22px;
           }
           .weather-date{
-            margin: 5px 10px 10px 10px;
+            margin: 11px 10px 10px 10px;
           }
           .weather-main{
             margin: 10px;
@@ -279,7 +279,7 @@
           right: 11%;
         }
         @media screen and (max-width:1700px){
-          right: 11.5%;
+          right: 11.7%;
         }
         @media screen and (max-width:1600px){
           right: 12.5%;
@@ -319,7 +319,7 @@
     }
     &--item{
       width: 96%;
-      height: 718px;
+      height: 800px;
       padding-left: 11px;
       background:rgba(243, 244, 245, 0.616);
       box-shadow: 0 1px 3px rgba(0,0,0,1);
@@ -342,7 +342,7 @@
       }
       &-border{
         border-bottom: 2px solid rgb(85, 79, 79);
-        margin: 0 50px 0 50px;
+        margin: 0 50px 3px 50px;
       }
       &-rainy{
         height: 33%;
@@ -354,10 +354,13 @@
         display:none;
       }
       &-recovery{
-        height: 33%;
+        height: 29.5%;
         overflow: scroll;
         -ms-overflow-style: none;
         scrollbar-width: none;
+        border-radius: 10px;
+        // background: rgba(158, 183, 202, 0.616);
+        margin:10px 10px 0 0;
       }
       &-recovery::-webkit-scrollbar { 
         display:none;

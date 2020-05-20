@@ -52,37 +52,24 @@
               #{@user.nickname} の靴一覧
         = link_to "ユーザー登録", new_user_registration_path, class: "top__right--area-btn"
     .top__right--item
-      .top__right--item-sunny 
-        .weather-box
-          = image_tag asset_path('sun1.png'),size:"25x25",class:"weatherimage"
-          %p 晴れの日用靴一覧
-        - @items.each do |i|
-          - if i.weather == 0 and i.status == "unused"
+      .top__right--item-show
+        #{@user.nickname} の靴一覧
+        .top__right--item-showbox
+          - @items.each do |i|
             .image_box
               .item__name
+                - if i.weather == 0 and i.status == "unused"
+                  = image_tag asset_path('sun1.png'),class:"weatherimage",size:"25x25"
+                - elsif i.weather == 1 and i.status == "unused"
+                  = image_tag asset_path('rain1.png'),class:"weatherimage" ,size:"25x25"
+                - else
+                  = image_tag asset_path('zzz.png'),class:"weatherimage",size:"25x25"
                 = i.name
                 = link_to image_tag(i.image.url,class:'image',size:'140x140'),item_path(i.id)
-      .top__right--item-border
-      .top__right--item-rainy
-        .weather-box
-          = image_tag asset_path('rain1.png'),size:"25x25",class:"weatherimage"
-          %p 雨の日用靴一覧
-        - @items.each do |i|
-          - if i.weather == 1 and i.status == "unused"
-            .image_box
-              .item__name
-                = i.name
-                = link_to image_tag(i.image.url,class:'image',size:'140x140'),item_path(i.id)
-      .top__right--item-border
-      .top__right--item-recovery
-        .weather-box
-          = image_tag asset_path('zzz.png'),size:"25x25",class:"weatherimage"
-          %p 休息中
-        - @items.each do |i|
-          - if i.status == "used"
-            .image_box
-              .item__name
-                = i.name
-                = link_to image_tag(i.image.url,class:'image',size:'140x140'),item_path(i.id)
-              .time
-                = (i.updated_at+i.limit.minutes).strftime("%Y-%m-%d %H:%M:%S")
+                - if i.favorite == 0
+                  = image_tag asset_path('favorite1.png'),class:"favorite_off",size:"25x25"
+                - else i.favorite == 1
+                  = image_tag asset_path('favorite2.png'),class:"favorite_on" ,size:"60x60"
+              - if i.status == "used"
+                .time
+                  = (i.updated_at+i.limit.minutes).strftime("%Y-%m-%d %H:%M:%S")
