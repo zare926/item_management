@@ -57,6 +57,7 @@
               .image_box
                 .item__name
                   = i.name
+                .image_box-area
                   = link_to image_tag(i.image.url,class:'image',size:'140x140'),item_path(i.id)
                   - if i.favorite == 0
                     = image_tag asset_path('favorite1.png'),class:"favorite_off",size:"25x25"
@@ -75,6 +76,7 @@
               .image_box
                 .item__name
                   = i.name
+                .image_box-area
                   = link_to image_tag(i.image.url,class:'image',size:'140x140'),item_path(i.id)
                   - if i.favorite == 0
                     = image_tag asset_path('favorite1.png'),class:"favorite_off",size:"25x25"
@@ -93,6 +95,7 @@
               .image_box
                 .item__name
                   = i.name
+                .image_box-area
                   = link_to image_tag(i.image.url,class:'image',size:'140x140'),item_path(i.id)
                   - if i.favorite == 0
                     = image_tag asset_path('favorite1.png'),class:"favorite_off",size:"25x25"

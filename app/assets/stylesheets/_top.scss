@@ -390,22 +390,25 @@
           color: black;
           margin-bottom: 5px;
         }
-        .item__name{
-          display: block;
-          width: 140px;
-          height: 15px;
-          font-size: 13px;
+        &-area{
+          display: inline;
           position: relative;
+          height: 140px;
           .favorite_off{
-            position: absolute ;
-            top: 25px;
+            position: absolute;
+            top: -120px;
             left: 108px;
           }
           .favorite_on{
             position: absolute;
-            top: 10px;
+            top: -135px;
             left: 92px;
           }
+        }
+        .item__name{
+          display: block;
+          width: 140px;
+          font-size: 13px;
         }
         .time{
           background:rgba(243, 247, 250, 0.616);
