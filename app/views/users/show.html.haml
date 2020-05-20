@@ -58,13 +58,14 @@
           - @items.each do |i|
             .image_box
               .item__name
+                = i.name
+              .image_box-area
                 - if i.weather == 0 and i.status == "unused"
                   = image_tag asset_path('sun1.png'),class:"weatherimage",size:"25x25"
                 - elsif i.weather == 1 and i.status == "unused"
-                  = image_tag asset_path('rain1.png'),class:"weatherimage" ,size:"25x25"
+                  = image_tag asset_path('rain1.png'),class:"weatherimage" ,size:"23x23"
                 - else
-                  = image_tag asset_path('zzz.png'),class:"weatherimage",size:"25x25"
-                = i.name
+                  = image_tag asset_path('zzz.png'),class:"weatherimage",size:"24x24"
                 = link_to image_tag(i.image.url,class:'image',size:'140x140'),item_path(i.id)
                 - if i.favorite == 0
                   = image_tag asset_path('favorite1.png'),class:"favorite_off",size:"25x25"

@@ -1,50 +1,163 @@
-.show__name{
-  width: 400px;
-  margin: 10px auto;
-  &--box{
-    padding-top: 40px;
-    font-size: 30px;
-    text-align: center;
-  }
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
-.show__image{
-  margin: 25px 0 0 55px;
+.top__right--item_show{
+  width: 96%;
+  height: 800px;
+  padding-left: 11px;
+  background:rgba(243, 244, 245, 0.616);
+  box-shadow: 0 1px 3px rgba(0,0,0,1);
   border-radius: 10px;
-  border: 1px solid rgba(41, 49, 51, 0.616);
-  box-shadow: 0 1px 8px rgba(0,0,0,1);
-}
 
-.show__other{
-  float: right;
-  margin: 25px 120px 0 0;
-  width: 420px;
-  height: 400px;
-  max-width: 540px;
-  min-width: 100px;
-  background:rgba(243, 244, 245, 0.616);
-  box-shadow: 0 1px 3px rgba(0,0,0,1);
-  font-size: 20px;
-  padding: 10px 0 0 10px;
-  &--text{
-    height: 150px;
-    font-size: 20px;
-    overflow: scroll;
+  .show__image{
+    margin: 50px 0 0 50px;
+    border-radius: 10px;
+    border: 1px solid rgba(41, 49, 51, 0.616);
+    box-shadow: 0 1px 0px rgba(0,0,0,1);
+    float: left;
+    @media screen and (max-width:1300px){
+      width: 450px;
+      height: 450px;
+    }
   }
-  &--border{
-    border-bottom: 2px solid rgb(85, 79, 79);
-    margin: 20px ;
+  .item_info{
+    position: relative;
+    width: 50%;
+    height: 380px;
+    float: left;
+    background:rgba(243, 244, 245, 0.616);
+    box-shadow: 0 1px 3px rgba(0,0,0,1);
+    margin: 50px 0 0 20px;
+    border-radius: 10px;
+    @media screen and (max-width:1650px){
+      width: 48%;
+    }
+    @media screen and (max-width:1570px){
+      width: 46.5%;
+    }
+    @media screen and (max-width:1540px){
+      width: 45%;
+    }
+    @media screen and (max-width:1500px){
+      width: 43%;
+    }
+    @media screen and (max-width:1450px){
+      width: 41.5%;
+    }
+    @media screen and (max-width:1410px){
+      width: 40%;
+    }
+    @media screen and (max-width:1410px){
+      width: 40%;
+    }
+    @media screen and (max-width:1370px){
+      width: 38%;
+    }
+    @media screen and (max-width:1330px){
+      width: 36.5%;
+    }
+    @media screen and (max-width:1300px){
+      width: 35%;
+    }
+    &-image{
+      padding: 12px;
+    }
+    &-area{
+      display: none;
+      position: absolute;
+      top: 22px;
+      left: 10px;
+      width: 150px;
+      background:rgba(247, 245, 245, 0.904);
+      box-shadow: 0 1px 3px rgba(0,0,0,1);
+      border-radius: 10px;
+      padding: 10px 0 12px;
+      .delete__btn{
+        background:rgba(214, 213, 213, 0.904);
+        text-decoration: none;
+        color: rgba(0,0,0,1);
+        font-size: 14px;
+        padding: 9px 17px;
+        border-radius: 10px;
+        margin-left: 12px;
+      }
+      .edit__btn{
+        background:rgba(214, 213, 213, 0.904);
+        text-decoration: none;
+        color: rgba(0,0,0,1);
+        font-size: 14px;
+        padding: 9px 17px;
+        border-radius: 10px;
+      }
+    }
+    .show__name{
+      text-align: center;
+      &--box{
+        padding-top: 40px;
+        font-size: 30px;
+      }
+    }
   }
-}
-.delete__btn{
-  background:rgba(243, 244, 245, 0.616);
-  box-shadow: 0 1px 3px rgba(0,0,0,1);
-  text-decoration: none;
-  color: rgba(0,0,0,1);
-  font-weight: bold;
-  font-size: 18px;
-  padding: 12px;
-  float: right;
-  margin: -100px 463px 0px 0px;
+  .show__other{
+    margin: 26px 0 0 60px;
+    width: 560px;
+    padding: 5px 0 0 10px;
+    border-radius: 10px;
+    @media screen and (max-width:1540px){
+      margin: 26px 0 0 40px;
+    }
+    @media screen and (max-width:1450px){
+      margin: 26px 0 0 20px;
+    }
+    @media screen and (max-width:1300px){
+      margin: 26px 0 0 10px;
+    }
+    &--text{
+      width: 200px;
+      font-size: 15px;
+      margin: 10px;
+      overflow: scroll;
+      float: left;
+      @media screen and (max-width:1650px){
+        width: 160px;
+      }
+      @media screen and (max-width:1450px){
+        width: 130px;
+      }
+      @media screen and (max-width:1370px){
+        width: 100px;
+      }
+      @media screen and (max-width:1300px){
+        width: 80px;
+      }
+    }
+    &--size{
+      width: 100px;
+      font-size: 15px;
+      margin: 10px;
+      float: left;
+      @media screen and (max-width:1370px){
+        width: 70px;
+      }
+      @media screen and (max-width:1300px){
+        width: 65px;
+      }
+    }
+    &--weather{
+      width: 100px;
+      font-size: 15px;
+      margin: 10px;
+      float: left;
+      @media screen and (max-width:1370px){
+        width: 70px;
+      }
+      @media screen and (max-width:1300px){
+        width: 65px;
+      }
+    }
+  }
 }
 
