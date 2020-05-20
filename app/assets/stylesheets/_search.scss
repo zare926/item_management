@@ -1,6 +1,6 @@
 .top__right--user{
   width: 96%;
-  height: 718px;
+  height: 800px;
   padding-left: 11px;
   background:rgba(243, 244, 245, 0.616);
   box-shadow: 0 1px 3px rgba(0,0,0,1);
@@ -9,7 +9,7 @@
     width: 1000px;
     height: 80px;
     margin: 10px auto;
-    padding: 5px 10px 5px 10px;
+    padding: 5px 10px 10px 10px;
     font-weight: bold;
     line-height: 60px;
     border-bottom: 2px solid rgb(85, 79, 79);
@@ -42,17 +42,17 @@
       display: inline-block;
     }
     .top__right--user-box{
-      margin-top: 10px;
+      margin-top: 40px;
       height: 600px;
-      overflow: scroll;
       &s{
         margin-bottom: 40px;
-        height: 60px;
+        height: 75px;
         position: relative;
         &icon{
           display: inline-block;
           background:rgba(243, 244, 245, 0.616);
           box-shadow: 0 1px 3px rgba(0,0,0,1);
+          border-radius: 10px;
         }
         &name{
           display: inline-block;
@@ -81,11 +81,14 @@
           position: absolute;
           top: 0;
           left: 530px;
+          & img{
+            border-radius: 10px;
+          }
         }
       }
       .pagination{
         position: absolute;
-        top: 700px;
+        top: 800px;
       }
     }
   }
