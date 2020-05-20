@@ -121,6 +121,11 @@
       margin: 10px;
       float: left;
       overflow: scroll;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &--text::-webkit-scrollbar { 
+        display:none;
+      }
       @media screen and (max-width:1650px){
         width: 160px;
       }
