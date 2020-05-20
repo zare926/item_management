@@ -35,28 +35,28 @@
               = link_to "ログアウト",destroy_user_session_path,method: :delete,class: "window__area--logout-zone"
       = render partial:"shared/search"
       = link_to "HOME", root_path,method: :get,class:"top__right--area-btn"
-    .top__right--item
-      .top__right--item-form
-        .top__right--item-form-name
+    .edit-top__right--item
+      .edit-top__right--item-form
+        .edit-top__right--item-form-name
           Please edit!
-        .top__right--item-form-border
-        .top__right--item-form-info
+        .edit-top__right--item-form-border
+        .edit-top__right--item-form-info
           登録した情報の修正
-        .top__right--item-form--border
+        .edit-top__right--item-form--border
         = form_with(model: @item, local: true) do |f|
-          .top__right--item-form-box
+          .edit-top__right--item-form-box
             品名
-            = f.text_field :name, class: 'top__right--item-form-box-shoes', placeholder: '40文字まで'
-          .top__right--item-form-box
+            = f.text_field :name, class: 'edit-top__right--item-form-box-shoes', placeholder: '40文字まで'
+          .edit-top__right--item-form-box
             その他
-            = f.text_area :text, class: 'top__right--item-form-box-shoesohter',placeholder: '補足'
-            .top__right--item-form-box
+            = f.text_area :text, class: 'edit-top__right--item-form-box-shoesohter',placeholder: '補足'
+            .edit-top__right--item-form-box
             晴れ用か雨用か洗濯してください
-            = f.select :weather, [["晴れの日用", 0],["雨の日用", 1]],{}, {class: 'top__right--item-form-box-shoesweather'}
-            .top__right--item-form-box
+            = f.select :weather, [["晴れの日用", 0],["雨の日用", 1]],{}, {class: 'edit-top__right--item-form-box-shoesweather'}
+            .edit-top__right--item-form-box
             サイズ
-            = f.select :size, Item.sizes.keys ,{}, {class: 'top__right--item-form-box-shoessize'}
-          .top__right--item-form-right
-            = image_tag @item.image.url ,class:'top__right--item-form-right-box'
-            = f.file_field :image, class: 'top__right--item-form-right-boximage'
-            = f.submit "登録" ,class: 'top__right--item-form-rightbtn'
+            = f.select :size, Item.sizes.keys ,{}, {class: 'edit-top__right--item-form-box-shoessize'}
+          .edit-top__right--item-form-right
+            = image_tag @item.image.url ,class:'edit-top__right--item-form-right-box'
+            = f.file_field :image, class: 'edit-top__right--item-form-right-boximage'
+            = f.submit "登録" ,class: 'edit-top__right--item-form-rightbtn'
