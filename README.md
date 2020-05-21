@@ -16,6 +16,7 @@
   - AWS S3への画像アップロード
   - OpenWeatherMapをAPIとして使用
   - RSpecで単体テスト
+  - お気に入り機能実装
 
 ## Contributors
   - https://github.com/zare926
@@ -45,8 +46,6 @@ https://gyazo.com/c7afd97a002a96222af218788238772e
 ## 実装予定
   - Dockerの使用
   - Twitterカードの使用（adidas,NIKEなどシューズメーカーのツイート？）
-  - お気に入りの靴を選べる機能
-  - ユーザー毎のお気に入りの靴を確認できる機能
   - ユーザー同士の靴に対してのコメント機能
 
 ## 工夫したポイント

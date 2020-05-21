@@ -13,7 +13,7 @@
   border-radius: 10px;
 
   .show__image{
-    margin: 50px 0 0 50px;
+    margin: 25px 0 0 25px;
     border-radius: 10px;
     border: 1px solid rgba(41, 49, 51, 0.616);
     box-shadow: 0 1px 0px rgba(0,0,0,1);
@@ -26,11 +26,11 @@
   .item_info{
     position: relative;
     width: 50%;
-    height: 380px;
+    height: 305px;
     float: left;
     background:rgba(243, 244, 245, 0.616);
     box-shadow: 0 1px 3px rgba(0,0,0,1);
-    margin: 50px 0 0 20px;
+    margin: 25px 0 0 25px;
     border-radius: 10px;
     @media screen and (max-width:1650px){
       width: 48%;
@@ -96,12 +96,95 @@
     .show__name{
       text-align: center;
       &--box{
+        margin-top: -20px;
         font-size: 30px;
       }
     }
   }
+  .comment__area{
+    width: 50%;
+    height: 337px;
+    background:rgba(243, 244, 245, 0.616);
+    box-shadow: 0 1px 3px rgba(0,0,0,1);
+    float: left;
+    border-radius: 10px;
+    margin: 10px 0 0 27px;
+    @media screen and (max-width:1650px){
+      width: 48%;
+    }
+    @media screen and (max-width:1570px){
+      width: 46.5%;
+    }
+    @media screen and (max-width:1540px){
+      width: 45%;
+    }
+    @media screen and (max-width:1500px){
+      width: 43%;
+    }
+    @media screen and (max-width:1450px){
+      width: 41.5%;
+    }
+    @media screen and (max-width:1410px){
+      width: 40%;
+    }
+    @media screen and (max-width:1410px){
+      width: 40%;
+    }
+    @media screen and (max-width:1370px){
+      width: 38%;
+    }
+    @media screen and (max-width:1330px){
+      width: 36.5%;
+    }
+    @media screen and (max-width:1300px){
+      width: 35%;
+    }
+  }
+  .comment__bar{
+    width: 50%;
+    height: 70px;
+    background:rgba(243, 244, 245, 0.616);
+    box-shadow: 0 1px 3px rgba(0,0,0,1);
+    float: left;
+    border-radius: 10px;
+    margin: 10px 0 0 595px;
+    @media screen and (max-width:1650px){
+      width: 48%;
+    }
+    @media screen and (max-width:1570px){
+      width: 46.5%;
+    }
+    @media screen and (max-width:1540px){
+      width: 45%;
+    }
+    @media screen and (max-width:1500px){
+      width: 43%;
+    }
+    @media screen and (max-width:1450px){
+      width: 41.5%;
+    }
+    @media screen and (max-width:1410px){
+      width: 40%;
+    }
+    @media screen and (max-width:1410px){
+      width: 40%;
+    }
+    @media screen and (max-width:1370px){
+      width: 38%;
+    }
+    @media screen and (max-width:1330px){
+      width: 36.5%;
+    }
+    @media screen and (max-width:1300px){
+      width: 35%;
+      margin: 10px 0 0 504px;
+    }
+    &--form{
+      
+    }
+  }
   .show__other{
-    margin: 26px 0 0 60px;
+    margin: -5px 0 0 60px;
     width: 560px;
     padding: 5px 0 0 10px;
     border-radius: 10px;
