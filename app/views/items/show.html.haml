@@ -67,5 +67,7 @@
       .comment__area
 
       .comment__bar
-        .comment__bar--form
-        .comment__bar--send
+        = form_with(model: [@item,@comment], local: true,class:"comment__bar--form") do |f|
+          = f.text_area :text, placeholder: "コメント", class: "comment__bar--form-input"
+          = f.submit class:"comment__bar--form-submit"
+        %i.fas.fa-paper-plane

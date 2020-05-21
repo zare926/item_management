@@ -99,4 +99,8 @@ $(function(){
   });
 });
 
-
+$(function(){
+  $('.comment__bar--form-submit').on('mousedown',function(){
+    $('.fa-paper-plane').click();
+  });
+});

@@ -142,7 +142,7 @@
   }
   .comment__bar{
     width: 50%;
-    height: 70px;
+    height: 95px;
     background:rgba(243, 244, 245, 0.616);
     box-shadow: 0 1px 3px rgba(0,0,0,1);
     float: left;
@@ -180,7 +180,29 @@
       margin: 10px 0 0 504px;
     }
     &--form{
-      
+      padding: 5px 0 5px 20px;
+      &-input{
+        width: 80%;
+        height: 84px;
+        border-radius: 10px;
+        border: 0.5px solid gray;
+      }
+      &-submit{
+        display: none;
+      }
+    }
+    .fa-paper-plane{
+      border: 1px solid gray;
+      font-size: 38px;
+      color: gray;
+      padding: 6px 30px;
+      float: right;
+      margin: -64px 15px 0;
+      border-radius: 10px;
+    }
+    .fa-paper-plane:active{
+      background:rgba(161, 171, 180, 0.616);
+      box-shadow: 0 3px 3px rgba(0,0,0,1);
     }
   }
   .show__other{
