@@ -31,14 +31,19 @@
 		background:rgba(243, 244, 245, 0.6);
     box-shadow: 0 1px 3px rgba(0,0,0,1);
     width: 346px;
-    height: 590px;
+    height: 610px;
     border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
     .new_user{
       position: relative;
     }
     .newnickname__area{
       margin: 20px 20px 5px 20px;
       font-weight: bold;
+      text-align: left;
+      font-size: 16px;
       &--form{
         width: 300px;
         height: 35px;
@@ -47,6 +52,8 @@
     .newemail__area{
       margin: 5px 20px 5px 20px;
       font-weight: bold;
+      text-align: left;
+      font-size: 16px;
       &--form{
         width: 300px;
         height: 35px;
@@ -55,6 +62,8 @@
     .newpassword__area{
       margin: 5px 20px 5px 20px;
       font-weight: bold;
+      text-align: left;
+      font-size: 16px;
       &--form{
         width: 300px;
         height: 35px;
@@ -63,6 +72,8 @@
     .newpassword_confirmation__area{
       margin: 5px 20px 5px 20px;
       font-weight: bold;
+      text-align: left;
+      font-size: 16px;
       &--form{
         width: 300px;
         height: 35px;
@@ -71,6 +82,8 @@
     .newmysize__area{
       margin: 5px 20px 5px 20px;
       font-weight: bold;
+      text-align: left;
+      font-size: 16px;
       &--form{
         width: 300px;
         height: 35px;
@@ -80,6 +93,8 @@
       margin: 5px 20px 5px 20px;
       font-weight: bold;
       position: relative;
+      text-align: left;
+      font-size: 16px;
       &--form{
         position: absolute;
         top: 121px;

@@ -56,6 +56,9 @@
             .edit-top__right--item-form-box
             サイズ
             = f.select :size, Item.sizes.keys ,{}, {class: 'edit-top__right--item-form-box-shoessize'}
+            .edit-top__right--item-form-box
+            ブランドを選択してください
+            = f.select :brand, Item.brands.keys,{},{class: 'edit-top__right--item-form-box-shoesbrand'}
           .edit-top__right--item-form-right
             = image_tag @item.image.url ,class:'edit-top__right--item-form-right-box'
             = f.file_field :image, class: 'edit-top__right--item-form-right-boximage'

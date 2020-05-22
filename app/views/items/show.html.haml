@@ -38,6 +38,7 @@
       = link_to "トップ", root_path,method: :get,class:"top__right--area-btn"
     .top__right--item_show.clearfix
       = image_tag @item.image.url,class:"show__image"
+      = render "brand"
       .item_info
         - if user_signed_in? && current_user.id == @item.user_id
         = image_tag asset_path('triangle.png'),class:"item_info-image",size:"12x8"
