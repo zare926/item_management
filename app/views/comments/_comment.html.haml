@@ -1,0 +1,30 @@
+.comment__area
+  .comment__area--info
+    コメント
+  - if @comments
+    - @comments.each do |c|
+      .comment__area--display
+        .comment__area--display-box
+          - if c.user.iconimage.present?
+            = link_to image_tag(c.user.iconimage.url,size:"60x60",class:"comment__area--display-boxicon"),user_path(c.user.id)
+            .comment__area--display-boxname
+              = c.user.nickname
+          - else
+            = link_to image_tag(asset_path('iconnew1.png'),size:"60x60",class:"comment__area--display-boxicon"),user_path(c.user.id)
+            .comment__area--display-boxname
+              = c.user.nickname
+        .comment__area--display-time
+          = c.created_at.strftime("%Y-%m-%d %H:%M:%S")
+        - if current_user.id == c.item.user.id or c.user.id == current_user.id
+          = link_to 'コメント削除',item_comment_path(@item,c) , method: :delete,class:'comment__area--display-delete',data: { confirm: '本当によろしいですか?' }
+        - if c.item.user.id == c.user.id
+          .comment__area--display-main
+            = simple_format(c.text)
+        - else
+          .comment__area--display-message
+            = simple_format(c.text)
+.comment__bar
+  = form_with(model: [@item,@comment], local: true,class:"comment__bar--form") do |f|
+    = f.text_area :text, placeholder: "コメント", class: "comment__bar--form-input"
+    = f.submit class:"comment__bar--form-submit"
+  %i.fas.fa-paper-plane

@@ -32,6 +32,7 @@
     box-shadow: 0 1px 3px rgba(0,0,0,1);
     margin: 25px 0 0 25px;
     border-radius: 10px;
+    position: relative;
     @media screen and (max-width:1650px){
       width: 48%;
     }
@@ -64,6 +65,9 @@
     }
     &-image{
       padding: 12px;
+      position: absolute;
+      top: 12;
+      left: 12;
     }
     &-area{
       display: none;
@@ -96,7 +100,7 @@
     .show__name{
       text-align: center;
       &--box{
-        margin-top: -20px;
+        margin-top: 20px;
         font-size: 30px;
       }
     }
@@ -161,6 +165,13 @@
       &-boxname{
         font-size: 1px;
         text-align: center;
+      }
+      &-delete{
+        float:right;
+        text-decoration: none;
+        padding: 0 10px 5px 0;
+        color: black;
+        font-size: 12px;
       }
       &-time{
         font-size: 12px;

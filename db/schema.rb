@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2020_05_21_150511) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "text"
+    t.text "text", collation: "utf8mb4_general_ci"
     t.integer "user_id"
     t.integer "item_id"
     t.datetime "created_at", null: false
