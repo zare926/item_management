@@ -40,6 +40,7 @@ class ItemsController < ApplicationController
   def show
     @comment = Comment.new
     @comments = @item.comments.includes(:user)
+    # binding.pry
   end
 
   def destroy

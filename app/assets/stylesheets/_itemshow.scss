@@ -139,6 +139,11 @@
     @media screen and (max-width:1300px){
       width: 35%;
     }
+    &--display{
+      width: 200px;
+      height: 100px;
+      background: red;
+    }
   }
   .comment__bar{
     width: 50%;

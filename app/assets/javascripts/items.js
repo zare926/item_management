@@ -100,7 +100,8 @@ $(function(){
 });
 
 $(function(){
-  $('.comment__bar--form-submit').on('mousedown',function(){
-    $('.fa-paper-plane').click();
+  $('.fa-paper-plane').on('mousedown',function(){
+    console.log('aaa');
+    $('.comment__bar--form-submit').click();
   });
 });
