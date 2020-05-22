@@ -17,6 +17,7 @@
   - OpenWeatherMapをAPIとして使用
   - RSpecで単体テスト
   - お気に入り機能実装
+  - コメント機能実装、絵文字も利用可能
 
 ## Contributors
   - https://github.com/zare926
@@ -46,7 +47,9 @@ https://gyazo.com/c7afd97a002a96222af218788238772e
 ## 実装予定
   - Dockerの使用
   - Twitterカードの使用（adidas,NIKEなどシューズメーカーのツイート？）
-  - ユーザー同士の靴に対してのコメント機能
+  - 独自ドメイン
+  - CircleCI
+  - 
 
 ## 工夫したポイント
 メイン機能は1ページで完結できるようにしました。
@@ -67,6 +70,7 @@ https://gyazo.com/c7afd97a002a96222af218788238772e
 
 #### association
   - has_many :items
+  - has_many :comments
 
 ### itemsテーブル
 |Column|Type|Options|
@@ -78,7 +82,21 @@ https://gyazo.com/c7afd97a002a96222af218788238772e
 |limit|integer|default: 4320|
 |text|string|
 |user_id|integer|null: false|
-|favorite|integer|default: 0||
+|favorite|integer|default: 0|
+|brand|string|
 
 #### association
   - belongs_to :user
+  - has_many :comments
+
+
+### commentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|string|
+|user_id|integer|
+|item_id|integer|
+
+#### association
+  - belongs_to :user
+  - belongs_to :item
