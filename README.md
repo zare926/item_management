@@ -70,6 +70,7 @@ https://gyazo.com/c7afd97a002a96222af218788238772e
 
 #### association
   - has_many :items
+  - has_many :comments
 
 ### itemsテーブル
 |Column|Type|Options|
@@ -81,7 +82,21 @@ https://gyazo.com/c7afd97a002a96222af218788238772e
 |limit|integer|default: 4320|
 |text|string|
 |user_id|integer|null: false|
-|favorite|integer|default: 0||
+|favorite|integer|default: 0|
+|brand|string|
 
 #### association
   - belongs_to :user
+  - has_many :comments
+
+
+### commentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|string|
+|user_id|integer|
+|item_id|integer|
+
+#### association
+  - belongs_to :user
+  - belongs_to :item
