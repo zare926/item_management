@@ -10,15 +10,15 @@ class Item < ApplicationRecord
                "28cm":"28cm","28.5cm":"28.5cm",
                "29cm":"29cm","29.5cm":"29.5cm",
                "30cm":"30cm" }
-  enum brand: { "選択してください":"","adidas":"adidas","NIKE":"NIKE",
+  enum brand: { "ノーブランド":"ノーブランド","adidas":"adidas","NIKE":"NIKE",
                 "New Balance":"New Balance","ASICS":"ASICS",
-                "PUMA":"PUMA","VANS":"VANS","CONVERSE":"CONVERSE","Reebok":"Reebok",}
+                "PUMA":"PUMA","VANS":"VANS","CONVERSE":"CONVERSE","Reebok":"Reebok"}
   mount_uploader :image, ImageUploader
   belongs_to :user
   belongs_to :used, optional: true
   has_many :comments
 
-  validates :name , presence: true,length: { maximum: 40 }
+  validates :name , presence: true,length: { maximum: 20 }
   validates :image , presence: true
 
 end
