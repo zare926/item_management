@@ -1,7 +1,11 @@
 class CommentsController < ApplicationController
   def create
     @comment = Comment.create(text: comment_params[:text], item_id: comment_params[:item_id], user_id: current_user.id)
-    # binding.pry
+    if @comment.save
+      redirect_to item_path(@comment.item.id)
+    else
+      redirect_to item_path(@comment.item.id)
+    end
   end
 
   private

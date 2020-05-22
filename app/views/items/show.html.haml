@@ -79,12 +79,16 @@
                   = link_to image_tag(asset_path('iconnew1.png'),size:"60x60",class:"comment__area--display-boxicon"),user_path(c.user.id)
                   .comment__area--display-boxname
                     = c.user.nickname
-                %i.fas.fa-caret-left
-              .comment__area--display-message
-                = simple_format(c.text)
-      - if user_signed_in?
-        .comment__bar
-          = form_with(model: [@item,@comment], local: true,class:"comment__bar--form") do |f|
-            = f.text_area :text, placeholder: "コメント", class: "comment__bar--form-input"
-            = f.submit class:"comment__bar--form-submit"
-          %i.fas.fa-paper-plane
+              .comment__area--display-time
+                = c.created_at.strftime("%Y-%m-%d %H:%M:%S")
+              - if c.item.user.id == c.user.id
+                .comment__area--display-main
+                  = simple_format(c.text)
+              - else
+                .comment__area--display-message
+                  = simple_format(c.text)
+      .comment__bar
+        = form_with(model: [@item,@comment], local: true,class:"comment__bar--form") do |f|
+          = f.text_area :text, placeholder: "コメント", class: "comment__bar--form-input"
+          = f.submit class:"comment__bar--form-submit"
+        %i.fas.fa-paper-plane

@@ -108,6 +108,7 @@
     box-shadow: 0 1px 3px rgba(0,0,0,1);
     float: left;
     border-radius: 10px;
+    overflow: scroll;
     margin: 10px 0 0 27px;
     @media screen and (max-width:1650px){
       width: 48%;
@@ -142,13 +143,12 @@
     &--info{
       margin-top: 10px;
       text-align: center;
-      font-size: 14px;
+      font-size: 20px;
     }
     &--display{
       margin: 20px;
-      width: 580px;
+      width: 93%;
       display: inline-block;
-      overflow: scroll;
       &-box{
         width: 60px;
         height: 80px;
@@ -157,23 +157,31 @@
         &icon{
           border-radius: 10px;
         }
-        .fas.fa-caret-left{
-          display: inline-block;
-          color: white;
-          font-size: 31px;
-          position: absolute;
-          top: 29px;
-          left: 80px;
-        }
       }
       &-boxname{
-        font-size: 12px;
+        font-size: 1px;
         text-align: center;
+      }
+      &-time{
+        font-size: 12px;
+        float: right;
+        margin-right: 3%;
+      }
+      &-main{
+        width: 83%;
+        background: rgba(253, 165, 130, 0.493);
+        margin:-60px 10px 0;
+        border-radius: 10px;
+        float: right;
+        display: inline-block;
+        & p{
+          margin: 5px;
+        }
       }
       &-message{
         width: 83%;
         background: white;
-        margin:30px 10px 0;
+        margin:-60px 10px 0;
         border-radius: 10px;
         float: right;
         display: inline-block;
@@ -300,15 +308,15 @@
       }
     }
     &--weather{
-      width: 100px;
+      width: 130px;
       font-size: 15px;
       margin: 10px;
       float: left;
       @media screen and (max-width:1370px){
-        width: 70px;
+        width: 100px;
       }
       @media screen and (max-width:1300px){
-        width: 65px;
+        width: 90px;
       }
     }
   }
