@@ -1,5 +1,9 @@
 $(function(){
-  $('.top__right--item-form-right-boximage').change(function(e){
+  $('.select__button').on('mousedown',function(){
+    $('.edit-top__right--item-form-right-boximage').click();
+  });
+
+  $('.edit-top__right--item-form-right-boximage').change(function(e){
     //ファイルオブジェクトを取得する
     var file = e.target.files[0];
     var reader = new FileReader();
@@ -13,12 +17,11 @@ $(function(){
     //アップロードした画像を設定する
     reader.onload = (function(file){
       return function(e){
-        $(".top__right--item-form-right-box").attr("src", e.target.result);
-        $(".top__right--item-form-right-box").attr("title", file.name);
+        $(".edit-top__right--item-form-right-box").attr("src", e.target.result);
+        $(".edit-top__right--item-form-right-box").attr("title", file.name);
       };
     })(file);
     reader.readAsDataURL(file);
- 
   });
   $('.iconimage__area--form').change(function(e){
     //ファイルオブジェクトを取得する

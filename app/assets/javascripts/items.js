@@ -104,9 +104,3 @@ $(function(){
     $('.comment__bar--form-submit').click();
   });
 });
-
-$(function(){
-  $('.select__button').on('mousedown',function(){
-    $('.edit-top__right--item-form-right-boximage').click();
-  });
-});
