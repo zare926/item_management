@@ -1,0 +1,27 @@
+.brand_box
+  - if @item.brand == "adidas"
+    = link_to image_tag(asset_path('adidas.png'),size:"100x100",class:"logo"),"https://shop.adidas.jp/"
+    ◀︎購入先リンク
+  - elsif @item.brand == "NIKE"
+    = link_to image_tag(asset_path('nike.png'),size:"200x100",class:"logo"),"https://www.nike.com/jp/"
+    ◀︎購入先リンク
+  - elsif @item.brand == "ASICS"
+    = link_to image_tag(asset_path('asics.png'),size:"280x100",class:"logo"),"https://www.asics.com/jp/ja-jp/"
+    ◀︎購入先リンク
+  - elsif @item.brand == "CONVERSE"
+    = link_to image_tag(asset_path('converse.png'),size:"280x170",class:"logo"),"https://converse.co.jp/"
+    ◀︎購入先リンク
+  - elsif @item.brand == "PUMA"
+    = link_to image_tag(asset_path('puma.png'),size:"280x150",class:"logo"),"https://jp.puma.com/"
+    ◀︎購入先リンク
+  - elsif @item.brand == "VANS"
+    = link_to image_tag(asset_path('VANS.png'),size:"300x200",class:"logo"),"https://www.vansjapan.com/"
+    ◀︎購入先リンク
+  - elsif @item.brand == "New Balance"
+    = link_to image_tag(asset_path('newbarance.png'),size:"280x140",class:"logo"),"https://shop.newbalance.jp/shop/default.aspx"
+    ◀︎購入先リンク
+  - else
+    = link_to image_tag(asset_path('amazon.png'),size:"280x100",class:"logo"),"https://www.amazon.co.jp/"
+    ◀︎購入先リンク
+    = link_to image_tag(asset_path('rakuten1.png'),size:"278x83",class:"logo"),"https://www.rakuten.co.jp/"
+    ◀︎購入先リンク
