@@ -14,6 +14,7 @@ class Item < ApplicationRecord
   mount_uploader :image, ImageUploader
   belongs_to :user
   belongs_to :used, optional: true
+  has_many :comments
 
   validates :name , presence: true,length: { maximum: 40 }
   validates :image , presence: true

@@ -15,6 +15,7 @@ class User < ApplicationRecord
                "29cm":"29cm","29.5cm":"29.5cm",
                "30cm":"30cm" }
   has_many :items
+  has_many :comments
   mount_uploader :iconimage, ImageUploader
 
   validates :nickname , presence: true

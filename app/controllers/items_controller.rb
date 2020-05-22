@@ -38,6 +38,8 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @item.comments.includes(:item).order("created_at DESC")
   end
 
   def destroy
