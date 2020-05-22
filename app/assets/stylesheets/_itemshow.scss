@@ -113,6 +113,8 @@
     float: left;
     border-radius: 10px;
     overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     margin: 10px 0 0 27px;
     @media screen and (max-width:1650px){
       width: 48%;
@@ -202,6 +204,9 @@
       }
     }
   }
+  .comment__area::-webkit-scrollbar { 
+    display:none;
+  }
   .comment__bar{
     width: 50%;
     height: 95px;
@@ -290,9 +295,6 @@
       overflow: scroll;
       -ms-overflow-style: none;
       scrollbar-width: none;
-      &--text::-webkit-scrollbar { 
-        display:none;
-      }
       @media screen and (max-width:1650px){
         width: 160px;
       }
@@ -305,6 +307,9 @@
       @media screen and (max-width:1300px){
         width: 80px;
       }
+    }
+    &--text::-webkit-scrollbar { 
+      display:none;
     }
     &--size{
       width: 100px;
