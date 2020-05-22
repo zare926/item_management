@@ -139,10 +139,48 @@
     @media screen and (max-width:1300px){
       width: 35%;
     }
+    &--info{
+      margin-top: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
     &--display{
-      width: 200px;
-      height: 100px;
-      background: red;
+      margin: 20px;
+      width: 580px;
+      display: inline-block;
+      overflow: scroll;
+      &-box{
+        width: 60px;
+        height: 80px;
+        display: inline-block;
+        position: relative;
+        &icon{
+          border-radius: 10px;
+        }
+        .fas.fa-caret-left{
+          display: inline-block;
+          color: white;
+          font-size: 31px;
+          position: absolute;
+          top: 29px;
+          left: 80px;
+        }
+      }
+      &-boxname{
+        font-size: 12px;
+        text-align: center;
+      }
+      &-message{
+        width: 83%;
+        background: white;
+        margin:30px 10px 0;
+        border-radius: 10px;
+        float: right;
+        display: inline-block;
+        & p{
+          margin: 5px;
+        }
+      }
     }
   }
   .comment__bar{

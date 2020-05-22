@@ -65,18 +65,21 @@
             - else
               = simple_format("晴れの日用")
       .comment__area
+        .comment__area--info
+          コメント
         - if @comments
           - @comments.each do |c|
             .comment__area--display
               .comment__area--display-box
-              - if current_user.iconimage.present?
-                = link_to image_tag(c.user.iconimage.url,size:"60x60",class:"comment__area--display-boxicom"),user_path(c.user.id)
-                .comment__area--display-boxname
-                  = c.user.nickname
-              - else
-                = link_to image_tag(asset_path('iconnew1.png'),size:"60x60",class:"comment__area--display-boxicom"),user_path(c.user.id)
-                .comment__area--display-boxname
-                  = c.user.nickname
+                - if current_user.iconimage.present?
+                  = link_to image_tag(c.user.iconimage.url,size:"60x60",class:"comment__area--display-boxicon"),user_path(c.user.id)
+                  .comment__area--display-boxname
+                    = c.user.nickname
+                - else
+                  = link_to image_tag(asset_path('iconnew1.png'),size:"60x60",class:"comment__area--display-boxicon"),user_path(c.user.id)
+                  .comment__area--display-boxname
+                    = c.user.nickname
+                %i.fas.fa-caret-left
               .comment__area--display-message
                 = simple_format(c.text)
       - if user_signed_in?
