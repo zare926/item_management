@@ -38,7 +38,6 @@
     &-box{
       margin: 20px 20px 20px 170px;
       font-size: 20px;
-      font-weight: bold;
       &-shoes{
         display: block;
         font-size: 15px;
@@ -52,23 +51,27 @@
         height: 150px;
       }
       &-shoesweather{
-        display: inline-block;
+        display: block;
         font-size: 15px;
         height: 30px;
       }
       &-shoessize{
-        display: inline-block;
+        display: block;
+        font-size: 15px;
+        height: 30px;
+      }
+      &-shoesbrand{
+        display: block;
         font-size: 15px;
         height: 30px;
       }
     }
     &-right{
-      width: 550px;
+      width: 300px;
       height: 390px;
       position: absolute;
       top: 239px;
       left: 620px;
-      font-weight: bold;
       font-size: 20px;
       &-box{
         background:rgba(255, 255, 255, 0.6);
@@ -77,23 +80,39 @@
         height: 300px;
         display: block;
         &image{
-          width: 100px;
-          margin-top: 30px;
+          display: none;
         }
         &image input{
           background:rgba(143, 139, 139, 0.6);
           box-shadow: 0 1px 3px rgba(0,0,0,1);
         }
       }
-      &btn{
+      .select__button{
         float: right;
-        margin: 30px 250px 0 0 ;
+        margin: 10px 10px 0;
         background:rgba(191, 218, 240, 0.616);
         box-shadow: 0 1px 3px rgba(0,0,0,1);
         width: 100px;
         height: 30px;
         border-radius: 10px;
         font-size: 15px;
+        line-height: 30px;
+        text-align: center;
+      }
+      .select__button:active{
+        background:rgba(90, 131, 167, 0.616);
+        box-shadow: 3px 3px 5px rgba(0,0,0,1);
+      }
+      &btn{
+        float: right;
+        margin-top: 10px;
+        background:rgba(191, 218, 240, 0.616);
+        box-shadow: 0 1px 3px rgba(0,0,0,1);
+        width: 100px;
+        height: 30px;
+        border-radius: 10px;
+        font-size: 15px;
+        display: inline-block;
       }
     }
   }
