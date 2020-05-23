@@ -81,9 +81,18 @@
           position: absolute;
           top: 0;
           left: 530px;
+          height: 84px;
+          width: 470px;
+          overflow-x: auto;
+          white-space: nowrap;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
           & img{
             border-radius: 10px;
           }
+        }
+        &favorite::-webkit-scrollbar {
+          display:none;
         }
       }
       .pagination{
