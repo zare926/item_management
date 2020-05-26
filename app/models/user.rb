@@ -14,9 +14,16 @@ class User < ApplicationRecord
                "28cm":"28cm","28.5cm":"28.5cm",
                "29cm":"29cm","29.5cm":"29.5cm",
                "30cm":"30cm" }
+
+
+
   has_many :items
   has_many :comments
+  has_many :likes
+  has_many :like_items, through: :likes, source: :item
   mount_uploader :iconimage, ImageUploader
+
+
 
   validates :nickname , presence: true
   validates :email, presence: true, 
@@ -27,5 +34,14 @@ class User < ApplicationRecord
   def self.search(search)
     return User.all unless search
     User.where('nickname LIKE(?)', "%#{search}%")
+  end
+
+  def like(item)
+    likes.find_or_create_by(item_id: item.id)
+  end
+
+  def unlike(item)
+    like = likes.find_by(post_id: post.id)
+    like.destroy if like
   end
 end

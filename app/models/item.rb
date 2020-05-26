@@ -17,6 +17,8 @@ class Item < ApplicationRecord
   belongs_to :user
   belongs_to :used, optional: true
   has_many :comments
+  has_many :likes
+  has_many :users, through: :likes
 
   validates :name , presence: true,length: { maximum: 20 }
   validates :image , presence: true
