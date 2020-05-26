@@ -53,6 +53,18 @@
       top: -135px;
       left: 94px;
     }
+    &-like{
+      color: gray;
+      border: 0.5px solid gray;
+      border-radius: 10px;
+      float: bottom;
+      padding-left: 5px;
+      width: 110px;
+      .fa-heart{
+        color: gray;
+        font-size: 14px;
+      }
+    }
   }
   .item__name{
     display: block;
