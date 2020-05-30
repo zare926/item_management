@@ -40,6 +40,7 @@ class ItemsController < ApplicationController
   def show
     @comment = Comment.new
     @comments = @item.comments.includes(:item).order("created_at DESC")
+    @like = Like.new
   end
 
   def destroy

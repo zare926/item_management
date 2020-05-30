@@ -346,5 +346,20 @@
       }
     }
   }
+  .like__zone{
+    color: gray;
+    border: 0.5px solid gray;
+    border-radius: 15px;
+    padding: 5px 10px;
+    width: 107px;
+    text-decoration: none;
+    position: absolute;
+    top: 72%;
+    left: 35%;
+  }
+  .fa-heart{
+    color: black;
+    font-size: 14px;
+  }
 }
 

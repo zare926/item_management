@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'items#index'
+
   resources :items do
+    resources :likes, only:[:create,:destroy]
     resources :comments,only:[:create,:destroy]
     resources :used,only:[:index,:new,:create]
     resources :favorite,only:[:index,:new,:create]
@@ -10,4 +11,7 @@ Rails.application.routes.draw do
     resources :searches, only: [:index]
   end
   resources :users, only: [:index,:show]
+
+  root to: 'items#index'
+
 end
