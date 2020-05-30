@@ -17,9 +17,9 @@ class User < ApplicationRecord
 
 
 
-  has_many :items
-  has_many :comments
-  has_many :likes
+  has_many :items ,dependent: :destroy
+  has_many :comments ,dependent: :destroy
+  has_many :likes, dependent: :destroy
   has_many :like_items, through: :likes, source: :item
   mount_uploader :iconimage, ImageUploader
 
@@ -36,12 +36,7 @@ class User < ApplicationRecord
     User.where('nickname LIKE(?)', "%#{search}%")
   end
 
-  def like(item)
-    likes.find_or_create_by(item_id: item.id)
-  end
-
-  def unlike(item)
-    like = likes.find_by(post_id: post.id)
-    like.destroy if like
+  def already_liked?(item)
+    self.likes.exists?(item_id: item.id)
   end
 end
