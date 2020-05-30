@@ -40,9 +40,14 @@
       = image_tag @item.image.url,class:"show__image"
 
       .like
-        = button_to "いいね！" ,item_likes_path(@item)
-        %i.far.fa-heart
-        = @item.likes.count
+        - if current_user.already_liked?(@item)
+          = button_to "いいね解除" ,item_like_path(@item), method: :delete
+          %i.fas.fa-heart
+          = @item.likes.count
+        - else
+          = button_to "いいね！" ,item_likes_path(@item)
+          %i.far.fa-heart
+          = @item.likes.count
 
 
       = render "brand"

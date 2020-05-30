@@ -354,13 +354,12 @@
     left: 38%;
     .button_to{
       display: inline-block;
-      & input{
-        
-      }
-      .fa-heart{
-        color: black;
-        font-size: 14px;
-      }
+    }
+    .fa-heart{
+      color: black;
+    }
+    .fas{
+      color: red;
     }
   }
 }
