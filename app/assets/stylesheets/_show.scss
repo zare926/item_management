@@ -1,10 +1,8 @@
 .top__right--item-user{
+  @include box;
   width: 96%;
   height: 800px;
   padding-left: 11px;
-  background:rgba(243, 244, 245, 0.616);
-  box-shadow: 0 1px 3px rgba(0,0,0,1);
-  border-radius: 10px;
   .top__right--item-show{
     padding: 30px;
     .weatherimage{
@@ -25,19 +23,10 @@
     border-radius: 10px;
   }
   .image:active{
-    background:rgba(161, 171, 180, 0.616);
-    box-shadow: 3px 3px 5px rgba(0,0,0,1);
+    @include click;
   }
   .edit__btn{
-    background:rgba(243, 247, 250, 0.616);
-    box-shadow: 0 1px 3px rgba(0,0,0,1);
-    border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
-    padding: 4px 10px 4px 10px;
-    font-size: 13px;
-    color: black;
-    margin-bottom: 5px;
+    @include edit_btn;
   }
   &-area{
     display: inline;
@@ -60,11 +49,6 @@
     font-size: 13px;
   }
   .time{
-    background:rgba(243, 247, 250, 0.616);
-    box-shadow: 0 1px 1px rgba(0,0,0,1);
-    position: absolute;
-    top: 82px;
-    left: -19px;
-    color: rgb(0, 0, 0);
+    @include time;
   }
 }

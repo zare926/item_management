@@ -5,12 +5,10 @@
 }
 
 .top__right--item_show{
+  @include box;
   width: 96%;
   height: 800px;
   padding-left: 11px;
-  background:rgba(243, 244, 245, 0.616);
-  box-shadow: 0 1px 3px rgba(0,0,0,1);
-  border-radius: 10px;
   position: relative;
   .show__image{
     margin: 25px 0 0 25px;
@@ -34,14 +32,12 @@
     }
   }
   .item_info{
+    @include box;
     position: relative;
     width: 50%;
     height: 305px;
     float: left;
-    background:rgba(243, 244, 245, 0.616);
-    box-shadow: 0 1px 3px rgba(0,0,0,1);
     margin: 25px 0 0 25px;
-    border-radius: 10px;
     position: relative;
     @media screen and (max-width:1650px){
       width: 48%;
@@ -90,21 +86,11 @@
       border-radius: 10px;
       padding: 10px 0 12px;
       .delete__btn{
-        background:rgba(214, 213, 213, 0.904);
-        text-decoration: none;
-        color: rgba(0,0,0,1);
-        font-size: 14px;
-        padding: 9px 17px;
-        border-radius: 10px;
+        @include itemShowbox;
         margin-left: 12px;
       }
       .edit__btn{
-        background:rgba(214, 213, 213, 0.904);
-        text-decoration: none;
-        color: rgba(0,0,0,1);
-        font-size: 14px;
-        padding: 9px 17px;
-        border-radius: 10px;
+        @include itemShowbox;
       }
     }
     .show__name{
@@ -116,12 +102,10 @@
     }
   }
   .comment__area{
+    @include box;
     width: 50%;
     height: 337px;
-    background:rgba(243, 244, 245, 0.616);
-    box-shadow: 0 1px 3px rgba(0,0,0,1);
     float: left;
-    border-radius: 10px;
     overflow: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -156,6 +140,9 @@
     @media screen and (max-width:1300px){
       width: 35%;
     }
+
+    //ここまでやった。
+    
     &--info{
       margin-top: 10px;
       text-align: center;
