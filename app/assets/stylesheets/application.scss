@@ -1,4 +1,6 @@
 @import "./base/reset";
+@import "./mixin/flame";
+@import "./mixin/scroll";
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 @import "./session";
@@ -9,4 +11,3 @@
 @import "./error";
 @import "./search";
 @import "./show";
-@import "./edit";

@@ -1,7 +1,6 @@
 .top__contents--image{
   width: 100%;
   height: 100%;
-  background:rgba(235, 235, 235, 0);
   z-index: -1;
   display: flex;
   &-back{
@@ -19,13 +18,11 @@
     z-index: 1;
     margin-left: 15px;
     &--time{
+      @include box;
       height: 50px;
       padding: 10px;
       margin: 25px 10px 10px 10px;
-      background:rgba(243, 244, 245, 0.616);
-      box-shadow: 0 1px 3px rgba(0,0,0,1);
       line-height: 50px;
-      border-radius: 10px;
       &-real{
         font-size: 25px;
         text-align: center;
@@ -35,17 +32,12 @@
       }
     }
     &--weather{
+      @include box;
       height: 716px;
       padding: 15px;
       margin: 10px;
-      background:rgba(243, 244, 245, 0.616);
-      box-shadow: 0 1px 3px rgba(0,0,0,1);
-      border-radius: 10px;
       .top__info{
-        box-shadow: 10px 10px #ccc;
-        -moz-box-shadow: 10px 10px rgb(134, 128, 128);
         -webkit-box-shadow: 10px 10px rgba(89, 99, 109, 0.616);
-        -o-box-shadow: 10px 10px rgb(121, 115, 115);
         width: 90%;
         border: solid 1px rgb(134, 128, 128);
         margin-bottom: 20px;
@@ -64,17 +56,14 @@
       }
       &-information{
         .weather-report{
+          @include box;
+          @include scroll_none;
           width: 98%;
           height: 96px;
-          background:rgba(155, 233, 243, 0.616);
-          box-shadow: 0 1px 3px rgba(0,0,0,1);
           -webkit-box-shadow: 3px 3px rgba(18, 41, 65, 0.616);
           margin: 20px 0 20px 0;
-          border-radius: 10px;
           font-size: 12px;
           overflow-x: scroll;
-          -ms-overflow-style: none;
-          scrollbar-width: none;
           & img{
             float: left;
             margin: 22px;
@@ -95,18 +84,15 @@
       }
     }
     &--register{
+      @include box;
       padding: 10px 0;
       margin: 10px;
-      background:rgba(243, 244, 245, 0.616);
-      box-shadow: 0 1px 3px rgba(0,0,0,1);
-      border-radius: 10px;
       display: block;
       cursor: pointer;
       text-align: center;
     }
     &--register:active{
-      background:rgba(161, 171, 180, 0.616);
-      box-shadow: 0 3px 3px rgba(0,0,0,1);
+      @include click;
     }
     & a{
       text-decoration: none;
@@ -115,32 +101,27 @@
     }
   }
   .top__right{
-    background:rgba(235, 235, 235, 0);
     width: 80%;
     height: 833px;
     z-index: 1;
     margin-left: 20px;
     &--area{
+      @include box;
       height: 70px;
       width: 97%;
       margin: 25px 0 10px 0 ;
       font-size: 30px;
       line-height: 70px;
-      background:rgba(243, 244, 245, 0.616);
-      box-shadow: 0 1px 3px rgba(0,0,0,1);
-      border-radius: 10px;
       position: relative;
       font-size: 25px;
       &-btn{
+        @include box;
         width: 130px;
-        background:rgba(243, 244, 245, 0.616);
-        box-shadow: 0 1px 3px rgba(0,0,0,1);
         text-decoration: none;
         color: rgba(0,0,0,1);
         margin: 7px 10px 10px 0;
         font-size: 18px;
         text-align: center;
-        border-radius: 10px;
         float: right;
         height: 80%;
         line-height: 59px;
@@ -155,8 +136,7 @@
         }
       }
       &-btn:active{
-        background:rgba(161, 171, 180, 0.616);
-        box-shadow: 0 3px 3px rgba(0,0,0,1);
+        @include click;
       }
       &-name{
         width: 45%;
@@ -180,6 +160,7 @@
           border-radius: 10px;
         }
         &-window{
+          @include box2;
           display: none;
           position: absolute;
           top: 66px;
@@ -187,13 +168,9 @@
           z-index: 1;
           width: 200px;
           height: 325px;
-          background:rgba(247, 245, 245, 0.904);
-          box-shadow: 0 1px 3px rgba(0,0,0,1);
-          border-radius: 10px;
           font-size: 12px;
           .window__area{
             text-align: center;
-          
             &--name{
               height: 20px;
               font-size: 12px;
@@ -211,29 +188,15 @@
               margin-bottom: 30px;
             }
             &--mypage{
-              border: 0.5px solid gray;
-              border-radius: 10px;
-              background:rgba(214, 213, 213, 0.904);
-              width: 150px;
-              height: 30px;
-              line-height: 30px;
-              margin-left: 25px;
+              @include area;
               &-zone{
-                text-decoration: none;
-                color: black;
+                @include zone;
               }
             }
             &--logout{
-              border: 0.5px solid gray;
-              border-radius: 10px;
-              background:rgba(214, 213, 213, 0.904);
-              width: 150px;
-              height: 30px;
-              line-height: 30px;
-              margin:10px 0 0 25px;
+              @include area;
               &-zone{
-                text-decoration: none;
-                color: black;
+                @include zone;
               }
             }
           }
@@ -259,10 +222,9 @@
         }
       }
       .search-btn{
+        @include box;
         border: 1px solid black;
         padding: 0 17px;
-        background:rgba(243, 244, 245, 0.616);
-        box-shadow: 0 1px 3px rgba(0,0,0,1);
         cursor: pointer;
         display: inline-block;
         margin-left: 10px;
@@ -313,17 +275,14 @@
         }
       }
       .search-btn:active{
-        background:rgba(161, 171, 180, 0.616);
-        box-shadow: 0 3px 3px rgba(0,0,0,1);
+        @include click;
       }
     }
     &--item{
+      @include box2;
       width: 96%;
       height: 546px;
       padding-left: 11px;
-      background:rgba(243, 244, 245, 0.616);
-      box-shadow: 0 1px 3px rgba(0,0,0,1);
-      border-radius: 10px;
       .weatherimage{
       }
       & p{
@@ -331,11 +290,10 @@
         display: inline-block;
       }
       &-sunny{
+        @include scroll_none;
         padding-top: 10px;
         height: 50%;
         overflow: scroll;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
       }
       &-sunny::-webkit-scrollbar { 
         display:none;
@@ -345,38 +303,23 @@
         margin: 0 50px 3px 50px;
       }
       &-rainy{
+        @include scroll_none;
         height: 50%;
         overflow: scroll;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
       }
       &-rainy::-webkit-scrollbar { 
         display:none;
       }
       .image_box{
-        width: 140px;
-        height: 200px;
-        display: inline-block;
-        margin: 5px 0 10px 50px;
-        padding-right: 45px;
-        position: relative;
+        @include image_box;
         & img{
           border-radius: 10px;
         }
         .image:active{
-          background:rgba(161, 171, 180, 0.616);
-          box-shadow: 3px 3px 5px rgba(0,0,0,1);
+          @include image_active;
         }
         .edit__btn{
-          background:rgba(243, 247, 250, 0.616);
-          box-shadow: 0 1px 3px rgba(0,0,0,1);
-          border-radius: 10px;
-          text-decoration: none;
-          display: inline-block;
-          padding: 4px 10px 4px 10px;
-          font-size: 13px;
-          color: black;
-          margin-bottom: 5px;
+          @include edit_btn
         }
         &-area{
           display: inline;
@@ -399,22 +342,15 @@
           font-size: 13px;
         }
         .time{
-          background:rgba(243, 247, 250, 0.616);
-          box-shadow: 0 1px 1px rgba(0,0,0,1);
-          position: absolute;
-          top: 82px;
-          left: -19px;
-          color: rgb(0, 0, 0);
+          @include time;
         }
       }
     }
     &--item-bottom{
+      @include box2;
       width: 96%;
       height: 244px;
       padding-left: 11px;
-      background:rgba(243, 244, 245, 0.616);
-      box-shadow: 0 1px 3px rgba(0,0,0,1);
-      border-radius: 10px;
       .weatherimage{
       }
       & p{
@@ -423,40 +359,23 @@
       }
       &recovery{
         overflow: scroll;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
         border-radius: 10px;
         margin:10px 10px 0 0;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
+        @include scroll_none;
       }
       &recovery::-webkit-scrollbar { 
         display:none;
       }
       .image_box{
-        width: 140px;
-        height: 200px;
-        display: inline-block;
-        margin: 5px 0 10px 50px;
-        padding-right: 45px;
-        position: relative;
+        @include image_box;
         & img{
           border-radius: 10px;
         }
         .image:active{
-          background:rgba(161, 171, 180, 0.616);
-          box-shadow: 3px 3px 5px rgba(0,0,0,1);
+          @include image_active;
         }
         .edit__btn{
-          background:rgba(243, 247, 250, 0.616);
-          box-shadow: 0 1px 3px rgba(0,0,0,1);
-          border-radius: 10px;
-          text-decoration: none;
-          display: inline-block;
-          padding: 4px 10px 4px 10px;
-          font-size: 13px;
-          color: black;
-          margin-bottom: 5px;
+          @include edit_btn;
         }
         .item__name{
           display: block;
@@ -464,12 +383,7 @@
           font-size: 13px;
         }
         .time{
-          background:rgba(243, 247, 250, 0.616);
-          box-shadow: 0 1px 1px rgba(0,0,0,1);
-          position: absolute;
-          top: 82px;
-          left: -19px;
-          color: rgb(0, 0, 0);
+          @include time;
         }
         &-area{
           display: inline;

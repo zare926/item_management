@@ -1,0 +1,66 @@
+@mixin box {
+  background:rgba(243, 244, 245, 0.616);
+  box-shadow: 0 1px 3px rgba(0,0,0,1);
+  border-radius: 10px;
+}
+
+@mixin box2 {
+  background:rgba(247, 245, 245, 0.904);
+  box-shadow: 0 1px 3px rgba(0,0,0,1);
+  border-radius: 10px;
+}
+
+@mixin click {
+  background:rgba(161, 171, 180, 0.616);
+  box-shadow: 0 3px 3px rgba(0,0,0,1);
+}
+
+@mixin image_box {
+  width: 140px;
+  height: 200px;
+  display: inline-block;
+  margin: 5px 0 10px 50px;
+  padding-right: 45px;
+  position: relative;
+}
+
+@mixin image_active {
+  background:rgba(161, 171, 180, 0.616);
+  box-shadow: 3px 3px 5px rgba(0,0,0,1);
+}
+
+@mixin edit_btn {
+  background:rgba(243, 247, 250, 0.616);
+  box-shadow: 0 1px 3px rgba(0,0,0,1);
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 4px 10px 4px 10px;
+  font-size: 13px;
+  color: black;
+  margin-bottom: 5px;
+}
+
+@mixin time {
+  background:rgba(243, 247, 250, 0.616);
+  box-shadow: 0 1px 1px rgba(0,0,0,1);
+  position: absolute;
+  top: 82px;
+  left: -19px;
+  color: rgb(0, 0, 0);
+}
+
+@mixin area {
+  border: 0.5px solid gray;
+  border-radius: 10px;
+  background:rgba(214, 213, 213, 0.904);
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 25px;
+}
+
+@mixin zone {
+  text-decoration: none;
+  color: black;
+}
