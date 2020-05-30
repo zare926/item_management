@@ -26,7 +26,7 @@
   .brand_box{
     width: 600px;
     position: absolute;
-    top: 580px;
+    top: 593px;
     left: 45px;
     display: inline-block;
     .logo{
@@ -346,20 +346,22 @@
       }
     }
   }
-  .like__zone{
-    color: gray;
-    border: 0.5px solid gray;
-    border-radius: 15px;
-    padding: 5px 10px;
-    width: 107px;
-    text-decoration: none;
+  .like{
+    width: 150px;
+    height: 25px;
     position: absolute;
-    top: 72%;
-    left: 35%;
-  }
-  .fa-heart{
-    color: black;
-    font-size: 14px;
+    top: 71.5%;
+    left: 38%;
+    .button_to{
+      display: inline-block;
+    }
+    .fa-heart{
+      color: black;
+    }
+    .fas{
+      color: red;
+    }
   }
 }
+
 
