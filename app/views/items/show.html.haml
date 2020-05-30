@@ -38,9 +38,13 @@
       = link_to "トップ", root_path,method: :get,class:"top__right--area-btn"
     .top__right--item_show.clearfix
       = image_tag @item.image.url,class:"show__image"
-      = button_to "いいね！" ,item_likes_path(@item)
-      %span いいね！
-      %i.far.fa-heart 10
+
+      .like
+        = button_to "いいね！" ,item_likes_path(@item)
+        %i.far.fa-heart
+        = @item.likes.count
+
+
       = render "brand"
       .item_info
         - if user_signed_in? && current_user.id == @item.user_id
