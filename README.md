@@ -17,6 +17,7 @@
   - OpenWeatherMapをAPIとして使用
   - RSpecで単体テスト
   - お気に入り機能実装
+  - いいね機能実装
   - コメント機能実装、絵文字も利用可能
 
 ## Contributors
@@ -49,7 +50,7 @@ https://gyazo.com/c7afd97a002a96222af218788238772e
   - Twitterカードの使用（adidas,NIKEなどシューズメーカーのツイート？）
   - 独自ドメイン
   - CircleCI
-  - 
+  - 使用可能になった靴をLINE通知
 
 ## 工夫したポイント
 メイン機能は1ページで完結できるようにしました。
@@ -71,6 +72,8 @@ https://gyazo.com/c7afd97a002a96222af218788238772e
 #### association
   - has_many :items
   - has_many :comments
+  - has_many :likes
+  - has_many :like_items, through: :likes, source: :item
 
 ### itemsテーブル
 |Column|Type|Options|
@@ -88,7 +91,8 @@ https://gyazo.com/c7afd97a002a96222af218788238772e
 #### association
   - belongs_to :user
   - has_many :comments
-
+  - has_many :likes
+  - has_many :like_users, through: :likes, source: :user
 
 ### commentsテーブル
 |Column|Type|Options|
@@ -100,3 +104,15 @@ https://gyazo.com/c7afd97a002a96222af218788238772e
 #### association
   - belongs_to :user
   - belongs_to :item
+
+### likesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|
+|item_id|integer|
+
+#### association
+  - belongs_to :user
+  - belongs_to :item
+  - validates_uniqueness_of :item_id,scope: :user_id
+
