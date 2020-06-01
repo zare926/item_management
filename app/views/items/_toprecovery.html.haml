@@ -1,0 +1,19 @@
+.top__right--item-bottomrecovery
+  .weather-box
+    = image_tag asset_path('zzz.png'),size:"25x25",class:"weatherimage"
+    %p 休息中
+  - if user_signed_in?
+    - @items.each do |i|
+      - if i.status == "used"
+        .image_box
+          .item__name
+            = i.name
+          .image_box-area
+            = link_to image_tag(i.image.url,class:'image',size:'140x140'),item_path(i.id)
+            - if i.favorite == 0
+              = link_to image_tag(asset_path('favorite1.png'),class:"favorite_off",size:"25x25"),item_favorite_index_path(i.id)
+            - else i.favorite == 1
+              = link_to image_tag(asset_path('favorite2.png'),class:"favorite_on" ,size:"55x55"),new_item_favorite_path(i.id)
+            = link_to '使用可能にする', new_item_used_path(i.id), method: :get,class:'edit__btn'
+          .time
+            = (i.updated_at+i.limit.minutes).strftime("%Y-%m-%d %H:%M:%S")

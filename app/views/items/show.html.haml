@@ -1,13 +1,6 @@
 .top__contents--image
   = image_tag asset_path('IMindex7.jpeg'),class:"top__contents--image-back"
-  .top__left
-    .top__left--time
-      %p.top__left--time-real
-    .top__left--weather
-      .top__info
-      .top__left--weather-city
-      .top__left--weather-information
-    = link_to "ログアウト" ,destroy_user_session_path,method: :delete,class: "top__left--register"
+  = render "backlayout"
   .top__right
     .top__right--area
       .top__right--area-name
@@ -39,17 +32,8 @@
     .top__right--item_show.clearfix
       = image_tag @item.image.url,class:"show__image"
 
-      .like
-        - if current_user.already_liked?(@item)
-          = button_to "いいね解除" ,item_like_path(@item), method: :delete
-          %i.fas.fa-heart
-          = @item.likes.count
-        - else
-          = button_to "いいね！" ,item_likes_path(@item)
-          %i.far.fa-heart
-          = @item.likes.count
-
-
+      = render "like"
+      
       = render "brand"
       .item_info
         - if user_signed_in? && current_user.id == @item.user_id

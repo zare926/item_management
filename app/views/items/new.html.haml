@@ -1,14 +1,6 @@
 .top__contents--image
   = image_tag asset_path('IMindex28.png'),class:"top__contents--image-back"
-  .top__left
-    .top__left--time
-      %p.top__left--time-real
-    .top__left--weather
-      .top__info
-      .top__left--weather-city
-      .top__left--weather-information
-    .top__left--register
-      = link_to "ログアウト" ,destroy_user_session_path,method: :delete,class: "top__left--register-btn"
+  = render "backlayout"
   .top__right
     .top__right--area
       .top__right--area-name
