@@ -4,40 +4,36 @@
   height: 800px;
   padding-left: 11px;
   &info{
+    @include border_bottom;
     width: 1000px;
     height: 80px;
     margin: 10px auto;
     padding: 5px 10px 10px 10px;
     font-weight: bold;
     line-height: 60px;
-    border-bottom: 2px solid rgb(85, 79, 79);
+    
     &-border{
-      border-bottom: 2px solid rgb(85, 79, 79);
+      @include border_bottom;
       margin: 10px -10px 0 -10px;
     }
     &-icon{
-      margin-top: 10px;
-      display: inline-block;
+      @include searchwhile;
     }
     &-name{
-      margin-top: 10px;
+      @include searchwhile;
       margin-left: 30px;
-      display: inline-block;
     }
     &-size{
-      margin-top: 10px;
+      @include searchwhile;
       margin-left: 40px;
-      display: inline-block;
     }
     &-number{
-      margin-top: 10px;
+      @include searchwhile;
       margin-left: 53px;
-      display: inline-block;
     }
     &-favorite{
-      margin-top: 10px;
+      @include searchwhile;
       margin-left: 85px;
-      display: inline-block;
     }
     .top__right--user-box{
       margin-top: 40px;
@@ -61,28 +57,24 @@
           }
         }
         &size{
-          display: inline-block;
-          position: absolute;
+          @include searchwhile2;
           top: 0;
           left: 260px;
         }
         &number{
-          display: inline-block;
-          position: absolute;
+          @include searchwhile2;
           top: 0;
           left: 400px;
         }
         &favorite{
-          display: inline-block;
-          position: absolute;
+          @include searchwhile2;
+          @include scroll_none;
           top: 0;
           left: 530px;
           height: 84px;
           width: 470px;
           overflow-x: auto;
           white-space: nowrap;
-          -ms-overflow-style: none;
-          scrollbar-width: none;
           & img{
             border-radius: 10px;
           }

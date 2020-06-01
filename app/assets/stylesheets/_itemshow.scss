@@ -103,12 +103,11 @@
   }
   .comment__area{
     @include box;
+    @include scroll_none;
     width: 50%;
     height: 337px;
     float: left;
     overflow: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
     margin: 10px 0 0 27px;
     @media screen and (max-width:1650px){
       width: 48%;
@@ -141,8 +140,6 @@
       width: 35%;
     }
 
-    //ここまでやった。
-    
     &--info{
       margin-top: 10px;
       text-align: center;
@@ -205,12 +202,10 @@
     display:none;
   }
   .comment__bar{
+    @include box;
     width: 50%;
     height: 95px;
-    background:rgba(243, 244, 245, 0.616);
-    box-shadow: 0 1px 3px rgba(0,0,0,1);
     float: left;
-    border-radius: 10px;
     margin: 10px 0 0 595px;
     @media screen and (max-width:1650px){
       width: 48%;
@@ -265,8 +260,7 @@
       border-radius: 10px;
     }
     .fa-paper-plane:active{
-      background:rgba(161, 171, 180, 0.616);
-      box-shadow: 0 3px 3px rgba(0,0,0,1);
+      @include click;
     }
   }
   .show__other{
@@ -284,14 +278,13 @@
       margin: 26px 0 0 10px;
     }
     &--text{
+      @include scroll_none;
       width: 200px;
       height: 200px;
       font-size: 15px;
       margin: 10px;
       float: left;
       overflow: scroll;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
       @media screen and (max-width:1650px){
         width: 160px;
       }

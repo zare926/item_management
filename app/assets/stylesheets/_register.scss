@@ -38,61 +38,49 @@
       position: relative;
     }
     .newnickname__area{
+      @include form;
       margin: 20px 20px 5px 20px;
-      font-weight: bold;
-      text-align: left;
-      font-size: 16px;
       &--form{
         width: 300px;
         height: 35px;
       }
     }
     .newemail__area{
+      @include form;
       margin: 5px 20px 5px 20px;
-      font-weight: bold;
-      text-align: left;
-      font-size: 16px;
       &--form{
         width: 300px;
         height: 35px;
       }
     }
     .newpassword__area{
+      @include form;
       margin: 5px 20px 5px 20px;
-      font-weight: bold;
-      text-align: left;
-      font-size: 16px;
       &--form{
         width: 300px;
         height: 35px;
       }
     }
     .newpassword_confirmation__area{
+      @include form;
       margin: 5px 20px 5px 20px;
-      font-weight: bold;
-      text-align: left;
-      font-size: 16px;
       &--form{
         width: 300px;
         height: 35px;
       }
     }
     .newmysize__area{
+      @include form;
       margin: 5px 20px 5px 20px;
-      font-weight: bold;
-      text-align: left;
-      font-size: 16px;
       &--form{
         width: 300px;
         height: 35px;
       }
     }
     .iconimage__area{
+      @include form;
       margin: 5px 20px 5px 20px;
-      font-weight: bold;
       position: relative;
-      text-align: left;
-      font-size: 16px;
       &--form{
         position: absolute;
         top: 121px;
@@ -113,22 +101,16 @@
       left: 8px;
       margin: 40px 30px 20px 20px;
       &__btn{
+        @include box3;
         float: right;
-        background:rgba(143, 139, 139, 0.6);
-        box-shadow: 0 1px 3px rgba(0,0,0,1);
-        border-radius: 10px;
         width: 128px;
         height: 46px;
         font-size: 20px;
-        color: white;
       }
     }
     .sign_in{
+      @include box3;
       text-decoration: none;
-      background:rgba(143, 139, 139, 0.6);
-      box-shadow: 0 1px 3px rgba(0,0,0,1);
-      border-radius: 10px;
-      color: white;
       width: 140px;
       font-size: 18px;
       line-height: 46px;

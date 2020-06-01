@@ -1,10 +1,8 @@
 .edit-top__right--item{
+  @include box;
   width: 96%;
   height: 800px;
   padding-left: 11px;
-  background:rgba(243, 244, 245, 0.616);
-  box-shadow: 0 1px 3px rgba(0,0,0,1);
-  border-radius: 10px;
   &-form{
     height: 100%;
     width: 95%;
@@ -19,51 +17,37 @@
       font-size: 30px;
     }
     &-border{
+      @include border;
       max-width: 200px;
-      border-bottom: 2px solid rgb(85, 79, 79);
-      margin: auto;
-      margin-top: 30px;
     }
     &-info{
       text-align: center;
       margin-top: 30px;
     }
     &--border{
+      @include border;
       width: 90%;
-      border-bottom: 2px solid rgb(85, 79, 79);
-      margin: auto;
-      margin-top: 30px;
       margin-bottom: 20px;
     }
     &-box{
       margin: 20px 20px 20px 170px;
       font-size: 20px;
       &-shoes{
-        display: block;
-        font-size: 15px;
+        @include newform30;
         width: 400px;
-        height: 30px;
       }
       &-shoesohter{
-        display: block;
-        font-size: 15px;
+        @include newform150;
         width: 400px;
-        height: 150px;
       }
       &-shoesweather{
-        display: block;
-        font-size: 15px;
-        height: 30px;
+        @include newform30;
       }
       &-shoessize{
-        display: block;
-        font-size: 15px;
-        height: 30px;
+        @include newform30;
       }
       &-shoesbrand{
-        display: block;
-        font-size: 15px;
-        height: 30px;
+        @include newform30;
       }
     }
     &-right{

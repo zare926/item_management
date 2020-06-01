@@ -10,6 +10,13 @@
   border-radius: 10px;
 }
 
+@mixin box3 {
+  background:rgba(143, 139, 139, 0.6);
+  box-shadow: 0 1px 3px rgba(0,0,0,1);
+  border-radius: 10px;
+  color: white;
+}
+
 @mixin click {
   background:rgba(161, 171, 180, 0.616);
   box-shadow: 0 3px 3px rgba(0,0,0,1);
@@ -72,4 +79,53 @@
   font-size: 14px;
   padding: 9px 17px;
   border-radius: 10px;
+}
+
+@mixin form{
+  font-weight: bold;
+  text-align: left;
+  font-size: 16px;
+}
+
+@mixin newform30{
+  display: block;
+  font-size: 15px;
+  height: 30px;
+}
+
+@mixin newform150{
+  display: block;
+  font-size: 15px;
+  height: 150px;
+}
+
+@mixin border{
+  border-bottom: 2px solid rgb(85, 79, 79);
+  margin: auto;
+  margin-top: 30px;
+}
+
+@mixin border_bottom{
+  border-bottom: 2px solid rgb(85, 79, 79);
+}
+
+@mixin searchwhile {
+  margin-top: 10px;
+  display: inline-block;
+}
+
+@mixin searchwhile2{
+  display: inline-block;
+  position: absolute;
+}
+
+@mixin formbar {
+  position: relative;
+  margin: 40px 20px 20px 20px;
+}
+
+@mixin formbar2 {
+  width: 604px;
+  height: 50px;
+  font-weight: bold;
 }

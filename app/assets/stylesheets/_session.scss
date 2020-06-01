@@ -20,6 +20,7 @@
     width: 660px;
   }
   .rogin__area{
+    @include box;
     position: absolute;
     left: 0;
     top: 200px;
@@ -27,27 +28,18 @@
     bottom: 0;
     margin: auto;
     margin-top: 20px;
-		background:rgba(243, 244, 245, 0.6);
-    box-shadow: 0 1px 3px rgba(0,0,0,1);
     width: 672px;
     height: 328px;
-    border-radius: 10px;
     &--email{
-      position: relative;
-      margin: 40px 20px 20px 20px;
+      @include formbar;
       #user_email{
-        width: 604px;
-        height: 50px;
-        font-weight: bold;
+        @include formbar2;
       }
     }
     &--password{
-      position: relative;
-      margin: 40px 20px 20px 20px;
+      @include formbar;
       #user_password{
-        width: 604px;
-        height: 50px;
-        font-weight: bold;
+        @include formbar2;
       }
     }
     &--remember{
@@ -59,29 +51,23 @@
       left: -10px;
       margin: 40px 30px 20px 20px;
       &__btn{
+        @include box3;
         float: right;
-        background:rgba(143, 139, 139, 0.6);
-        box-shadow: 0 1px 3px rgba(0,0,0,1);
-        border-radius: 10px;
         width: 128px;
         height: 46px;
         font-size: 20px;
-        color: white;
         margin-bottom: 10px;
         cursor: pointer;
       }
     }
     .sign_up{
+      @include box3;
       position: absolute;
       top: 233px;
       left: 360px;
-      background:rgba(143, 139, 139, 0.6);
-      box-shadow: 0 1px 3px rgba(0,0,0,1);
-      border-radius: 10px;
       width: 128px;
       height: 46px;
       font-size: 20px;
-      color: white;
       margin-bottom: 10px;
       text-decoration: none;
       text-align: center;
