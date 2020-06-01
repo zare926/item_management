@@ -22,25 +22,6 @@
         .edit-top__right--item-form-info
           持っている靴を長持ちさせる為、登録しましょう！
         .edit-top__right--item-form--border
-        = form_with(model: @item, local: true) do |f|
-          .edit-top__right--item-form-box
-            靴の名前を入力してください
-            = f.text_field :name, class: 'edit-top__right--item-form-box-shoes', placeholder: '20文字まで'
-          .edit-top__right--item-form-box
-            情報を入力してください
-            = f.text_area :text, class: 'edit-top__right--item-form-box-shoesohter',placeholder: '買った日、買った場所、好きな情報を書き込みましょう！'
-            .edit-top__right--item-form-box
-            晴れ用、雨用を選択してください
-            = f.select :weather, [["晴れの日用", 0],["雨の日用", 1]],{}, {class: 'edit-top__right--item-form-box-shoesweather'}
-            .edit-top__right--item-form-box
-            サイズを選択してください
-            = f.select :size, Item.sizes.keys,{}, {class: 'edit-top__right--item-form-box-shoessize'}
-            .edit-top__right--item-form-box
-            ブランドを選択してください
-            = f.select :brand, Item.brands.keys,{},{class: 'edit-top__right--item-form-box-shoesbrand'}
-          .edit-top__right--item-form-right
-            画像
-            = image_tag asset_path('new1.png'),class:'edit-top__right--item-form-right-box'
-            = f.file_field :image, class: 'edit-top__right--item-form-right-boximage'
-            = f.submit "登録" ,class: 'edit-top__right--item-form-rightbtn'
-            .select__button 画像を選択
+
+        -# フォームまとめ
+        = render "form"

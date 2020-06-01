@@ -42,23 +42,6 @@
             = link_to '削除',item_path(@item.id) , method: :delete,class:'delete__btn'
             - if user_signed_in? && current_user.id == @item.user_id and @item.status == "unused"
               = link_to '編集', edit_item_path(@item.id), method: :get,class:'edit__btn'
-        .show__name
-          .show__name--box
-            = @item.name
-        .show__other.clearfix
-          .show__other--text
-            ■ 情報
-            %br
-            = simple_format(@item.text)
-          .show__other--size
-            ■ サイズ
-            %br
-            = simple_format(@item.size)
-          .show__other--weather
-            ■ 晴れ用？雨用？
-            %br
-            - if @item.weather == 1
-              = simple_format("雨の日用")
-            - else
-              = simple_format("晴れの日用")
+        -# 靴の情報ボックス
+        = render "showinfobox"
       = render partial:"comments/comment"
