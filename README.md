@@ -19,18 +19,14 @@
   - お気に入り機能実装
   - いいね機能実装
   - コメント機能実装、絵文字も利用可能
+  - Twitterカード
+  - favicon設定
 
 ## Contributors
   - https://github.com/zare926
 
-## ER図
-
 ## URL：http://54.178.124.177/users/sign_in
-Basic認証をかけているため、以下のID/PASSを入力してください。
 
-### ID/PASS
-- ID：admin
-- PASS：3333
 
 ## テストアカウント
 - メール：hogehoge@gmail.com
@@ -47,7 +43,6 @@ https://gyazo.com/c7afd97a002a96222af218788238772e
 
 ## 実装予定
   - Dockerの使用
-  - Twitterカードの使用（adidas,NIKEなどシューズメーカーのツイート？）
   - 独自ドメイン
   - CircleCI
   - 使用可能になった靴をLINE通知
